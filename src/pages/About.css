@@ -1,0 +1,295 @@
+/* About Page Styles */
+.about {
+  min-height: 100vh;
+}
+
+/* About Hero Section */
+.about-hero {
+  position: relative;
+  height: 60vh;
+  min-height: 400px;
+  background: linear-gradient(135deg, #d34a3a 0%, #d34a3a 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.about-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('https://images.unsplash.com/photo-1488521706669-41e6ad3b2c9d?w=1920&h=1080&fit=crop');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.15;
+}
+
+.about-hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.about-hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+.about-hero-content h1 {
+  font-family: 'Cinzel', serif;
+  font-size: 3.5rem;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.about-hero-content p {
+  font-size: 1.5rem;
+  color: #f2ead5;
+}
+
+/* Mission Section */
+.mission-section {
+  padding: 80px 20px;
+  background-color: #fff;
+}
+
+.mission-section .section-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: start;
+}
+
+.mission-content h2 {
+  font-family: 'Cinzel', serif;
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.mission-content p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #555;
+}
+
+.mission-values {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.value-card {
+  background: #f9f9f9;
+  padding: 30px 20px;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: var(--mat-sys-level1, 0px 2px 1px -1px rgba(0, 0, 0, 0.2));
+  transition: all 0.3s ease;
+}
+
+.value-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--mat-sys-level3, 0px 3px 5px -1px rgba(0, 0, 0, 0.2));
+  border: 1px solid #d34a3a;
+}
+
+.value-icon {
+  font-size: 2.5rem;
+  color: #d34a3a;
+  margin-bottom: 15px;
+}
+
+.value-card h3 {
+  font-family: 'Cinzel', serif;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.value-card p {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+/* History Section */
+.history-section {
+  padding: 80px 20px;
+  background-color: #f2ead5;
+}
+
+.history-section h2 {
+  font-family: 'Cinzel', serif;
+  font-size: 2.5rem;
+  text-align: center;
+  color: #333;
+  margin-bottom: 60px;
+}
+
+.timeline {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: linear-gradient(135deg, #d34a3a 0%, #d34a3a 100%);
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.timeline-item {
+  display: flex;
+  margin-bottom: 50px;
+  position: relative;
+}
+
+.timeline-year {
+  width: 100px;
+  height: 100px;
+  background: linear-gradient(135deg, #d34a3a 0%, #d34a3a 100%);
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  font-weight: 700;
+  flex-shrink: 0;
+  margin: 0 20px;
+  z-index: 1;
+}
+
+.timeline-content {
+  background: #fff;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: var(--mat-sys-level1, 0px 2px 1px -1px rgba(0, 0, 0, 0.2));
+  flex: 1;
+}
+
+.timeline-content h3 {
+  font-family: 'Cinzel', serif;
+  color: #d34a3a;
+  margin-bottom: 10px;
+}
+
+.timeline-content p {
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Team Section */
+.team-section {
+  padding: 80px 20px;
+  background-color: #fff;
+}
+
+.team-section h2 {
+  font-family: 'Cinzel', serif;
+  font-size: 2.5rem;
+  text-align: center;
+  color: #333;
+  margin-bottom: 50px;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.team-card {
+  text-align: center;
+  padding: 30px 20px;
+  background: #f9f9f9;
+  border-radius: 16px;
+  box-shadow: var(--mat-sys-level1, 0px 2px 1px -1px rgba(0, 0, 0, 0.2));
+  transition: all 0.3s ease;
+}
+
+.team-card:hover {
+  transform: translateY(-10px);
+}
+
+.team-image {
+  width: 150px;
+  height: 150px;
+  margin: 0 auto 20px;
+}
+
+.team-image img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #d34a3a;
+}
+
+.team-card h3 {
+  font-family: 'Cinzel', serif;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.team-card p {
+  color: #d34a3a;
+  font-weight: 500;
+}
+
+/* Join CTA Section */
+.join-cta {
+  background: linear-gradient(135deg, #d34a3a 0%, #d34a3a 100%);
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.join-cta h2 {
+  font-family: 'Cinzel', serif;
+  font-size: 2.5rem;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.join-cta p {
+  color: #f2ead5;
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .about-hero-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .mission-section .section-container {
+    grid-template-columns: 1fr;
+  }
+
+  .timeline::before {
+    left: 30px;
+  }
+
+  .timeline-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .timeline-year {
+    margin: 0 0 20px 0;
+  }
+}
