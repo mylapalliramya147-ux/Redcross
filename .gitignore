@@ -1,0 +1,19 @@
+# Dependencies
+/node_modules/
+
+# Build output
+/build/
+
+# Cache files
+/node_modules/.cache/
+/.eslintcache
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
