@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import './Calendar.css';
 import DayCard from '../components/DayCard';
@@ -12,8 +12,6 @@ const formatDate = (dateString) => {
 };
 
 const Calendar = () => {
-  const [selectedEvent, setSelectedEvent] = useState(null);
-
   const events = [
     // January Awareness Days
     {
@@ -569,34 +567,6 @@ const Calendar = () => {
     }
   ];
 
-  const getCategoryIcon = (category) => {
-    switch (category) {
-      case 'donation': return 'fas fa-tint';
-      case 'training': return 'fas fa-chalkboard-teacher';
-      case 'emergency': return 'fas fa-first-aid';
-      case 'health': return 'fas fa-heartbeat';
-      case 'fundraising': return 'fas fa-hand-holding-heart';
-      case 'volunteer': return 'fas fa-users';
-      case 'awareness': return 'fas fa-lightbulb';
-      case 'environment': return 'fas fa-leaf';
-      default: return 'fas fa-calendar-alt';
-    }
-  };
-
-  const getCategoryColor = (category) => {
-    switch (category) {
-      case 'donation': return '#a02525';
-      case 'training': return '#a02525';
-      case 'emergency': return '#f5a623';
-      case 'health': return '#7ed321';
-      case 'fundraising': return '#bd10e0';
-      case 'volunteer': return '#50e3c2';
-      case 'awareness': return '#9c27b0';
-      case 'environment': return '#4caf50';
-      default: return '#a02525';
-    }
-  };
-
   return (
     <div className="calendar">
       {/* Hero Section */}
@@ -614,10 +584,7 @@ const Calendar = () => {
           <h2>National & International Awareness Days</h2>
           <div className="events-grid">
             {events.map((event) => (
-              <div 
-                key={event.id} 
-                onClick={() => setSelectedEvent(event)}
-              >
+              <div key={event.id}>
                 <DayCard 
                   date={formatDate(event.date)}
                   title={event.title}
@@ -627,49 +594,6 @@ const Calendar = () => {
           </div>
         </div>
       </section>
-
-      {/* Modal for Event Details */}
-      {selectedEvent && (
-        <div className="modal-overlay" onClick={() => setSelectedEvent(null)}>
-          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-            <button className="modal-close" onClick={() => setSelectedEvent(null)}>
-              <i className="fas fa-times"></i>
-            </button>
-            <div 
-              className="modal-header" 
-              style={{ backgroundColor: getCategoryColor(selectedEvent.category) }}
-            >
-              <i className={getCategoryIcon(selectedEvent.category)}></i>
-              <h2>{selectedEvent.title}</h2>
-            </div>
-            <div className="modal-body">
-              <div className="event-info">
-                <div className="info-item">
-                  <i className="fas fa-calendar"></i>
-                  <span>{new Date(selectedEvent.date).toLocaleDateString('en-US', { 
-                    weekday: 'long', 
-                    year: 'numeric', 
-                    month: 'long', 
-                    day: 'numeric' 
-                  })}</span>
-                </div>
-                <div className="info-item">
-                  <i className="fas fa-clock"></i>
-                  <span>{selectedEvent.time}</span>
-                </div>
-                <div className="info-item">
-                  <i className="fas fa-globe"></i>
-                  <span>{selectedEvent.location}</span>
-                </div>
-              </div>
-              <p className="modal-description">{selectedEvent.description}</p>
-              <Link to="/contact" className="btn btn-primary" onClick={() => setSelectedEvent(null)}>
-                Get Involved
-              </Link>
-            </div>
-          </div>
-        </div>
-      )}
 
       {/* CTA Section */}
       <section className="calendar-cta">
