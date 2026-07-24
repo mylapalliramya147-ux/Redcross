@@ -56,15 +56,15 @@ const Header = () => {
                 Services
               </NavLink>
             </li>
-            <li className="nav-item">
-              <a 
-                href="https://apredcross.org/calender" 
-                className="nav-link"
-                target="_blank"
-                rel="noopener noreferrer"
+<li className="nav-item">
+              <NavLink 
+                to="/calender" 
+                className={({ isActive }) => 
+                  isActive ? 'nav-link active' : 'nav-link'
+                }
               >
                 Calendar
-              </a>
+              </NavLink>
             </li>
             <li className="nav-item">
               <NavLink 
