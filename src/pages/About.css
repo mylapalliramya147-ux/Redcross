@@ -37,17 +37,28 @@
   background-color: rgba(0, 0, 0, 0.3);
 }
 
-.about-hero-content {
-  position: relative;
-  z-index: 1;
-}
+ .about-hero-content {
+   position: relative;
+   z-index: 1;
+ }
 
-.about-hero-content h1 {
-  font-family: 'Cinzel', serif;
-  font-size: 3.5rem;
-  color: #fff;
-  margin-bottom: 10px;
-}
+ .indian-red-cross-logo {
+   margin-bottom: 30px;
+ }
+
+ .wikipedia-logo {
+   width: 120px;
+   height: auto;
+   filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+   border-radius: 8px;
+ }
+
+ .about-hero-content h1 {
+   font-family: 'Cinzel', serif;
+   font-size: 3.5rem;
+   color: #fff;
+   margin-bottom: 10px;
+ }
 
 .about-hero-content p {
   font-size: 1.5rem;

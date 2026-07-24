@@ -22,15 +22,22 @@ const About = () => {
   ];
 
   return (
-    <div className="about">
-      {/* Hero Section */}
-      <section className="about-hero">
-        <div className="about-hero-overlay"></div>
-        <div className="about-hero-content">
-          <h1>About AP Red Cross</h1>
-          <p>Dedicated to humanity since 1920</p>
-        </div>
-      </section>
+      <div className="about">
+        {/* Hero Section */}
+        <section className="about-hero">
+         <div className="about-hero-overlay"></div>
+         <div className="about-hero-content">
+           <div className="indian-red-cross-logo">
+             <img 
+               src="/indian-red-cross.png" 
+               alt="Indian Red Cross Society Logo" 
+               className="wikipedia-logo"
+             />
+           </div>
+           <h1>About AP Red Cross</h1>
+           <p>Dedicated to humanity since 1920</p>
+         </div>
+       </section>
 
       {/* Mission Section */}
       <section className="mission-section">
