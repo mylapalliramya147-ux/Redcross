@@ -268,100 +268,6 @@
   font-size: 1.1rem;
 }
 
-/* Calendar Preview Section */
-.calendar-preview {
-  padding: 80px 20px;
-  background-color: #f8f9fa;
-}
-
-.calendar-subtitle {
-  text-align: center;
-  font-size: 1.2rem;
-  color: #666;
-  margin-bottom: 50px;
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.events-preview-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 25px;
-  margin-bottom: 40px;
-}
-
-.event-preview-card {
-  background: #fff;
-  border-radius: 16px;
-  padding: 30px;
-  box-shadow: var(--mat-sys-level1, 0px 2px 1px -1px rgba(0, 0, 0, 0.2));
-  border: 1px solid #e6e1d6;
-  transition: all 0.3s ease;
-  display: flex;
-  gap: 20px;
-  align-items: flex-start;
-}
-
-.event-preview-card:hover {
-  transform: translateY(-5px);
-  box-shadow: var(--mat-sys-level3, 0px 3px 5px -1px rgba(0, 0, 0, 0.2));
-  border-color: #d34a3a;
-}
-
-.event-preview-icon {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-}
-
-.event-preview-icon i {
-  font-size: 1.5rem;
-  color: #fff;
-}
-
-.event-preview-content {
-  flex: 1;
-}
-
-.event-preview-content h3 {
-  font-family: 'Cinzel', serif;
-  font-size: 1.3rem;
-  color: #333;
-  margin-bottom: 15px;
-}
-
-.event-preview-date,
-.event-preview-location {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  color: #666;
-  font-size: 0.95rem;
-  margin-bottom: 8px;
-}
-
-.event-preview-date i,
-.event-preview-location i {
-  color: #d34a3a;
-}
-
-.event-preview-content p {
-  color: #777;
-  line-height: 1.6;
-  margin-top: 10px;
-}
-
-.calendar-btn {
-  display: block;
-  margin: 0 auto;
-  width: fit-content;
-}
-
 /* Responsive Design */
 @media screen and (max-width: 768px) {
   .hero-title {
@@ -378,14 +284,5 @@
 
   .section-title {
     font-size: 2rem;
-  }
-
-  .event-preview-card {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .events-preview-grid {
-    grid-template-columns: 1fr;
   }
 }

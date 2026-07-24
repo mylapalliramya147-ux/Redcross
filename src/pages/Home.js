@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import './Home.css';
 
@@ -25,50 +25,6 @@ const Home = () => {
       description: '24/7 emergency response services for medical and disaster situations.',
     },
   ];
-
-  // Upcoming awareness events for preview
-  const upcomingEvents = [
-    {
-      id: 1,
-      title: 'World AIDS Day',
-      date: 'December 1',
-      time: 'All Day',
-      location: 'Global',
-      description: 'Raising awareness about the AIDS pandemic and supporting those affected.',
-      category: 'health',
-      icon: 'fas fa-heartbeat'
-    },
-    {
-      id: 2,
-      title: 'International Volunteer Day',
-      date: 'December 5',
-      time: 'All Day',
-      location: 'Global',
-      description: 'Recognizing volunteers who contribute to making the world better.',
-      category: 'volunteer',
-      icon: 'fas fa-users'
-    },
-    {
-      id: 3,
-      title: 'Human Rights Day',
-      date: 'December 10',
-      time: 'All Day',
-      location: 'Global',
-      description: 'Promoting and protecting human rights globally.',
-      category: 'awareness',
-      icon: 'fas fa-lightbulb'
-    },
-  ];
-
-  const getCategoryColor = (category) => {
-    switch (category) {
-      case 'health': return '#7ed321';
-      case 'volunteer': return '#50e3c2';
-      case 'awareness': return '#9c27b0';
-      case 'environment': return '#4caf50';
-      default: return '#d34a3a';
-    }
-  };
 
   return (
     <div className="home">
@@ -132,43 +88,6 @@ const Home = () => {
               </div>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* Calendar Awareness Days Preview Section */}
-      <section className="calendar-preview">
-        <div className="section-container">
-          <h2 className="section-title">Important Awareness Days</h2>
-          <p className="calendar-subtitle">
-            Stay informed about upcoming awareness days and how you can get involved
-          </p>
-          <div className="events-preview-grid">
-            {upcomingEvents.map((event) => (
-              <div key={event.id} className="event-preview-card">
-                <div 
-                  className="event-preview-icon"
-                  style={{ backgroundColor: getCategoryColor(event.category) }}
-                >
-                  <i className={event.icon}></i>
-                </div>
-                <div className="event-preview-content">
-                  <h3>{event.title}</h3>
-                  <div className="event-preview-date">
-                    <i className="fas fa-calendar"></i>
-                    <span>{event.date} | {event.time}</span>
-                  </div>
-                  <div className="event-preview-location">
-                    <i className="fas fa-globe"></i>
-                    <span>{event.location}</span>
-                  </div>
-                  <p>{event.description}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-          <Link to="/calender" className="btn btn-outline calendar-btn">
-            View Full Calendar
-          </Link>
         </div>
       </section>
 
