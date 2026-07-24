@@ -36,9 +36,9 @@
 
 .logo-text {
   color: white;
-  font-size: 3rem;
+  font-size: 2rem;
   font-weight: bold;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   font-family: "Cinzel", serif;
 }
 
@@ -57,9 +57,9 @@
 .nav-link {
   text-decoration: none;
   color: white;
-  font-size: 1.3rem;
+  font-size: 1.05rem;
   font-weight: 600;
-  padding: 18px 35px;
+  padding: 14px 22px;
   border-radius: 40px;
   transition: .3s;
 }
@@ -77,6 +77,36 @@
   background: white;
   color: #d34a3a;
   font-weight: bold;
+}
+
+.nav-divider {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 1.5rem;
+  align-self: center;
+  padding: 0 10px;
+}
+
+.nav-item-secondary {
+  align-self: center;
+}
+
+.nav-link.secondary {
+  font-size: 1rem;
+  padding: 8px 15px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.nav-link.secondary:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.nav-link.active.secondary {
+  background: rgba(255, 255, 255, 0.3);
+  color: white;
 }
 
 .donate-btn:hover {
@@ -105,8 +135,8 @@ padding:0 20px;
 }
 
 .logo{
-width:60px;
-height:60px;
+width:50px;
+height:50px;
 }
 
 .logo-text{
@@ -132,7 +162,7 @@ display:block;
 
 .nav-menu{
 flex-direction:column;
-padding:20px;
+padding:10px;
 }
 
 .nav-link{

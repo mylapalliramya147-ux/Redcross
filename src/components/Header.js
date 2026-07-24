@@ -66,6 +66,39 @@ const Header = () => {
                 Contact
               </NavLink>
             </li>
+            <li className="nav-divider">|</li>
+            {/* Second set of Home, About, Contact */}
+            <li className="nav-item nav-item-secondary">
+              <NavLink 
+                to="/" 
+                className={({ isActive }) => 
+                  isActive ? 'nav-link active secondary' : 'nav-link secondary'
+                }
+                end
+              >
+                <i className="fas fa-home"></i> Home
+              </NavLink>
+            </li>
+            <li className="nav-item nav-item-secondary">
+              <NavLink 
+                to="/about" 
+                className={({ isActive }) => 
+                  isActive ? 'nav-link active secondary' : 'nav-link secondary'
+                }
+              >
+                <i className="fas fa-info-circle"></i> About
+              </NavLink>
+            </li>
+            <li className="nav-item nav-item-secondary">
+              <NavLink 
+                to="/contact" 
+                className={({ isActive }) => 
+                  isActive ? 'nav-link active secondary' : 'nav-link secondary'
+                }
+              >
+                <i className="fas fa-envelope"></i> Contact
+              </NavLink>
+            </li>
             <li className="nav-item">
               <NavLink 
                 to="/donate" 
