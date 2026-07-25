@@ -16,10 +16,10 @@ const Header = () => {
         <div className="logo-section">
           <Link to="/" className="logo-link">
             <img
-  src={logo}
-  alt="Indian Red Cross Society"
-  className="logo"
-/>
+    src={logo}
+    alt="Indian Red Cross Society"
+    className="logo"
+    />
             <span className="logo-text">APRedcross</span>
           </Link>
         </div>
@@ -59,22 +59,13 @@ const Header = () => {
                 Services
               </NavLink>
             </li>
-<<<<<<< HEAD
 
             <li className="nav-item">
-              <a
-                href="https://apredcross.org/calendar"
-                className="nav-link"
-                target="_blank"
-                rel="noopener noreferrer"
-=======
-<li className="nav-item">
-              <NavLink 
-                to="/calender" 
-                className={({ isActive }) => 
+              <NavLink
+                to="/calendar"
+                className={({ isActive }) =>
                   isActive ? 'nav-link active' : 'nav-link'
                 }
->>>>>>> ac15c4bbd9500090f0e7f59dee67406904e3f8e2
               >
                 Calendar
               </NavLink>
