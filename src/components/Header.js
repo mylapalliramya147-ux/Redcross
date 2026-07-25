@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
-import { Link, NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import './Header.css';
-import logo from "../assets/logo.png";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -16,10 +15,10 @@ const Header = () => {
         <div className="logo-section">
           <Link to="/" className="logo-link">
             <img
-    src={logo}
-    alt="Indian Red Cross Society"
-    className="logo"
-    />
+  src={logo}
+  alt="Indian Red Cross Society"
+  className="logo"
+/>
             <span className="logo-text">APRedcross</span>
           </Link>
         </div>
@@ -59,11 +58,19 @@ const Header = () => {
                 Services
               </NavLink>
             </li>
+<<<<<<< HEAD
 
             <li className="nav-item">
-              <NavLink
-                to="/calendar"
-                className={({ isActive }) =>
+              <a
+                href="https://apredcross.org/calendar"
+                className="nav-link"
+                target="_blank"
+                rel="noopener noreferrer"
+=======
+<li className="nav-item">
+              <NavLink 
+                to="/calender" 
+                className={({ isActive }) => 
                   isActive ? 'nav-link active' : 'nav-link'
                 }
               >
