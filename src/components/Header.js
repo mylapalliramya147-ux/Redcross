@@ -59,6 +59,7 @@ const Header = () => {
                 Services
               </NavLink>
             </li>
+<<<<<<< HEAD
 
             <li className="nav-item">
               <a
@@ -66,9 +67,17 @@ const Header = () => {
                 className="nav-link"
                 target="_blank"
                 rel="noopener noreferrer"
+=======
+<li className="nav-item">
+              <NavLink 
+                to="/calender" 
+                className={({ isActive }) => 
+                  isActive ? 'nav-link active' : 'nav-link'
+                }
+>>>>>>> ac15c4bbd9500090f0e7f59dee67406904e3f8e2
               >
                 Calendar
-              </a>
+              </NavLink>
             </li>
 
             <li className="nav-item">
