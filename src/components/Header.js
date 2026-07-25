@@ -57,6 +57,16 @@ const Header = () => {
               </NavLink>
             </li>
             <li className="nav-item">
+              <a 
+                href="https://apredcross.org/calender" 
+                className="nav-link"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Calendar
+              </a>
+            </li>
+            <li className="nav-item">
               <NavLink 
                 to="/contact" 
                 className={({ isActive }) => 
