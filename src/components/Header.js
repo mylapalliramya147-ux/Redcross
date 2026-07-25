@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import './Header.css';
+import logo from "../assets/logo.png";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -13,14 +14,8 @@ const Header = () => {
     <header className="header">
       <div className="header-container">
         <div className="logo-section">
-          <Link to="/" className="logo-link">
-            <img
-  src={logo}
-  alt="Indian Red Cross Society"
-  className="logo"
-/>
-            <span className="logo-text">APRedcross</span>
-          </Link>
+          <img src={logo} alt="Red Cross" className="logo" />
+          <span className="logo-text">APREDCROSS</span>
         </div>
 
         <nav className={`navbar ${isMenuOpen ? 'active' : ''}`}>
@@ -58,19 +53,11 @@ const Header = () => {
                 Services
               </NavLink>
             </li>
-<<<<<<< HEAD
 
             <li className="nav-item">
-              <a
-                href="https://apredcross.org/calendar"
-                className="nav-link"
-                target="_blank"
-                rel="noopener noreferrer"
-=======
-<li className="nav-item">
-              <NavLink 
-                to="/calender" 
-                className={({ isActive }) => 
+              <NavLink
+                to="/calender"
+                className={({ isActive }) =>
                   isActive ? 'nav-link active' : 'nav-link'
                 }
               >
