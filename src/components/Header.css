@@ -1,7 +1,7 @@
 /* Header Styles */
 
 .header {
-  background: #d34a3a;
+  background: var(--red);
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -66,12 +66,12 @@
 
 .nav-link.active {
   background: white;
-  color: #d34a3a;
+  color: var(--red);
 }
 
 .donate-btn {
   background: white;
-  color: #d34a3a;
+  color: var(--red);
   font-weight: bold;
 }
 
@@ -155,7 +155,7 @@ position:absolute;
 top:90px;
 left:0;
 right:0;
-background:#d34a3a;
+background:var(--red);
 display:none;
 }
 
