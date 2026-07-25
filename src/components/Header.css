@@ -18,10 +18,9 @@
   align-items: center;
 }
 
-.logo-link {
+.logo-section {
   display: flex;
   align-items: center;
-  text-decoration: none;
 }
 
 .logo {

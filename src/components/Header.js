@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import './Header.css';
+import logo from "../assets/logo.png";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -13,6 +14,7 @@ const Header = () => {
     <header className="header">
       <div className="header-container">
         <div className="logo-section">
+          <img src={logo} alt="Red Cross" className="logo" />
           <span className="logo-text">APREDCROSS</span>
         </div>
 
