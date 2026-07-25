@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
-import { Link, NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import './Header.css';
-import logo from "../assets/logo.png";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -14,14 +13,7 @@ const Header = () => {
     <header className="header">
       <div className="header-container">
         <div className="logo-section">
-          <Link to="/" className="logo-link">
-            <img
-    src={logo}
-    alt="Indian Red Cross Society"
-    className="logo"
-/>
-            <span className="logo-text">APRedcross</span>
-          </Link>
+          <span className="logo-text">APREDCROSS</span>
         </div>
 
         <nav className={`navbar ${isMenuOpen ? 'active' : ''}`}>
