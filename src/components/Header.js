@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import './Header.css';
+import logo from "../assets/logo.png";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -14,11 +15,11 @@ const Header = () => {
       <div className="header-container">
         <div className="logo-section">
           <Link to="/" className="logo-link">
-            <img 
-              src="/logo.svg" 
-              alt="Red Cross Logo" 
-              className="logo"
-            />
+            <img
+  src={logo}
+  alt="Indian Red Cross Society"
+  className="logo"
+/>
             <span className="logo-text">APRedcross</span>
           </Link>
         </div>
@@ -26,9 +27,9 @@ const Header = () => {
         <nav className={`navbar ${isMenuOpen ? 'active' : ''}`}>
           <ul className="nav-menu">
             <li className="nav-item">
-              <NavLink 
-                to="/" 
-                className={({ isActive }) => 
+              <NavLink
+                to="/"
+                className={({ isActive }) =>
                   isActive ? 'nav-link active' : 'nav-link'
                 }
                 end
@@ -36,29 +37,32 @@ const Header = () => {
                 Home
               </NavLink>
             </li>
+
             <li className="nav-item">
-              <NavLink 
-                to="/about" 
-                className={({ isActive }) => 
+              <NavLink
+                to="/about"
+                className={({ isActive }) =>
                   isActive ? 'nav-link active' : 'nav-link'
                 }
               >
                 About Us
               </NavLink>
             </li>
+
             <li className="nav-item">
-              <NavLink 
-                to="/services" 
-                className={({ isActive }) => 
+              <NavLink
+                to="/services"
+                className={({ isActive }) =>
                   isActive ? 'nav-link active' : 'nav-link'
                 }
               >
                 Services
               </NavLink>
             </li>
+
             <li className="nav-item">
-              <a 
-                href="https://apredcross.org/calender" 
+              <a
+                href="https://apredcross.org/calendar"
                 className="nav-link"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -66,53 +70,22 @@ const Header = () => {
                 Calendar
               </a>
             </li>
+
             <li className="nav-item">
-              <NavLink 
-                to="/contact" 
-                className={({ isActive }) => 
+              <NavLink
+                to="/contact"
+                className={({ isActive }) =>
                   isActive ? 'nav-link active' : 'nav-link'
                 }
               >
                 Contact
               </NavLink>
             </li>
-            <li className="nav-divider">|</li>
-            {/* Second set of Home, About, Contact */}
-            <li className="nav-item nav-item-secondary">
-              <NavLink 
-                to="/" 
-                className={({ isActive }) => 
-                  isActive ? 'nav-link active secondary' : 'nav-link secondary'
-                }
-                end
-              >
-                <i className="fas fa-home"></i> Home
-              </NavLink>
-            </li>
-            <li className="nav-item nav-item-secondary">
-              <NavLink 
-                to="/about" 
-                className={({ isActive }) => 
-                  isActive ? 'nav-link active secondary' : 'nav-link secondary'
-                }
-              >
-                <i className="fas fa-info-circle"></i> About
-              </NavLink>
-            </li>
-            <li className="nav-item nav-item-secondary">
-              <NavLink 
-                to="/contact" 
-                className={({ isActive }) => 
-                  isActive ? 'nav-link active secondary' : 'nav-link secondary'
-                }
-              >
-                <i className="fas fa-envelope"></i> Contact
-              </NavLink>
-            </li>
+
             <li className="nav-item">
-              <NavLink 
-                to="/donate" 
-                className={({ isActive }) => 
+              <NavLink
+                to="/donate"
+                className={({ isActive }) =>
                   isActive ? 'nav-link active donate-btn' : 'nav-link donate-btn'
                 }
               >
