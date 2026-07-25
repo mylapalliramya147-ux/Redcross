@@ -14,19 +14,8 @@ const Header = () => {
     <header className="header">
       <div className="header-container">
         <div className="logo-section">
-<<<<<<< HEAD
           <img src={logo} alt="Red Cross" className="logo" />
           <span className="logo-text">APREDCROSS</span>
-=======
-          <Link to="/" className="logo-link">
-            <img
-  src={logo}
-  alt="Indian Red Cross Society"
-  className="logo"
-/>
-            <span className="logo-text">APRedcross</span>
-          </Link>
->>>>>>> cfb7d46d0eabda0359fa818af0e62505fae9b78c
         </div>
 
         <nav className={`navbar ${isMenuOpen ? 'active' : ''}`}>
@@ -64,19 +53,11 @@ const Header = () => {
                 Services
               </NavLink>
             </li>
-<<<<<<< HEAD
 
             <li className="nav-item">
-              <a
-                href="https://apredcross.org/calendar"
-                className="nav-link"
-                target="_blank"
-                rel="noopener noreferrer"
-=======
-<li className="nav-item">
-              <NavLink 
-                to="/calender" 
-                className={({ isActive }) => 
+              <NavLink
+                to="/calender"
+                className={({ isActive }) =>
                   isActive ? 'nav-link active' : 'nav-link'
                 }
               >
