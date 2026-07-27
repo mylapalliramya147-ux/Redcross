@@ -8,7 +8,7 @@
   position: relative;
   height: 60vh;
   min-height: 400px;
-  background: linear-gradient(135deg, #8b1a1a 0%, #a02525 100%);
+  background: linear-gradient(135deg, var(--red) 0%, var(--red) 100%);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -83,14 +83,14 @@
   display: block;
   width: 80px;
   height: 4px;
-  background: linear-gradient(135deg, #a02525 0%, #8b1a1a 100%);
+  background: linear-gradient(135deg, var(--red) 0%, var(--red) 100%);
   margin: 20px auto;
   border-radius: 2px;
 }
 
 /* CTA Section */
 .calendar-cta {
-  background: linear-gradient(135deg, #8b1a1a 0%, #a02525 100%);
+  background: linear-gradient(135deg, var(--red) 0%, var(--red) 100%);
   padding: 60px 20px;
   text-align: center;
 }
