@@ -8,24 +8,70 @@ import Services from './pages/Services';
 import Contact from './pages/Contact';
 import Donate from './pages/Donate';
 import Calendar from './pages/Calendar';
+import Login from './pages/Login';
 import './App.css';
 
 function App() {
   return (
     <Router>
       <div className="app">
-        <Header />
-        <main className="main-content">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/services" element={<Services />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/donate" element={<Donate />} />
-            <Route path="/calender" element={<Calendar />} />
-          </Routes>
-        </main>
-        <Footer />
+        <Routes>
+          <Route path="/" element={
+            <>
+              <Header />
+              <main className="main-content">
+                <Home />
+              </main>
+              <Footer />
+            </>
+          } />
+          <Route path="/about" element={
+            <>
+              <Header />
+              <main className="main-content">
+                <About />
+              </main>
+              <Footer />
+            </>
+          } />
+          <Route path="/services" element={
+            <>
+              <Header />
+              <main className="main-content">
+                <Services />
+              </main>
+              <Footer />
+            </>
+          } />
+          <Route path="/contact" element={
+            <>
+              <Header />
+              <main className="main-content">
+                <Contact />
+              </main>
+              <Footer />
+            </>
+          } />
+          <Route path="/donate" element={
+            <>
+              <Header />
+              <main className="main-content">
+                <Donate />
+              </main>
+              <Footer />
+            </>
+          } />
+          <Route path="/calender" element={
+            <>
+              <Header />
+              <main className="main-content">
+                <Calendar />
+              </main>
+              <Footer />
+            </>
+          } />
+          <Route path="/admin/login" element={<Login />} />
+        </Routes>
       </div>
     </Router>
   );
