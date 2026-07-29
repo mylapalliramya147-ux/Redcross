@@ -69,12 +69,6 @@
   color: var(--red);
 }
 
-.donate-btn {
-  background: white;
-  color: var(--red);
-  font-weight: bold;
-}
-
 .nav-divider {
   color: rgba(255, 255, 255, 0.5);
   font-size: 1.5rem;
@@ -103,10 +97,6 @@
 .nav-link.active.secondary {
   background: rgba(255, 255, 255, 0.3);
   color: white;
-}
-
-.donate-btn:hover {
-  background: #f3ead5;
 }
 
 .hamburger {

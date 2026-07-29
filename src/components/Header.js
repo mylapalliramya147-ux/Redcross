@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import './Header.css';
-import logo from "../assets/logo.png";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -14,7 +13,7 @@ const Header = () => {
     <header className="header">
       <div className="header-container">
         <div className="logo-section">
-          <img src={logo} alt="Red Cross" className="logo" />
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Indian_Red_Cross_Society_Logo.png/120px-Indian_Red_Cross_Society_Logo.png" alt="Red Cross" className="logo" />
           <span className="logo-text">APREDCROSS</span>
         </div>
 
@@ -80,10 +79,21 @@ const Header = () => {
               <NavLink
                 to="/donate"
                 className={({ isActive }) =>
-                  isActive ? 'nav-link active donate-btn' : 'nav-link donate-btn'
+                  isActive ? 'nav-link active' : 'nav-link'
                 }
               >
                 Donate
+              </NavLink>
+            </li>
+
+            <li className="nav-item">
+              <NavLink
+                to="/admin/login"
+                className={({ isActive }) =>
+                  isActive ? 'nav-link active' : 'nav-link'
+                }
+              >
+                Login
               </NavLink>
             </li>
           </ul>

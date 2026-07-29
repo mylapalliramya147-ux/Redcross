@@ -70,7 +70,15 @@ function App() {
               <Footer />
             </>
           } />
-          <Route path="/admin/login" element={<Login />} />
+          <Route path="/admin/login" element={
+            <>
+              <Header />
+              <main className="main-content">
+                <Login />
+              </main>
+              <Footer />
+            </>
+          } />
         </Routes>
       </div>
     </Router>

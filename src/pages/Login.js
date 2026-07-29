@@ -40,7 +40,7 @@ const Login = () => {
       <div className="login-container">
         <div className="login-header">
           <img 
-            src="https://images.unsplash.com/photo-1593113630166-c5e7dfc0e4d9?w=100&h=100&fit=crop" 
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Indian_Red_Cross_Society_Logo.png/120px-Indian_Red_Cross_Society_Logo.png" 
             alt="Red Cross Logo" 
             className="login-logo"
           />
