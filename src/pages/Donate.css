@@ -256,6 +256,58 @@
   color: #666;
 }
 
+/* Blood Donation Requirements Section */
+.blood-requirements-section {
+  padding: 80px 20px;
+  background-color: #f2ead5;
+}
+
+.blood-requirements-section h2 {
+  font-family: 'Cinzel', serif;
+  font-size: 2.5rem;
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.requirements-intro {
+  text-align: center;
+  color: #666;
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto 50px;
+}
+
+.requirements-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.requirement-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background: #fff;
+  padding: 25px 20px;
+  border-radius: 16px;
+  box-shadow: var(--mat-sys-level1, 0px 2px 1px -1px rgba(0, 0, 0, 0.2));
+}
+
+.requirement-item i {
+  font-size: 1.8rem;
+  color: #d34a3a;
+  min-width: 40px;
+  text-align: center;
+}
+
+.requirement-item span {
+  color: #555;
+  font-size: 1rem;
+}
+
 /* Responsive Design */
 @media screen and (max-width: 768px) {
   .donate-hero-content h1 {
