@@ -37,28 +37,28 @@
   background-color: rgba(0, 0, 0, 0.3);
 }
 
- .about-hero-content {
-   position: relative;
-   z-index: 1;
- }
+.about-hero-content {
+  position: relative;
+  z-index: 1;
+}
 
- .indian-red-cross-logo {
-   margin-bottom: 30px;
- }
+.indian-red-cross-logo {
+  margin-bottom: 30px;
+}
 
- .wikipedia-logo {
-   width: 120px;
-   height: auto;
-   filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
-   border-radius: 8px;
- }
+.wikipedia-logo {
+  width: 120px;
+  height: auto;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+  border-radius: 8px;
+}
 
- .about-hero-content h1 {
-   font-family: 'Cinzel', serif;
-   font-size: 3.5rem;
-   color: #fff;
-   margin-bottom: 10px;
- }
+.about-hero-content h1 {
+  font-family: 'Cinzel', serif;
+  font-size: 3.5rem;
+  color: #fff;
+  margin-bottom: 10px;
+}
 
 .about-hero-content p {
   font-size: 1.5rem;
@@ -73,9 +73,10 @@
 
 .mission-section .section-container {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 50px;
-  align-items: start;
+  grid-template-columns: 1fr;
+  gap: 30px;
+  align-items: center;
+  text-align: center;
 }
 
 .mission-content h2 {
@@ -91,48 +92,86 @@
   color: #555;
 }
 
-.mission-values {
+/* Principles Section */
+.principles-section {
+  padding: 80px 20px;
+  background-color: #f2ead5;
+}
+
+.principles-title {
+  font-family: 'Cinzel', serif;
+  font-size: 2.5rem;
+  text-align: center;
+  color: #333;
+  margin-bottom: 50px;
+}
+
+.principles-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
+  grid-template-columns: repeat(4, 200px);
+  justify-content: center;
+  align-items: start;
+  gap: 28px;
+  padding: 0 20px;
+}
+
+.principles-row {
+  display: grid;
+  grid-template-columns: repeat(3, 200px);
+  justify-content: center;
+  align-items: start;
+  gap: 28px;
+  margin: 28px auto 0;
+  padding: 0 20px;
+  max-width: fit-content;
 }
 
 .value-card {
-  background: #f9f9f9;
-  padding: 30px 20px;
+  background: #fff;
+  width: 200px;
+  height: 260px;
+  padding: 28px;
   border-radius: 16px;
   text-align: center;
   box-shadow: var(--mat-sys-level1, 0px 2px 1px -1px rgba(0, 0, 0, 0.2));
   transition: all 0.3s ease;
+  border: 1px solid #e6e1d6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
 }
 
 .value-card:hover {
   transform: translateY(-5px);
   box-shadow: var(--mat-sys-level3, 0px 3px 5px -1px rgba(0, 0, 0, 0.2));
-  border: 1px solid #d34a3a;
+  border-color: #d34a3a;
 }
 
 .value-icon {
   font-size: 2.5rem;
   color: #d34a3a;
-  margin-bottom: 15px;
+  margin-bottom: 0;
 }
 
 .value-card h3 {
   font-family: 'Cinzel', serif;
+  font-size: 1.25rem;
   color: #333;
-  margin-bottom: 10px;
+  margin-bottom: 0;
 }
 
 .value-card p {
   color: #666;
   font-size: 0.9rem;
+  line-height: 1.35;
 }
 
 /* History Section */
 .history-section {
   padding: 80px 20px;
-  background-color: #f2ead5;
+  background-color: #fff;
 }
 
 .history-section h2 {
@@ -197,6 +236,7 @@
 }
 
 .timeline-content p {
+
   color: #555;
   line-height: 1.6;
 }
@@ -291,6 +331,23 @@
     grid-template-columns: 1fr;
   }
 
+  .value-card {
+    width: 140px;
+    padding: 25px 15px;
+  }
+
+  .value-icon {
+    font-size: 1.8rem;
+  }
+
+  .value-card h3 {
+    font-size: 0.95rem;
+  }
+
+  .value-card p {
+    font-size: 0.8rem;
+  }
+
   .timeline::before {
     left: 30px;
   }
@@ -302,5 +359,25 @@
 
   .timeline-year {
     margin: 0 0 20px 0;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .value-card {
+    width: 130px;
+    padding: 20px 12px;
+  }
+
+  .value-icon {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+
+  .value-card h3 {
+    font-size: 0.9rem;
+  }
+
+  .value-card p {
+    font-size: 0.75rem;
   }
 }

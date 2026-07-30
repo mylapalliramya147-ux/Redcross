@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { useAuth } from '../contexts/AuthContext';
 import './Login.css';
 
 const Login = () => {
@@ -9,6 +10,7 @@ const Login = () => {
   });
   const [error, setError] = useState('');
   const navigate = useNavigate();
+  const { login } = useAuth();
 
   const handleChange = (e) => {
     setFormData({
@@ -27,12 +29,14 @@ const Login = () => {
       return;
     }
     
-    // Here you would typically make an API call to authenticate
-    // For now, we'll just log and redirect
-    console.log('Login attempt:', formData);
+    // Attempt login
+    const result = login(formData.username, formData.password);
     
-    // Example redirect after login
-    // navigate('/admin/dashboard');
+    if (result.success) {
+      navigate('/admin/dashboard');
+    } else {
+      setError(result.error);
+    }
   };
 
   return (
@@ -44,8 +48,8 @@ const Login = () => {
             alt="Red Cross Logo" 
             className="login-logo"
           />
-          <h1>AP Red Cross Admin</h1>
-          <p>Sign in to access the admin panel</p>
+          <h1>User Login</h1>
+          <p>Sign in to access your account</p>
         </div>
         
         <form className="login-form" onSubmit={handleSubmit}>

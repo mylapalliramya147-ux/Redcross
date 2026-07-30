@@ -1,12 +1,19 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
+import { useAuth } from '../contexts/AuthContext';
 import './Header.css';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { isAuthenticated, logout } = useAuth();
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
+  };
+
+  const handleLogout = () => {
+    logout();
+    setIsMenuOpen(false);
   };
 
   return (
@@ -26,6 +33,7 @@ const Header = () => {
                   isActive ? 'nav-link active' : 'nav-link'
                 }
                 end
+                onClick={() => setIsMenuOpen(false)}
               >
                 Home
               </NavLink>
@@ -37,6 +45,7 @@ const Header = () => {
                 className={({ isActive }) =>
                   isActive ? 'nav-link active' : 'nav-link'
                 }
+                onClick={() => setIsMenuOpen(false)}
               >
                 About Us
               </NavLink>
@@ -48,6 +57,7 @@ const Header = () => {
                 className={({ isActive }) =>
                   isActive ? 'nav-link active' : 'nav-link'
                 }
+                onClick={() => setIsMenuOpen(false)}
               >
                 Services
               </NavLink>
@@ -59,6 +69,7 @@ const Header = () => {
                 className={({ isActive }) =>
                   isActive ? 'nav-link active' : 'nav-link'
                 }
+                onClick={() => setIsMenuOpen(false)}
               >
                 Calendar
               </NavLink>
@@ -70,6 +81,7 @@ const Header = () => {
                 className={({ isActive }) =>
                   isActive ? 'nav-link active' : 'nav-link'
                 }
+                onClick={() => setIsMenuOpen(false)}
               >
                 Contact
               </NavLink>
@@ -81,21 +93,44 @@ const Header = () => {
                 className={({ isActive }) =>
                   isActive ? 'nav-link active' : 'nav-link'
                 }
+                onClick={() => setIsMenuOpen(false)}
               >
                 Donate
               </NavLink>
             </li>
 
-            <li className="nav-item">
-              <NavLink
-                to="/admin/login"
-                className={({ isActive }) =>
-                  isActive ? 'nav-link active' : 'nav-link'
-                }
-              >
-                Login
-              </NavLink>
-            </li>
+            {isAuthenticated ? (
+              <>
+                <li className="nav-item">
+                  <NavLink
+                    to="/admin/dashboard"
+                    className={({ isActive }) =>
+                      isActive ? 'nav-link active' : 'nav-link'
+                    }
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    Dashboard
+                  </NavLink>
+                </li>
+                <li className="nav-item">
+                  <button onClick={handleLogout} className="nav-link logout-btn">
+                    Logout
+                  </button>
+                </li>
+              </>
+            ) : (
+              <li className="nav-item">
+                <NavLink
+                  to="/admin/login"
+                  className={({ isActive }) =>
+                    isActive ? 'nav-link active' : 'nav-link'
+                  }
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Login
+                </NavLink>
+              </li>
+            )}
           </ul>
         </nav>
 
