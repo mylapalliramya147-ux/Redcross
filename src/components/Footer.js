@@ -17,12 +17,12 @@ const Footer = () => {
               }}
             />
             <div className="footer-logo-text-wrapper">
-              <span className="footer-logo-text">APREDCROSS</span>
+              <span className="footer-logo-text">KAKINADA REDCROSS</span>
               <span className="footer-logo-subtitle">Government Of Andhra Pradesh</span>
             </div>
           </div>
           <p className="footer-description">
-            The AP Red Cross Society is a humanitarian organization dedicated to providing emergency assistance, 
+            The Kakinada Red Cross Society is a humanitarian organization dedicated to providing emergency assistance, 
             disaster relief, and education in communities across Andhra Pradesh. We work tirelessly to save lives 
             and support those in need.
           </p>
@@ -161,7 +161,7 @@ const Footer = () => {
       <div className="footer-bottom">
         <div className="footer-bottom-container">
           <p className="copyright">
-            © 2026 AP Red Cross Society. All Rights Reserved.
+            © 2026 Kakinada Red Cross Society. All Rights Reserved.
           </p>
           <div className="footer-bottom-links">
             <a href="/about">About</a>
