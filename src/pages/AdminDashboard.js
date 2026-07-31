@@ -8,7 +8,7 @@ const AdminDashboard = () => {
   return (
     <div className="admin-dashboard">
       <div className="dashboard-header">
-        <h1>AP Red Cross Admin Dashboard</h1>
+        <h1>Kakinada Redcross Admin Dashboard</h1>
         <div className="user-info">
           <span>Welcome, {user?.username}</span>
           <button onClick={logout} className="btn btn-danger">

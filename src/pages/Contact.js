@@ -61,7 +61,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3>Address</h3>
-                    <p>123 Red Cross Road, Hyderabad, Telangana 500001</p>
+                    <p>Kakinada Redcross Road, Kakinada, Andhra Pradesh 533001</p>
                   </div>
                 </div>
 
@@ -82,8 +82,8 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3>Email</h3>
-                    <p>info@apredcross.org</p>
-                    <p>support@apredcross.org</p>
+                    <p>info@kakinadaredcross.org</p>
+                    <p>support@kakinadaredcross.org</p>
                   </div>
                 </div>
 
@@ -173,16 +173,16 @@ const Contact = () => {
       <section className="map-section">
         <div className="map-placeholder">
           <h2>Our Location</h2>
-          <p>Find us at our headquarters in Hyderabad</p>
+          <p>Find us at our headquarters in Kakinada</p>
           <div className="map-wrapper">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.299!2d78.486673!3d17.412345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0000000000000000:0x0000000000000000!2sHyderabad%2C%20Telangana!5e0!3m2!1sen!2sin!4v1234567890!5m2!1sen!2sin"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.299!2d78.486673!3d17.412345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0000000000000000:0x0000000000000000!2sKakinada%2C%20Andhra%20Pradesh!5e0!3m2!1sen!2sin!4v1234567890!5m2!1sen!2sin"
               width="100%"
               height="400"
               style={{ border: 0 }}
               allowFullScreen=""
               loading="lazy"
-              title="AP Red Cross Location"
+              title="Kakinada Redcross Location"
             ></iframe>
           </div>
         </div>
