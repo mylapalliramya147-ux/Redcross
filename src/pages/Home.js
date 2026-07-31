@@ -85,6 +85,9 @@ const Home = () => {
                 </div>
                 <h3>{service.title}</h3>
                 <p>{service.description}</p>
+                <Link to="/services" className="service-link">
+                  Learn More <i className="fas fa-arrow-right"></i>
+                </Link>
               </div>
             ))}
           </div>

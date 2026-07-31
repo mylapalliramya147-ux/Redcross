@@ -15,12 +15,13 @@
   border: 1px solid var(--border);
   box-shadow: var(--shadow);
 
-  transition: all 0.35s ease;
+  transition: transform .35s ease, box-shadow .35s ease;
   cursor: pointer;
 }
 
 .day-card:hover {
-  transform: translateY(-4px);
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 18px 35px rgba(193, 18, 31, 0.18), 0 0 24px rgba(193, 18, 31, 0.14);
 }
 
 .icon-wrapper {
@@ -28,7 +29,7 @@
   height: 40px;
   min-width: 40px;
 
-  background: var(--red);
+  background: var(--primary);
   border-radius: 50%;
 
   display: flex;
@@ -37,11 +38,18 @@
 
   color: white;
 
-  box-shadow: 0 4px 10px rgba(211, 74, 58, 0.3);
+  box-shadow: 0 4px 10px rgba(193, 18, 31, 0.3);
+  transition: transform 0.3s ease;
 }
 
 .calendar-icon {
   font-size: 18px;
+  color: white;
+  transition: transform 0.3s ease;
+}
+
+.day-card:hover .calendar-icon {
+  transform: translateY(-2px) scale(1.08);
 }
 
 .day-content {
