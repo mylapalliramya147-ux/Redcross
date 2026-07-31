@@ -6,13 +6,14 @@
 /* Calendar Hero Section */
 .calendar-hero {
   position: relative;
-  height: 60vh;
-  min-height: 400px;
-  background: linear-gradient(135deg, var(--red) 0%, var(--red) 100%);
+  height: 70vh;
+  min-height: 500px;
+  background: linear-gradient(135deg, #8B0000 0%, #C1121F 100%);
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
+  overflow: hidden;
 }
 
 .calendar-hero::before {
@@ -25,7 +26,7 @@
   background-image: url('https://images.unsplash.com/photo-1506784064118-634b8a50b7f6?w=1920&h=1080&fit=crop');
   background-size: cover;
   background-position: center;
-  opacity: 0.15;
+  opacity: 0.12;
 }
 
 .calendar-hero-overlay {
@@ -34,30 +35,52 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.25);
 }
 
 .calendar-hero-content {
   position: relative;
   z-index: 1;
+  max-width: 900px;
+  padding: 0 40px;
+  animation: fadeUp 0.8s ease-out;
 }
 
 .calendar-hero-content h1 {
-  font-family: 'Cinzel', serif;
+  font-family: 'Playfair Display', serif;
   font-size: 3.5rem;
   color: #fff;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
+  font-weight: 700;
+  line-height: 1.2;
 }
 
 .calendar-hero-content p {
-  font-size: 1.5rem;
-  color: #f2ead5;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.3rem;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.7;
 }
 
 /* Events List Section */
 .events-list-section {
-  padding: 60px 20px;
-  background-color: #fff;
+  padding: 100px 0;
+  background: var(--background);
+}
+
+.events-list-section .section-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.events-list-section h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.75rem;
+  text-align: center;
+  color: var(--text);
+  margin-bottom: 60px;
+  line-height: 1.2;
 }
 
 /* Events Grid - spacing between cards */
@@ -74,60 +97,93 @@
   flex: 0 0 auto;
 }
 
-.events-list-section h2 {
-  font-family: 'Cinzel', serif;
-  font-size: 2.5rem;
-  text-align: center;
-  color: #333;
-  margin-bottom: 40px;
-  position: relative;
-}
-
-.events-list-section h2::after {
-  content: '';
-  display: block;
-  width: 80px;
-  height: 4px;
-  background: linear-gradient(135deg, var(--red) 0%, var(--red) 100%);
-  margin: 20px auto;
-  border-radius: 2px;
-}
-
 /* CTA Section */
 .calendar-cta {
-  background: linear-gradient(135deg, var(--red) 0%, var(--red) 100%);
-  padding: 60px 20px;
+  background: linear-gradient(135deg, #8B0000 0%, #C1121F 100%);
+  padding: 100px 0;
   text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.calendar-cta::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('https://images.unsplash.com/photo-1506784064118-634b8a50b7f6?w=1920&h=1080&fit=crop');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.08;
+}
+
+.calendar-cta-content {
+  position: relative;
+  z-index: 1;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 0 40px;
 }
 
 .calendar-cta h2 {
-  font-family: 'Cinzel', serif;
-  font-size: 2.5rem;
+  font-family: 'Playfair Display', serif;
+  font-size: 2.75rem;
   color: #fff;
   margin-bottom: 20px;
+  line-height: 1.2;
 }
 
 .calendar-cta p {
-  color: #f2ead5;
+  font-family: 'Poppins', sans-serif;
+  color: rgba(255, 255, 255, 0.9);
   font-size: 1.2rem;
-  margin-bottom: 30px;
+  margin-bottom: 32px;
+  line-height: 1.7;
 }
 
 /* Responsive Design */
 @media screen and (max-width: 768px) {
+  .calendar-hero {
+    min-height: 400px;
+  }
+
   .calendar-hero-content h1 {
     font-size: 2.5rem;
   }
 
-  .events-grid {
-    grid-template-columns: 1fr;
-    gap: 20px;
+  .calendar-hero-content p {
+    font-size: 1.1rem;
+  }
+
+  .events-list-section {
+    padding: 80px 0;
+  }
+
+  .section-container {
+    padding: 0 24px;
   }
 
   .events-list-section h2 {
+    font-size: 2.25rem;
+  }
+
+  .calendar-cta {
+    padding: 80px 0;
+  }
+
+  .calendar-cta h2 {
+    font-size: 2.25rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .calendar-hero-content h1 {
     font-size: 2rem;
   }
 
+  .events-list-section h2,
   .calendar-cta h2 {
     font-size: 2rem;
   }

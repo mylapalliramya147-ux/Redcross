@@ -12,16 +12,15 @@
   background: #fff;
   border-radius: 12px;
 
-  border: 1px solid #f3dada;
-   box-shadow: 0 4px 12px rgba(211, 74, 58, 0.08);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
 
-   transition: all 0.3s ease;
-   cursor: pointer;
- }
+  transition: all 0.35s ease;
+  cursor: pointer;
+}
 
- .day-card:hover {
-   transform: translateY(-2px);
-   box-shadow: 0 6px 16px rgba(211, 74, 58, 0.15);
+.day-card:hover {
+  transform: translateY(-4px);
 }
 
 .icon-wrapper {

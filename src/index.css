@@ -1,4 +1,18 @@
 /* Index CSS - Global Styles */
+:root {
+  --primary: #C1121F;
+  --primary-dark: #8B0000;
+  --background: #F8FAFC;
+  --surface: #FFFFFF;
+  --text: #1F2937;
+  --text-light: #6B7280;
+  --border: #E5E7EB;
+  --gold: #D4AF37;
+  --success: #16A34A;
+  --shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  --shadow-hover: 0 15px 35px rgba(193, 18, 31, 0.22), 0 0 25px rgba(193, 18, 31, 0.18);
+}
+
 html, body, #root {
   height: 100%;
   margin: 0;
@@ -14,10 +28,21 @@ html {
   box-sizing: border-box;
 }
 
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--background);
+  color: var(--text);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 /* Typography Styles */
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
   font-weight: normal;
+  font-family: 'Playfair Display', serif;
+  line-height: 1.2;
 }
 
 p {
@@ -27,6 +52,7 @@ p {
 ul, ol {
   margin: 0;
   padding: 0;
+  list-style: none;
 }
 
 a {
@@ -38,10 +64,24 @@ a {
 img {
   max-width: 100%;
   height: auto;
+  display: block;
 }
 
 /* Button Reset */
 button {
   font-family: inherit;
   cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+/* Accessibility */
+:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+/* Smooth transitions */
+a, button {
+  transition: all 0.3s ease;
 }

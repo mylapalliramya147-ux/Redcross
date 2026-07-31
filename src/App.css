@@ -6,22 +6,13 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Roboto', 'Helvetica Neue', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 16px;
-  line-height: 1.5;
-  color: var(--text, #222);
-  background-color: #fff;
+  line-height: 1.6;
+  color: var(--text);
+  background-color: var(--background);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-/* CSS Variables */
-:root {
-  --red: #d34a3a;
-  --cream: #f2ead5;
-  --text: #222;
-  --muted: #777;
-  --border: #e6e1d6;
 }
 
 /* App Container */
@@ -35,96 +26,85 @@ body {
   flex: 1;
 }
 
-/* Global Button Styles */
-.btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  padding: 15px 30px;
-  border-radius: 30px;
-  font-family: 'Roboto', sans-serif;
-  font-weight: 500;
-  font-size: 1rem;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  cursor: pointer;
-  border: none;
-}
-
-.btn-primary {
-   background: linear-gradient(135deg, var(--red) 0%, var(--red) 100%);
-   color: #fff;
- }
-
- .btn-primary:hover {
-   transform: translateY(-3px);
-   box-shadow: 0 4px 15px rgba(211, 74, 58, 0.3);
- }
-
- .btn-outline {
-   background: transparent;
-   color: var(--red);
-   border: 2px solid var(--red);
- }
-
- .btn-outline:hover {
-   background: var(--red);
-   color: #fff;
-   transform: translateY(-3px);
- }
-
- .btn-danger {
-   background: #dc2626;
-   color: white;
- }
-
- .btn-danger:hover {
-   background: #b91c1c;
-   transform: translateY(-3px);
-   box-shadow: 0 4px 15px rgba(220, 38, 38, 0.3);
- }
-
-/* Section Container */
-.section-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-/* Loading Styles */
-.loading-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  gap: 20px;
-}
-
-.loading-spinner {
-  width: 50px;
-  height: 50px;
-  border: 4px solid var(--cream);
-  border-top-color: var(--red);
-  border-radius: 50%;
-  animation: spin 1s linear infinite;
-}
-
-@keyframes spin {
+/* Animations */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
   to {
-    transform: rotate(360deg);
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
-.loading-container p {
-  color: var(--muted);
-  font-size: 1.1rem;
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
 }
 
-/* Responsive Design */
-@media screen and (max-width: 768px) {
-  .section-container {
-    padding: 0 15px;
-  }
+/* Responsive Images */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Focus States */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+/* Global Button Hover Effects */
+.btn:hover,
+button:hover {
+  box-shadow: 0 0 20px rgba(193, 18, 31, 0.35);
+  transform: translateY(-2px);
+}
+
+/* Global Card Hover Effects */
+.service-card,
+.service-card-detailed,
+.way-card,
+.impact-card,
+.team-card,
+.stat-card,
+.section-card,
+.quick-action-card,
+.requirement-item,
+.contact-item,
+.day-card {
+  transition: all 0.35s ease;
+}
+
+.service-card:hover,
+.service-card-detailed:hover,
+.way-card:hover,
+.impact-card:hover,
+.team-card:hover,
+.stat-card:hover,
+.section-card:hover,
+.quick-action-card:hover,
+.requirement-item:hover {
+  box-shadow: var(--shadow-hover);
+  transform: translateY(-8px);
+}
+
+.day-card:hover {
+  box-shadow: var(--shadow-hover);
+  transform: translateY(-4px);
+}
+
+/* Social Links Hover */
+.social-link:hover {
+  box-shadow: 0 0 20px rgba(193, 18, 31, 0.4);
+  transform: translateY(-3px);
 }

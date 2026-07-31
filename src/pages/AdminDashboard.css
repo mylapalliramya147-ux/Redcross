@@ -1,24 +1,27 @@
 /* Admin Dashboard Styles */
 .admin-dashboard {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
-  padding: 40px 20px;
-  min-height: calc(100vh - 80px);
+  padding: 100px 40px;
+  min-height: 100vh;
+  background: var(--background);
 }
 
 .dashboard-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 40px;
-  padding-bottom: 20px;
-  border-bottom: 2px solid var(--border);
+  margin-bottom: 60px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--border);
 }
 
 .dashboard-header h1 {
   color: var(--text);
-  font-size: 2rem;
-  font-weight: 600;
+  font-size: 2.5rem;
+  font-weight: 700;
+  font-family: 'Playfair Display', serif;
+  line-height: 1.2;
 }
 
 .user-info {
@@ -28,74 +31,83 @@
 }
 
 .user-info span {
-  color: var(--muted);
-  font-size: 0.95rem;
+  color: var(--text-light);
+  font-size: 1rem;
+  font-weight: 500;
 }
 
 .dashboard-content {
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 40px;
 }
 
 /* Stats Grid */
 .dashboard-stats {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
 }
 
 .stat-card {
-  background: white;
-  padding: 25px;
-  border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  border-left: 4px solid var(--red);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: var(--surface);
+  padding: 32px;
+  border-radius: 18px;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border);
+  transition: all 0.35s ease;
 }
 
 .stat-card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transform: translateY(-6px);
 }
 
 .stat-card h3 {
-  color: var(--muted);
-  font-size: 0.95rem;
-  font-weight: 500;
-  margin: 0 0 10px;
+  color: var(--text-light);
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin: 0 0 12px;
   text-transform: uppercase;
-  letter-spacing: 0.5px;
+  letter-spacing: 1px;
+  font-family: 'Poppins', sans-serif;
 }
 
 .stat-number {
-  color: var(--text);
-  font-size: 2rem;
+  color: var(--primary);
+  font-size: 2.5rem;
   font-weight: 700;
   margin: 0;
+  font-family: 'Playfair Display', serif;
 }
 
 /* Dashboard Sections */
 .dashboard-sections {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 24px;
 }
 
 .section-card {
-  background: white;
-  padding: 25px;
-  border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  background: var(--surface);
+  padding: 32px;
+  border-radius: 18px;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border);
+  transition: all 0.35s ease;
+}
+
+.section-card:hover {
+  transform: translateY(-4px);
 }
 
 .section-card h2 {
   color: var(--text);
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   font-weight: 600;
-  margin: 0 0 20px;
-  padding-bottom: 10px;
+  margin: 0 0 24px;
+  padding-bottom: 16px;
   border-bottom: 1px solid var(--border);
+  font-family: 'Playfair Display', serif;
 }
 
 /* Action Buttons */
@@ -110,6 +122,8 @@
   text-align: center;
   padding: 14px;
   font-size: 1rem;
+  border-radius: 50px;
+  font-weight: 600;
 }
 
 /* Activity List */
@@ -120,30 +134,115 @@
 }
 
 .activity-list li {
-  padding: 12px 15px;
-  margin-bottom: 10px;
-  background: var(--cream);
-  border-radius: 8px;
+  padding: 16px 20px;
+  margin-bottom: 12px;
+  background: var(--background);
+  border-radius: 12px;
   color: var(--text);
   font-size: 0.95rem;
-  border-left: 3px solid var(--red);
-  transition: background 0.3s ease;
+  border-left: 4px solid var(--primary);
+  transition: all 0.3s ease;
+  font-weight: 500;
 }
 
 .activity-list li:hover {
-  background: #f5ebe0;
+  background: rgba(193, 18, 31, 0.05);
+  transform: translateX(4px);
+}
+
+/* Quick Actions Section */
+.quick-actions {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+}
+
+.quick-action-card {
+  background: var(--surface);
+  padding: 24px;
+  border-radius: 18px;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border);
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.35s ease;
+  text-decoration: none;
+}
+
+.quick-action-card:hover {
+  transform: translateY(-4px);
+}
+
+.quick-action-icon {
+  width: 56px;
+  height: 56px;
+  background: var(--primary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 16px;
+  transition: transform 0.3s ease;
+}
+
+.quick-action-card:hover .quick-action-icon {
+  transform: scale(1.1) rotate(5deg);
+}
+
+.quick-action-icon svg {
+  width: 28px;
+  height: 28px;
+  color: white;
+}
+
+.quick-action-card h3 {
+  color: var(--text);
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Logout Button */
+.logout-btn-admin {
+  background: transparent;
+  color: var(--text);
+  border: 2px solid var(--border);
+  padding: 10px 24px;
+  border-radius: 50px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Poppins', sans-serif;
+}
+
+.logout-btn-admin:hover {
+  color: var(--primary);
+  border-color: var(--primary);
+  background: rgba(193, 18, 31, 0.04);
 }
 
 /* Responsive Design */
+@media screen and (max-width: 1024px) {
+  .admin-dashboard {
+    padding: 80px 24px;
+  }
+}
+
 @media screen and (max-width: 768px) {
+  .admin-dashboard {
+    padding: 60px 20px;
+  }
+
   .dashboard-header {
     flex-direction: column;
     gap: 20px;
     text-align: center;
+    margin-bottom: 40px;
   }
 
   .dashboard-header h1 {
-    font-size: 1.5rem;
+    font-size: 2rem;
   }
 
   .dashboard-stats {
@@ -151,25 +250,37 @@
   }
 
   .stat-number {
-    font-size: 1.5rem;
+    font-size: 2rem;
   }
-}
 
-@media screen and (max-width: 480px) {
-  .admin-dashboard {
-    padding: 20px 15px;
+  .dashboard-sections {
+    grid-template-columns: 1fr;
   }
 
   .user-info {
     flex-direction: column;
     width: 100%;
   }
+}
 
-  .user-info button {
-    width: 100%;
+@media screen and (max-width: 480px) {
+  .admin-dashboard {
+    padding: 40px 16px;
   }
 
-  .dashboard-sections {
+  .dashboard-header h1 {
+    font-size: 1.75rem;
+  }
+
+  .section-card {
+    padding: 24px 20px;
+  }
+
+  .stat-card {
+    padding: 24px;
+  }
+
+  .quick-actions {
     grid-template-columns: 1fr;
   }
 }
