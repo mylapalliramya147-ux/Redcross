@@ -1,18 +1,23 @@
-/* Services Page Styles */
+/* Modern Services Page Styles */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Cinzel:wght@500;600;700&display=swap');
+
 .services {
+  font-family: 'Inter', sans-serif;
   min-height: 100vh;
+  background: #fafafa;
 }
 
 /* Services Hero Section */
 .services-hero {
   position: relative;
-  height: 60vh;
-  min-height: 400px;
-  background: linear-gradient(135deg, #d34a3a 0%, #d34a3a 100%);
+  height: 70vh;
+  min-height: 500px;
+  background: linear-gradient(135deg, #c0392b 0%, #e74c3c 100%);
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
+  overflow: hidden;
 }
 
 .services-hero::before {
@@ -25,7 +30,7 @@
   background-image: url('https://images.unsplash.com/photo-1559971442-5cf47c18b8d2?w=1920&h=1080&fit=crop');
   background-size: cover;
   background-position: center;
-  opacity: 0.15;
+  opacity: 0.12;
 }
 
 .services-hero-overlay {
@@ -34,59 +39,100 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.3);
+  background: linear-gradient(45deg, rgba(192, 57, 42, 0.9) 0%, rgba(231, 76, 60, 0.8) 100%);
+  z-index: 1;
 }
 
 .services-hero-content {
   position: relative;
-  z-index: 1;
+  z-index: 2;
+  max-width: 800px;
+  padding: 0 20px;
+  animation: fadeInUp 1s ease;
 }
 
 .services-hero-content h1 {
   font-family: 'Cinzel', serif;
-  font-size: 3.5rem;
+  font-size: 3.8rem;
   color: #fff;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
+  letter-spacing: 1px;
 }
 
 .services-hero-content p {
   font-size: 1.5rem;
-  color: #f2ead5;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 300;
 }
 
 /* Services Grid Section */
 .services-grid-section {
-  padding: 80px 20px;
-  background-color: #fff;
+  padding: 100px 20px;
+  background: linear-gradient(135deg, #fff5f5 0%, #fff 100%);
 }
 
 .services-grid-section h2 {
   font-family: 'Cinzel', serif;
-  font-size: 2.5rem;
+  font-size: 2.8rem;
   text-align: center;
-  color: #333;
-  margin-bottom: 50px;
+  color: #2c3e50;
+  margin-bottom: 60px;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.services-grid-section h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: var(--red-gradient);
+  border-radius: 2px;
 }
 
 .services-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .service-card-detailed {
-  background: #f9f9f9;
-  padding: 40px 30px;
-  border-radius: 16px;
-  box-shadow: var(--mat-sys-level1, 0px 2px 1px -1px rgba(0, 0, 0, 0.2));
-  transition: all 0.3s ease;
-  border: 1px solid #e6e1d6;
+  background: #fff;
+  padding: 45px 35px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid #eee;
+  position: relative;
+  overflow: hidden;
+}
+
+.service-card-detailed::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--red-gradient);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
 }
 
 .service-card-detailed:hover {
-  transform: translateY(-10px);
-  box-shadow: var(--mat-sys-level3, 0px 3px 5px -1px rgba(0, 0, 0, 0.2));
-  border-color: #d34a3a;
+  transform: translateY(-15px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+  border-color: #e74c3c;
+}
+
+.service-card-detailed:hover::before {
+  transform: scaleX(1);
 }
 
 .service-header {
@@ -97,31 +143,34 @@
 }
 
 .service-icon-large {
-  width: 70px;
-  height: 70px;
-  background: linear-gradient(135deg, #d34a3a 0%, #d34a3a 100%);
+  width: 80px;
+  height: 80px;
+  background: var(--red-gradient);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 8px 20px rgba(231, 76, 60, 0.3);
 }
 
 .service-icon-large i {
-  font-size: 1.8rem;
+  font-size: 2rem;
   color: #fff;
 }
 
 .service-card-detailed h3 {
   font-family: 'Cinzel', serif;
-  font-size: 1.5rem;
-  color: #333;
+  font-size: 1.6rem;
+  color: #2c3e50;
   margin: 0;
 }
 
 .service-description {
-  color: #666;
-  line-height: 1.6;
-  margin-bottom: 20px;
+  color: #555;
+  line-height: 1.7;
+  margin-bottom: 25px;
+  font-size: 1.05rem;
 }
 
 .service-features {
@@ -133,33 +182,48 @@
 .service-features li {
   display: flex;
   align-items: center;
-  gap: 10px;
-  margin-bottom: 10px;
+  gap: 12px;
+  margin-bottom: 12px;
   color: #555;
+  padding: 8px 0;
 }
 
 .service-features i {
-  color: #d34a3a;
-  font-size: 0.9rem;
+  color: #e74c3c;
+  font-size: 1rem;
 }
 
 /* How We Work Section */
 .how-we-work {
-  padding: 80px 20px;
-  background-color: #f2ead5;
+  padding: 100px 20px;
+  background: #fff;
 }
 
 .how-we-work h2 {
   font-family: 'Cinzel', serif;
-  font-size: 2.5rem;
+  font-size: 2.8rem;
   text-align: center;
-  color: #333;
-  margin-bottom: 50px;
+  color: #2c3e50;
+  margin-bottom: 60px;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.how-we-work h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: var(--red-gradient);
+  border-radius: 2px;
 }
 
 .work-steps {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 30px;
   max-width: 1000px;
   margin: 0 auto;
@@ -167,13 +231,23 @@
 
 .work-step {
   text-align: center;
-  padding: 30px 20px;
+  padding: 40px 25px;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  border: 1px solid #eee;
+  transition: all 0.3s ease;
+}
+
+.work-step:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
 }
 
 .step-number {
-  width: 60px;
-  height: 60px;
-  background: linear-gradient(135deg, #d34a3a 0%, #d34a3a 100%);
+  width: 70px;
+  height: 70px;
+  background: var(--red-gradient);
   color: #fff;
   border-radius: 50%;
   display: flex;
@@ -182,47 +256,109 @@
   font-size: 1.5rem;
   font-weight: 700;
   margin: 0 auto 20px;
+  box-shadow: 0 5px 15px rgba(231, 76, 60, 0.3);
 }
 
 .work-step h3 {
   font-family: 'Cinzel', serif;
-  color: #333;
-  margin-bottom: 10px;
+  color: #2c3e50;
+  margin-bottom: 12px;
+  font-size: 1.3rem;
 }
 
 .work-step p {
-  color: #555;
+  color: #666;
   line-height: 1.6;
 }
 
 /* Services CTA */
 .services-cta {
-  background: linear-gradient(135deg, #d34a3a 0%, #d34a3a 100%);
-  padding: 80px 20px;
+  background: linear-gradient(135deg, #c0392b 0%, #e74c3c 100%);
+  padding: 100px 20px;
   text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.services-cta::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+  z-index: 1;
+}
+
+.services-cta-content {
+  position: relative;
+  z-index: 2;
+  max-width: 700px;
+  margin: 0 auto;
 }
 
 .services-cta h2 {
   font-family: 'Cinzel', serif;
-  font-size: 2.5rem;
+  font-size: 2.8rem;
   color: #fff;
   margin-bottom: 20px;
 }
 
 .services-cta p {
-  color: #f2ead5;
-  font-size: 1.2rem;
-  margin-bottom: 30px;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.25rem;
+  margin-bottom: 35px;
+  line-height: 1.6;
 }
 
 /* Responsive Design */
 @media screen and (max-width: 768px) {
+  .services-hero {
+    height: 60vh;
+    min-height: 400px;
+  }
+
   .services-hero-content h1 {
-    font-size: 2.5rem;
+    font-size: 2.8rem;
+  }
+
+  .services-grid-section,
+  .how-we-work,
+  .services-cta {
+    padding: 60px 20px;
   }
 
   .services-grid-section h2,
-  .how-we-work h2 {
-    font-size: 2rem;
+  .how-we-work h2,
+  .services-cta h2 {
+    font-size: 2.2rem;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .work-steps {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .services-hero-content h1 {
+    font-size: 2.2rem;
+  }
+
+  .services-hero-content p {
+    font-size: 1.2rem;
+  }
+
+  .service-header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .service-card-detailed {
+    padding: 35px 25px;
   }
 }
