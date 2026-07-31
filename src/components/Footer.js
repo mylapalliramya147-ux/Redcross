@@ -17,12 +17,11 @@ const Footer = () => {
               }}
             />
             <div className="footer-logo-text-wrapper">
-              <span className="footer-logo-text">KAKINADA REDCROSS</span>
-              <span className="footer-logo-subtitle">Government Of Andhra Pradesh</span>
+            <span className="footer-logo-text">APREDCROSS</span>
             </div>
           </div>
           <p className="footer-description">
-            The Kakinada Red Cross Society is a humanitarian organization dedicated to providing emergency assistance, 
+            The AP Red Cross Society is a humanitarian organization dedicated to providing emergency assistance, 
             disaster relief, and education in communities across Andhra Pradesh. We work tirelessly to save lives 
             and support those in need.
           </p>
@@ -82,9 +81,9 @@ const Footer = () => {
                 </a>
               </li>
               <li>
-                <a href="/donate" className="footer-link">
+              <a href="/donate" className="footer-link">
                   <i className="fas fa-chevron-right"></i>
-                  Donate
+                  Donate Now
                 </a>
               </li>
             </ul>

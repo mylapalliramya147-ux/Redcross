@@ -23,7 +23,7 @@
   padding: 0 40px;
   display: grid;
   grid-template-columns: 2fr 1fr 1fr 1.5fr;
-  gap: 60px;
+  gap: 40px;
   position: relative;
   z-index: 1;
 }
@@ -41,11 +41,12 @@
 }
 
 .footer-logo-img {
-  height: 50px;
-  width: 50px;
+  height: 60px;
+  width: 60px;
   border-radius: 50%;
   object-fit: contain;
   filter: grayscale(0.2);
+  flex-shrink: 0;
 }
 
 .footer-logo-text-wrapper {
@@ -55,54 +56,44 @@
 }
 
 .footer-logo-text {
-  font-family: "Algerian", serif;
+  font-family: 'Algerian', 'Times New Roman', serif;
   font-weight: bold;
-  font-size: 1.75rem;
+  font-size: 1.8rem;
   color: #fff;
   letter-spacing: 0.5px;
   line-height: 1.1;
 }
 
-.footer-logo-subtitle {
-  font-family: 'Poppins', sans-serif;
-  font-size: 0.75rem;
-  color: rgba(255, 255, 255, 0.7);
-  letter-spacing: 0.5px;
-  font-weight: 400;
-}
-
 .footer-description {
   line-height: 1.8;
   color: #B7BCC5;
-  margin-bottom: 28px;
+  margin-bottom: 24px;
   font-size: 0.95rem;
 }
 
 .social-links {
   display: flex;
-  gap: 12px;
+  gap: 16px;
 }
 
 .social-link {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 44px;
-  height: 44px;
-  background-color: rgba(255, 255, 255, 0.05);
+  width: 40px;
+  height: 40px;
+  background-color: #3a3f47;
   color: #fff;
   border-radius: 50%;
   text-decoration: none;
   transition: all 0.3s ease;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 1.1rem;
 }
 
 .social-link:hover {
   background-color: #C8102E;
   color: #fff;
   transform: translateY(-3px);
-  box-shadow: 0 8px 20px rgba(200, 16, 46, 0.4);
-  border-color: #C8102E;
 }
 
 /* Footer Headings */
@@ -111,15 +102,16 @@
   font-size: 2rem;
   font-weight: 700;
   color: #C8102E;
-  margin-bottom: 12px;
+  margin-bottom: 8px;
   letter-spacing: 0.5px;
+  text-transform: capitalize;
 }
 
 .footer-heading-underline {
   width: 50px;
   height: 3px;
-  background: linear-gradient(90deg, #C8102E, #ff3d5c);
-  margin-bottom: 32px;
+  background: #C8102E;
+  margin-bottom: 28px;
   border-radius: 2px;
 }
 
@@ -163,26 +155,26 @@
 .footer-contact {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 18px;
 }
 
 .contact-item {
   display: flex;
   align-items: flex-start;
-  gap: 14px;
+  gap: 12px;
   color: #fff;
   line-height: 1.5;
 }
 
 .contact-icon {
-  width: 20px;
+  width: 24px;
   flex-shrink: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #D32F2F;
-  font-size: 1.1rem;
-  margin-top: 3px;
+  color: #C8102E;
+  font-size: 1.2rem;
+  margin-top: 2px;
 }
 
 .contact-text {
@@ -194,10 +186,10 @@
 
 .contact-label {
   margin: 0;
-  font-size: 1rem;
+  font-size: 0.95rem;
   font-weight: 500;
   color: #B7BCC5;
-  line-height: 1.4;
+  line-height: 1.5;
   letter-spacing: 0.3px;
 }
 
@@ -228,40 +220,40 @@
 
 .newsletter-form {
   display: flex;
-  gap: 10px;
-  margin-bottom: 20px;
+  gap: 0;
+  margin-bottom: 24px;
+  height: 50px;
 }
 
 .newsletter-input {
   flex: 1;
   padding: 14px 20px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  background: rgba(255, 255, 255, 0.05);
+  border: none;
+  background: rgba(255, 255, 255, 0.08);
   color: #fff;
-  border-radius: 50px;
+  border-radius: 8px 0 0 8px;
   font-family: 'Poppins', sans-serif;
   font-size: 0.95rem;
   transition: all 0.3s ease;
   outline: none;
+  min-width: 0;
 }
 
 .newsletter-input::placeholder {
-  color: rgba(255, 255, 255, 0.4);
+  color: rgba(255, 255, 255, 0.5);
 }
 
 .newsletter-input:focus {
-  border-color: #C8102E;
-  background: rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.12);
 }
 
 .newsletter-btn {
-  padding: 14px 24px;
-  background: linear-gradient(135deg, #C8102E 0%, #ff3d5c 100%);
+  padding: 14px 20px;
+  background: #C8102E;
   color: #fff;
   border: none;
-  border-radius: 50px;
-  font-family: 'Poppins', sans-serif;
-  font-weight: 600;
+  border-radius: 0 8px 8px 0;
+  font-size: 1.1rem;
   cursor: pointer;
   transition: all 0.3s ease;
   white-space: nowrap;
@@ -271,14 +263,13 @@
 }
 
 .newsletter-btn:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 20px rgba(200, 16, 46, 0.4);
+  background: #ff3d5c;
 }
 
 /* Security Badges */
 .security-badges {
   display: flex;
-  gap: 10px;
+  gap: 12px;
   flex-wrap: wrap;
 }
 
@@ -287,8 +278,8 @@
   align-items: center;
   gap: 6px;
   padding: 8px 14px;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: 50px;
   color: #B7BCC5;
   font-size: 0.85rem;
