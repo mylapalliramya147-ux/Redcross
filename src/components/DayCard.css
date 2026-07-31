@@ -52,7 +52,7 @@
 
 .day-content h3 {
   margin: 0;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 600;
   color: #1d1d1d;
   white-space: nowrap;
@@ -62,7 +62,7 @@
 
 .day-content p {
   margin-top: 4px;
-  font-size: 14px;
+  font-size: 16px;
   color: #555;
   font-weight: 400;
   white-space: nowrap;
