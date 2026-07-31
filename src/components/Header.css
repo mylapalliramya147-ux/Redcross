@@ -53,11 +53,7 @@
 .logo-subtitle {
   font-family: 'Poppins', sans-serif;
   font-size: 0.75rem;
-<<<<<<< HEAD
-  color: rgba(0, 0, 0, 1);
-=======
   color: #000000;
->>>>>>> 199538b4f9082f43b9140c613132f3727e159a96
   letter-spacing: 0.5px;
   font-weight: 400;
 }
@@ -299,7 +295,6 @@
 
   .nav-link.active {
     background: var(--primary);
-    color: white;
   }
 
   .nav-divider {

@@ -92,55 +92,64 @@ const Footer = () => {
 
         {/* Column 3 - Contact Us */}
         <div className="footer-section">
-          <h3 className="footer-heading">CONTACT US</h3>
+          <h3 className="footer-heading contact-heading">CONTACT US</h3>
           <div className="footer-heading-underline"></div>
           <div className="footer-contact">
+            {/* Address */}
             <div className="contact-item">
               <div className="contact-icon">
                 <i className="fas fa-map-marker-alt"></i>
               </div>
               <div className="contact-text">
-                <p className="contact-label">123 Red Cross Road, Hyderabad, Telangana 500001</p>
+                <p className="contact-detail">Andhra Pradesh Red Cross Society<br />Red Cross Bhavan,<br />Governorpet,<br />Vijayawada - 520002</p>
               </div>
             </div>
+            {/* Phone */}
             <div className="contact-item">
               <div className="contact-icon">
                 <i className="fas fa-phone-alt"></i>
               </div>
               <div className="contact-text">
-                <p className="contact-label">+91 1234 567 890</p>
+                <a href="tel:+919876543210" className="contact-detail clickable">+91 XXXXX XXXXX</a>
               </div>
             </div>
+            {/* Emergency Phone */}
             <div className="contact-item">
               <div className="contact-icon">
                 <i className="fas fa-phone-alt"></i>
               </div>
               <div className="contact-text">
-                <p className="contact-label">+91 9876 543 210 (Emergency)</p>
+                <a href="tel:+919876543210" className="contact-detail clickable">
+                  +91 XXXXX XXXXX<br />
+                  <span className="emergency-note">(Emergency)</span>
+                </a>
               </div>
             </div>
+            {/* Email */}
             <div className="contact-item">
               <div className="contact-icon">
                 <i className="fas fa-envelope"></i>
               </div>
               <div className="contact-text">
-                <p className="contact-label">info@apredcross.org</p>
+                <a href="mailto:info@apredcross.org" className="contact-detail clickable">info@apredcross.org</a>
               </div>
             </div>
+            {/* Office Hours */}
             <div className="contact-item">
               <div className="contact-icon">
                 <i className="fas fa-clock"></i>
               </div>
               <div className="contact-text">
-                <p className="contact-label">Mon - Fri: 9:00 AM - 6:00 PM</p>
+                <p className="contact-detail">Mon - Fri: 9:00 AM - 6:00 PM</p>
               </div>
             </div>
+            {/* Emergency Service Hours */}
             <div className="contact-item">
               <div className="contact-icon">
                 <i className="fas fa-clock"></i>
               </div>
               <div className="contact-text">
-                <p className="contact-label">Emergency: 24/7</p>
+                <p className="contact-detail">Emergency: 24/7</p>
               </div>
             </div>
           </div>

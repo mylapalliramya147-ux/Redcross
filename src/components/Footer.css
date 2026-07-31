@@ -151,63 +151,65 @@
   transform: translateX(3px);
 }
 
+/* CONTACT US heading - uppercase to match reference */
+.footer-heading.contact-heading {
+  text-transform: uppercase;
+}
+
 /* Contact Us */
 .footer-contact {
   display: flex;
   flex-direction: column;
-  gap: 18px;
+  gap: 24px;
 }
 
 .contact-item {
   display: flex;
-  align-items: flex-start;
-  gap: 12px;
+  align-items: center;
+  gap: 16px;
   color: #fff;
-  line-height: 1.5;
 }
 
 .contact-icon {
-  width: 24px;
+  width: 40px;
   flex-shrink: 0;
   display: flex;
   align-items: center;
   justify-content: center;
   color: #C8102E;
-  font-size: 1.2rem;
-  margin-top: 2px;
+  font-size: 1.25rem;
 }
 
 .contact-text {
   flex: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
-}
-
-.contact-label {
-  margin: 0;
-  font-size: 0.95rem;
-  font-weight: 500;
-  color: #B7BCC5;
-  line-height: 1.5;
-  letter-spacing: 0.3px;
 }
 
 .contact-detail {
   margin: 0;
   font-size: 0.95rem;
-  font-weight: 400;
-  color: #B7BCC5;
+  font-weight: 500;
+  color: #fff;
   line-height: 1.5;
+  letter-spacing: 0.3px;
   transition: all 0.3s ease;
+  display: block;
 }
 
 .contact-detail.clickable {
+  color: #fff;
   cursor: pointer;
 }
 
 .contact-detail.clickable:hover {
   color: #C8102E;
+}
+
+/* Emergency note - secondary line under emergency phone */
+.emergency-note {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 400;
+  opacity: 0.85;
 }
 
 /* Newsletter */
@@ -369,6 +371,16 @@
   .footer-bottom-links {
     flex-wrap: wrap;
     justify-content: center;
+  }
+
+  /* Contact Us - tablet */
+  .contact-item {
+    gap: 14px;
+  }
+
+  .contact-icon {
+    width: 36px;
+    font-size: 1.15rem;
   }
 }
 
