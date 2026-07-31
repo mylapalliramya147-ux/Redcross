@@ -98,24 +98,28 @@ const Footer = () => {
           <div className="footer-contact">
             <div className="contact-item">
               <i className="fas fa-map-marker-alt"></i>
-              <p>Kakinada Redcross Society<br />Andhra Pradesh, India</p>
+              <div className="contact-info">
+                <p className="contact-primary">Kakinada Red Cross Society, Andhra Pradesh, India</p>
+              </div>
             </div>
             <div className="contact-item">
               <i className="fas fa-phone-alt"></i>
-              <div className="contact-text">
-                <p>Office: +91-XXX-XXXX-XXX</p>
-                <p>Emergency: 108</p>
+              <div className="contact-info">
+                <p className="contact-primary">Office: +91-XXX-XXXX-XXX</p>
+                <p className="contact-secondary">Emergency: 108</p>
               </div>
             </div>
             <div className="contact-item">
               <i className="fas fa-envelope"></i>
-              <p>info@kakinadaredcross.org</p>
+              <div className="contact-info">
+                <p className="contact-primary">info@kakinadaredcross.org</p>
+              </div>
             </div>
             <div className="contact-item">
               <i className="fas fa-clock"></i>
-              <div className="contact-text">
-                <p>Office Hours: 9 AM - 6 PM</p>
-                <p>Emergency: 24 Hours</p>
+              <div className="contact-info">
+                <p className="contact-primary">Office Hours: 9:00 AM – 6:00 PM</p>
+                <p className="contact-secondary">Emergency: 24 Hours</p>
               </div>
             </div>
           </div>

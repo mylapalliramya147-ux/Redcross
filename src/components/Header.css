@@ -10,9 +10,9 @@
 }
 
 .header-container {
-  max-width: 1400px;
+  width: 100%;
   height: 80px;
-  margin: auto;
+  margin: 0;
   padding: 0 30px;
   display: flex;
   justify-content: space-between;
@@ -24,6 +24,7 @@
   align-items: center;
   text-decoration: none;
   gap: 14px;
+  margin-left: -10px;
 }
 
 .logo {
@@ -51,7 +52,7 @@
 .logo-subtitle {
   font-family: 'Poppins', sans-serif;
   font-size: 0.75rem;
-  color: rgba(0, 0, 0, 0.6);
+  color: rgba(0, 0, 0, 1);
   letter-spacing: 0.5px;
   font-weight: 400;
 }
