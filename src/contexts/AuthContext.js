@@ -33,8 +33,8 @@ export const AuthProvider = ({ children }) => {
 
   const login = (username, password) => {
     // Demo credentials - in production, this would be an API call
-    // For demo: username = "admin", password = "apredcross2024"
-    if (username === 'admin' && password === 'apredcross2024') {
+    // For demo: username = "admin", password = "kakinadaredcross2024"
+    if (username === 'admin' && password === 'kakinadaredcross2024') {
       const userData = {
         username: 'admin',
         role: 'administrator',

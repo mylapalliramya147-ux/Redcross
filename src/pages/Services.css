@@ -79,12 +79,20 @@
   margin-bottom: 60px;
 }
 
-.section-header h2 {
+.section-heading {
   font-family: 'Playfair Display', serif;
-  font-size: 2.75rem;
-  color: var(--text);
-  margin-bottom: 16px;
+  font-size: 3rem;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 20px;
+  letter-spacing: 0.5px;
   line-height: 1.2;
+}
+
+.fade-up {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeUp 0.8s ease-out forwards;
 }
 
 .section-header p {
@@ -108,6 +116,8 @@
   box-shadow: var(--shadow);
   transition: all 0.35s ease;
   border: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
 }
 
 .service-card-detailed:hover {
@@ -156,6 +166,7 @@
   line-height: 1.7;
   margin-bottom: 20px;
   font-size: 1rem;
+  flex-grow: 1;
 }
 
 .service-features {
@@ -186,6 +197,29 @@
   font-size: 0.75rem;
   font-weight: bold;
   flex-shrink: 0;
+}
+
+.service-card-detailed .btn-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 24px;
+  background: linear-gradient(135deg, #8B0000 0%, #C1121F 100%);
+  color: white;
+  border: none;
+  border-radius: 30px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  margin-top: auto;
+  align-self: flex-start;
+}
+
+.service-card-detailed .btn-outline:hover {
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 10px 25px rgba(193, 18, 31, 0.35);
+  color: white;
 }
 
 /* How We Work Section */
@@ -299,6 +333,10 @@
   .services-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .section-heading {
+    font-size: 2.75rem;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -307,11 +345,7 @@
   }
 
   .services-hero-content h1 {
-    font-size: 2.5rem;
-  }
-
-  .services-hero-content p {
-    font-size: 1.1rem;
+    font-size: 2rem;
   }
 
   .services-section,
@@ -328,7 +362,7 @@
     gap: 24px;
   }
 
-  .section-header h2 {
+  .section-heading {
     font-size: 2.25rem;
   }
 
@@ -351,8 +385,8 @@
     font-size: 2rem;
   }
 
-  .section-header h2 {
-    font-size: 2rem;
+  .section-heading {
+    font-size: 1.75rem;
   }
 
   .work-steps {

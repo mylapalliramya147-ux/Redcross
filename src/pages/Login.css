@@ -65,6 +65,22 @@
   margin: 0;
 }
 
+.login-header p:nth-child(3) {
+  font-size: 0.8rem;
+  color: var(--text-light);
+  opacity: 0.8;
+  margin-top: 2px;
+  letter-spacing: 0.5px;
+}
+
+.login-subtitle {
+  font-size: 0.85rem;
+  color: var(--primary);
+  font-weight: 600;
+  margin-top: 12px;
+  letter-spacing: 0.5px;
+}
+
 .login-form {
   display: flex;
   flex-direction: column;

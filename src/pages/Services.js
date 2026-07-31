@@ -44,7 +44,7 @@ const Services = () => {
       {/* Services Grid */}
       <section className="services-grid-section">
         <div className="section-container">
-          <h2>What We Offer</h2>
+          <h2 className="section-heading fade-up">What We Offer</h2>
           <div className="services-grid">
             {services.map((service, index) => (
               <div key={index} className="service-card-detailed">
@@ -74,7 +74,7 @@ const Services = () => {
       {/* How We Work Section */}
       <section className="how-we-work">
         <div className="section-container">
-          <h2>How We Work</h2>
+          <h2 className="section-heading fade-up">How We Work</h2>
           <div className="work-steps">
             <div className="work-step">
               <div className="step-number">1</div>

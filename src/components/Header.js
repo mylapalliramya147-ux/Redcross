@@ -21,7 +21,10 @@ const Header = () => {
       <div className="header-container">
         <div className="logo-section">
           <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Indian_Red_Cross_Society_Logo.png/120px-Indian_Red_Cross_Society_Logo.png" alt="Red Cross" className="logo" />
-          <span className="logo-text">APREDCROSS</span>
+          <div className="logo-text-wrapper">
+            <span className="logo-text">Kakinada Red Cross</span>
+            <span className="logo-subtitle">Government Of Andhra Pradesh</span>
+          </div>
         </div>
 
         <nav className={`navbar ${isMenuOpen ? 'active' : ''}`}>
@@ -65,13 +68,13 @@ const Header = () => {
 
             <li className="nav-item">
               <NavLink
-                to="/calender"
+                to="/events"
                 className={({ isActive }) =>
                   isActive ? 'nav-link active' : 'nav-link'
                 }
                 onClick={() => setIsMenuOpen(false)}
               >
-                Calendar
+                Events
               </NavLink>
             </li>
 
