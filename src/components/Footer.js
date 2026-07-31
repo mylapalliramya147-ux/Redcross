@@ -93,33 +93,66 @@ const Footer = () => {
 
         {/* Column 3 - Contact Us */}
         <div className="footer-section">
-          <h3 className="footer-heading">Contact Us</h3>
+          <h3 className="footer-heading">CONTACT US</h3>
           <div className="footer-heading-underline"></div>
           <div className="footer-contact">
             <div className="contact-item">
-              <i className="fas fa-map-marker-alt"></i>
-              <div className="contact-info">
-                <p className="contact-primary">Kakinada Red Cross Society, Andhra Pradesh, India</p>
+              <div className="contact-icon">
+                <i className="fas fa-map-marker-alt"></i>
+              </div>
+              <div className="contact-text">
+                <p className="contact-label">Address</p>
+                <p className="contact-detail">
+                  Andhra Pradesh Red Cross Society<br />
+                  Red Cross Bhavan,<br />
+                  Governorpet,<br />
+                  Vijayawada - 520002
+                </p>
               </div>
             </div>
             <div className="contact-item">
-              <i className="fas fa-phone-alt"></i>
-              <div className="contact-info">
-                <p className="contact-primary">Office: +91-XXX-XXXX-XXX</p>
-                <p className="contact-secondary">Emergency: 108</p>
+              <div className="contact-icon">
+                <i className="fas fa-phone-alt"></i>
+              </div>
+              <div className="contact-text">
+                <p className="contact-label">Phone</p>
+                <p className="contact-detail clickable">+91 XXXXX XXXXX</p>
               </div>
             </div>
             <div className="contact-item">
-              <i className="fas fa-envelope"></i>
-              <div className="contact-info">
-                <p className="contact-primary">info@kakinadaredcross.org</p>
+              <div className="contact-icon">
+                <i className="fas fa-phone-alt"></i>
+              </div>
+              <div className="contact-text">
+                <p className="contact-label">Emergency</p>
+                <p className="contact-detail clickable">+91 XXXXX XXXXX (Emergency)</p>
               </div>
             </div>
             <div className="contact-item">
-              <i className="fas fa-clock"></i>
-              <div className="contact-info">
-                <p className="contact-primary">Office Hours: 9:00 AM – 6:00 PM</p>
-                <p className="contact-secondary">Emergency: 24 Hours</p>
+              <div className="contact-icon">
+                <i className="fas fa-envelope"></i>
+              </div>
+              <div className="contact-text">
+                <p className="contact-label">Email</p>
+                <p className="contact-detail clickable">info@apredcross.org</p>
+              </div>
+            </div>
+            <div className="contact-item">
+              <div className="contact-icon">
+                <i className="fas fa-clock"></i>
+              </div>
+              <div className="contact-text">
+                <p className="contact-label">Office Hours</p>
+                <p className="contact-detail">Mon - Fri: 9:00 AM - 6:00 PM</p>
+              </div>
+            </div>
+            <div className="contact-item">
+              <div className="contact-icon">
+                <i className="fas fa-clock"></i>
+              </div>
+              <div className="contact-text">
+                <p className="contact-label">Emergency Service</p>
+                <p className="contact-detail">Emergency: 24/7</p>
               </div>
             </div>
           </div>
