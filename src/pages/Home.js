@@ -31,26 +31,7 @@ const Home = () => {
     <div className="home">
       {/* Hero Section */}
       <section className="hero">
-        <div className="hero-overlay"></div>
         <div className="hero-container">
-          <div className="hero-image-wrapper">
-            <div className="hero-image-bg"></div>
-            <div className="hero-image">
-              <img 
-                src={dunantImage} 
-                alt="Henry Dunant - Founder of the Red Cross" 
-                loading="eager"
-              />
-              <div className="hero-image-overlay"></div>
-              
-              </div>
-              
-  
-            <div className="hero-decoration">
-              <div className="decoration-cross"></div>
-              <div className="decoration-circle"></div>
-            </div>
-          </div>
           <div className="hero-content">
             <h1 className="hero-title">
               Together We Can Make a Difference
@@ -70,6 +51,13 @@ const Home = () => {
                 <i className="fas fa-info-circle"></i> Learn More
               </Link>
             </div>
+          </div>
+          <div className="hero-image-wrapper">
+            <img 
+              src={dunantImage} 
+              alt="Henry Dunant - Founder of the Red Cross" 
+              loading="lazy"
+            />
           </div>
         </div>
       </section>
