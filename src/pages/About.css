@@ -45,7 +45,6 @@
 
 .about-hero-content {
   position: relative;
-<<<<<<< HEAD
   z-index: 2;
   max-width: 800px;
   padding: 0 20px;
@@ -85,27 +84,6 @@
   color: #fff;
   margin-bottom: 15px;
   letter-spacing: 1px;
-=======
-  z-index: 1;
-}
-
-.indian-red-cross-logo {
-  margin-bottom: 30px;
-}
-
-.wikipedia-logo {
-  width: 120px;
-  height: auto;
-  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
-  border-radius: 8px;
-}
-
-.about-hero-content h1 {
-  font-family: 'Cinzel', serif;
-  font-size: 3.5rem;
-  color: #fff;
-  margin-bottom: 10px;
->>>>>>> 7495cc18ed771f53c91584226972bcb8b1f1dea6
 }
 
 .about-hero-content p {
@@ -193,7 +171,6 @@
 
 .value-card {
   background: #fff;
-<<<<<<< HEAD
   padding: 35px 20px;
   border-radius: 20px;
   text-align: center;
@@ -212,68 +189,25 @@
   font-size: 2.8rem;
   color: #e74c3c;
   margin-bottom: 15px;
-=======
-  width: 200px;
-  height: 260px;
-  padding: 28px;
-  border-radius: 16px;
-  text-align: center;
-  box-shadow: var(--mat-sys-level1, 0px 2px 1px -1px rgba(0, 0, 0, 0.2));
-  transition: all 0.3s ease;
-  border: 1px solid #e6e1d6;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-}
-
-.value-card:hover {
-  transform: translateY(-5px);
-  box-shadow: var(--mat-sys-level3, 0px 3px 5px -1px rgba(0, 0, 0, 0.2));
-  border-color: #d34a3a;
-}
-
-.value-icon {
-  font-size: 2.5rem;
-  color: #d34a3a;
-  margin-bottom: 0;
->>>>>>> 7495cc18ed771f53c91584226972bcb8b1f1dea6
 }
 
 .value-card h3 {
   font-family: 'Cinzel', serif;
-<<<<<<< HEAD
   color: #2c3e50;
   margin-bottom: 10px;
   font-size: 1.3rem;
-=======
-  font-size: 1.25rem;
-  color: #333;
-  margin-bottom: 0;
->>>>>>> 7495cc18ed771f53c91584226972bcb8b1f1dea6
 }
 
 .value-card p {
   color: #666;
-<<<<<<< HEAD
   font-size: 0.95rem;
   line-height: 1.6;
-=======
-  font-size: 0.9rem;
-  line-height: 1.35;
->>>>>>> 7495cc18ed771f53c91584226972bcb8b1f1dea6
 }
 
 /* History Section */
 .history-section {
-<<<<<<< HEAD
   padding: 100px 20px;
   background: #fff;
-=======
-  padding: 80px 20px;
-  background-color: #fff;
->>>>>>> 7495cc18ed771f53c91584226972bcb8b1f1dea6
 }
 
 .history-section h2 {
@@ -361,7 +295,6 @@
 }
 
 .timeline-content p {
-
   color: #555;
   line-height: 1.7;
 }
@@ -542,7 +475,6 @@
   }
 }
 
-<<<<<<< HEAD
 @media screen and (max-width: 768px) {
   .about-hero {
     height: 60vh;
@@ -588,8 +520,8 @@
 
   .team-card {
     padding: 30px 20px;
-=======
-@media screen and (max-width: 480px) {
+  }
+
   .value-card {
     width: 130px;
     padding: 20px 12px;
@@ -606,6 +538,5 @@
 
   .value-card p {
     font-size: 0.75rem;
->>>>>>> 7495cc18ed771f53c91584226972bcb8b1f1dea6
   }
 }

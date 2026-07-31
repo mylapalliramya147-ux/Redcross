@@ -27,6 +27,7 @@ body {
   --text-muted: #777;
   --border-light: #eee;
   --red-gradient: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+  --red: #e74c3c;
 }
 
 /* App Container */
@@ -47,7 +48,6 @@ a {
   color: inherit;
 }
 
-<<<<<<< HEAD
 /* Scrollbar */
 ::-webkit-scrollbar {
   width: 10px;
@@ -65,7 +65,7 @@ a {
 ::-webkit-scrollbar-thumb:hover {
   background: #c0392b;
 }
-=======
+
 .btn-primary {
    background: linear-gradient(135deg, var(--red) 0%, var(--red) 100%);
    color: #fff;
@@ -98,7 +98,6 @@ a {
    transform: translateY(-3px);
    box-shadow: 0 4px 15px rgba(220, 38, 38, 0.3);
  }
->>>>>>> 7495cc18ed771f53c91584226972bcb8b1f1dea6
 
 /* Selection */
 ::selection {
@@ -152,12 +151,9 @@ a {
     padding: 0 15px;
   }
 }
-<<<<<<< HEAD
 
 @media screen and (max-width: 480px) {
   body {
     font-size: 14px;
   }
 }
-=======
->>>>>>> 7495cc18ed771f53c91584226972bcb8b1f1dea6

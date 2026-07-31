@@ -2,11 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Cinzel:wght@500;600;700&display=swap');
 
 .header {
-<<<<<<< HEAD
   background: linear-gradient(135deg, #c0392b 0%, #e74c3c 100%);
-=======
-  background: var(--red);
->>>>>>> 7495cc18ed771f53c91584226972bcb8b1f1dea6
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -87,7 +83,6 @@
 }
 
 .nav-link.active {
-<<<<<<< HEAD
   background: #fff;
   color: #c0392b;
   font-weight: 600;
@@ -104,9 +99,6 @@
   background: #f8f9fa !important;
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
-=======
-  background: white;
-  color: var(--red);
 }
 
 .nav-divider {
@@ -157,7 +149,6 @@
   background: rgba(255,255,255,.2);
   color: var(--red);
   background: white;
->>>>>>> 7495cc18ed771f53c91584226972bcb8b1f1dea6
 }
 
 .hamburger {
@@ -243,22 +234,11 @@
     display: flex;
   }
 
-<<<<<<< HEAD
   .nav-menu {
     flex-direction: column;
     width: 100%;
     gap: 5px;
   }
-=======
-.navbar{
-position:absolute;
-top:90px;
-left:0;
-right:0;
-background:var(--red);
-display:none;
-}
->>>>>>> 7495cc18ed771f53c91584226972bcb8b1f1dea6
 
   .nav-link {
     padding: 12px 20px;
