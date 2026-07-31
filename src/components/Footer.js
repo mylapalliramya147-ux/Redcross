@@ -9,8 +9,8 @@ const Footer = () => {
         <div className="footer-section footer-about">
           <div className="footer-logo">
             <img 
-              src="https://www.redcross.org/redcross-logo.png" 
-              alt="Kakinada Redcross Logo" 
+              src="/ircs-logo.png" 
+              alt="Indian Red Cross Society Logo" 
               className="footer-logo-img"
               onError={(e) => {
                 e.target.src = 'https://via.placeholder.com/50x50/C8102E/FFF?text=RC';

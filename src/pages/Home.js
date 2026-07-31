@@ -53,7 +53,7 @@ const Home = () => {
       <section className="about-preview">
         <div className="section-container">
           <div className="about-content">
-            <h2>Who We Are</h2>
+            <h2>About Us</h2>
             <p>
               The Kakinada Redcross Society is a humanitarian organization dedicated to 
               providing emergency assistance, disaster relief, and education in 
