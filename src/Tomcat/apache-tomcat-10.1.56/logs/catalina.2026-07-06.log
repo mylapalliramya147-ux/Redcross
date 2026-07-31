@@ -1,0 +1,47 @@
+06-Jul-2026 15:48:16.534 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/10.1.56
+06-Jul-2026 15:48:16.559 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Jun 17 2026 23:33:08 UTC
+06-Jul-2026 15:48:16.562 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 10.1.56.0
+06-Jul-2026 15:48:16.562 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Windows 11
+06-Jul-2026 15:48:16.562 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            10.0
+06-Jul-2026 15:48:16.562 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+06-Jul-2026 15:48:16.562 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             C:\Program Files\Java\jdk-21.0.10
+06-Jul-2026 15:48:16.562 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           21.0.10+8-LTS-217
+06-Jul-2026 15:48:16.562 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+06-Jul-2026 15:48:16.562 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         C:\Users\HP 440 G8\Documents\Tomcat\apache-tomcat-10.1.56
+06-Jul-2026 15:48:16.562 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         C:\Users\HP 440 G8\Documents\Tomcat\apache-tomcat-10.1.56
+06-Jul-2026 15:48:16.618 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=C:\Users\HP 440 G8\Documents\Tomcat\apache-tomcat-10.1.56\conf\logging.properties
+06-Jul-2026 15:48:16.618 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+06-Jul-2026 15:48:16.618 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+06-Jul-2026 15:48:16.618 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+06-Jul-2026 15:48:16.618 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dsun.io.useCanonCaches=false
+06-Jul-2026 15:48:16.618 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+06-Jul-2026 15:48:16.618 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang.reflect=ALL-UNNAMED
+06-Jul-2026 15:48:16.618 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+06-Jul-2026 15:48:16.618 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+06-Jul-2026 15:48:16.618 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+06-Jul-2026 15:48:16.618 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+06-Jul-2026 15:48:16.618 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=C:\Users\HP 440 G8\Documents\Tomcat\apache-tomcat-10.1.56
+06-Jul-2026 15:48:16.618 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=C:\Users\HP 440 G8\Documents\Tomcat\apache-tomcat-10.1.56
+06-Jul-2026 15:48:16.618 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=C:\Users\HP 440 G8\Documents\Tomcat\apache-tomcat-10.1.56\temp
+06-Jul-2026 15:48:18.430 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent Loaded Apache Tomcat Native library [2.0.15] using APR version [1.7.6].
+06-Jul-2026 15:48:18.444 INFO [main] org.apache.catalina.core.AprLifecycleListener.initializeSSL OpenSSL successfully initialized [OpenSSL 3.5.7 9 Jun 2026]
+06-Jul-2026 15:48:19.205 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+06-Jul-2026 15:48:19.289 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [3261] milliseconds
+06-Jul-2026 15:48:19.473 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+06-Jul-2026 15:48:19.475 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/10.1.56]
+06-Jul-2026 15:48:19.567 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [C:\Users\HP 440 G8\Documents\Tomcat\apache-tomcat-10.1.56\webapps\itiapadmissions.war]
+06-Jul-2026 15:48:21.754 WARNING [main] org.apache.tomcat.util.descriptor.web.WebXml.setVersion Unknown version string [6.1]. Default version will be used.
+06-Jul-2026 15:48:27.747 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+06-Jul-2026 15:49:05.963 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [C:\Users\HP 440 G8\Documents\Tomcat\apache-tomcat-10.1.56\webapps\itiapadmissions.war] has finished in [46,398] ms
+06-Jul-2026 15:49:05.979 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\HP 440 G8\Documents\Tomcat\apache-tomcat-10.1.56\webapps\docs]
+06-Jul-2026 15:49:06.121 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\HP 440 G8\Documents\Tomcat\apache-tomcat-10.1.56\webapps\docs] has finished in [151] ms
+06-Jul-2026 15:49:06.121 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\HP 440 G8\Documents\Tomcat\apache-tomcat-10.1.56\webapps\examples]
+06-Jul-2026 15:49:07.294 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\HP 440 G8\Documents\Tomcat\apache-tomcat-10.1.56\webapps\examples] has finished in [1,173] ms
+06-Jul-2026 15:49:07.294 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\HP 440 G8\Documents\Tomcat\apache-tomcat-10.1.56\webapps\host-manager]
+06-Jul-2026 15:49:07.420 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\HP 440 G8\Documents\Tomcat\apache-tomcat-10.1.56\webapps\host-manager] has finished in [126] ms
+06-Jul-2026 15:49:07.420 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\HP 440 G8\Documents\Tomcat\apache-tomcat-10.1.56\webapps\manager]
+06-Jul-2026 15:49:07.535 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\HP 440 G8\Documents\Tomcat\apache-tomcat-10.1.56\webapps\manager] has finished in [115] ms
+06-Jul-2026 15:49:07.535 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\HP 440 G8\Documents\Tomcat\apache-tomcat-10.1.56\webapps\ROOT]
+06-Jul-2026 15:49:07.625 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\HP 440 G8\Documents\Tomcat\apache-tomcat-10.1.56\webapps\ROOT] has finished in [88] ms
+06-Jul-2026 15:49:07.641 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+06-Jul-2026 15:49:07.738 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [48448] milliseconds
