@@ -9,11 +9,11 @@ const Footer = () => {
         <div className="footer-section footer-about">
           <div className="footer-logo">
             <img 
-              src="/ircs-logo.png" 
+              src="/indian-red-cross.png" 
               alt="Indian Red Cross Society Logo" 
               className="footer-logo-img"
               onError={(e) => {
-                e.target.src = 'https://via.placeholder.com/50x50/C8102E/FFF?text=RC';
+                e.target.src ='https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Indian_Red_Cross_Society_Logo.png/120px-Indian_Red_Cross_Society_Logo.png';
               }}
             />
             <div className="footer-logo-text-wrapper">
