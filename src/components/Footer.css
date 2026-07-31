@@ -163,50 +163,50 @@
 .footer-contact {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 20px;
 }
 
 .contact-item {
   display: flex;
   align-items: flex-start;
-  gap: 16px;
+  gap: 14px;
   color: #fff;
-  line-height: 1.6;
+  line-height: 1.5;
 }
 
 .contact-icon {
-  width: 24px;
+  width: 20px;
   flex-shrink: 0;
   display: flex;
   align-items: center;
   justify-content: center;
   color: #D32F2F;
-  font-size: 1.3rem;
-  margin-top: 2px;
+  font-size: 1.1rem;
+  margin-top: 3px;
 }
 
 .contact-text {
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 2px;
 }
 
 .contact-label {
   margin: 0;
-  font-size: 1.1rem;
-  font-weight: 600;
+  font-size: 1rem;
+  font-weight: 500;
   color: #fff;
   line-height: 1.4;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.3px;
 }
 
 .contact-detail {
   margin: 0;
-  font-size: 1rem;
+  font-size: 0.95rem;
   font-weight: 400;
-  color: rgba(255, 255, 255, 0.85);
-  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.5;
   transition: all 0.3s ease;
 }
 

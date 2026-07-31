@@ -101,13 +101,7 @@ const Footer = () => {
                 <i className="fas fa-map-marker-alt"></i>
               </div>
               <div className="contact-text">
-                <p className="contact-label">Address</p>
-                <p className="contact-detail">
-                  Andhra Pradesh Red Cross Society<br />
-                  Red Cross Bhavan,<br />
-                  Governorpet,<br />
-                  Vijayawada - 520002
-                </p>
+                <p className="contact-label">123 Red Cross Road, Hyderabad, Telangana 500001</p>
               </div>
             </div>
             <div className="contact-item">
@@ -115,8 +109,7 @@ const Footer = () => {
                 <i className="fas fa-phone-alt"></i>
               </div>
               <div className="contact-text">
-                <p className="contact-label">Phone</p>
-                <p className="contact-detail clickable">+91 XXXXX XXXXX</p>
+                <p className="contact-label">+91 1234 567 890</p>
               </div>
             </div>
             <div className="contact-item">
@@ -124,8 +117,7 @@ const Footer = () => {
                 <i className="fas fa-phone-alt"></i>
               </div>
               <div className="contact-text">
-                <p className="contact-label">Emergency</p>
-                <p className="contact-detail clickable">+91 XXXXX XXXXX (Emergency)</p>
+                <p className="contact-label">+91 9876 543 210 (Emergency)</p>
               </div>
             </div>
             <div className="contact-item">
@@ -133,8 +125,7 @@ const Footer = () => {
                 <i className="fas fa-envelope"></i>
               </div>
               <div className="contact-text">
-                <p className="contact-label">Email</p>
-                <p className="contact-detail clickable">info@apredcross.org</p>
+                <p className="contact-label">info@apredcross.org</p>
               </div>
             </div>
             <div className="contact-item">
@@ -142,8 +133,7 @@ const Footer = () => {
                 <i className="fas fa-clock"></i>
               </div>
               <div className="contact-text">
-                <p className="contact-label">Office Hours</p>
-                <p className="contact-detail">Mon - Fri: 9:00 AM - 6:00 PM</p>
+                <p className="contact-label">Mon - Fri: 9:00 AM - 6:00 PM</p>
               </div>
             </div>
             <div className="contact-item">
@@ -151,8 +141,7 @@ const Footer = () => {
                 <i className="fas fa-clock"></i>
               </div>
               <div className="contact-text">
-                <p className="contact-label">Emergency Service</p>
-                <p className="contact-detail">Emergency: 24/7</p>
+                <p className="contact-label">Emergency: 24/7</p>
               </div>
             </div>
           </div>
