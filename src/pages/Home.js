@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import dunantImage from '../assets/dunaun.png';
 import './Home.css';
 
 const Home = () => {
@@ -31,20 +32,44 @@ const Home = () => {
       {/* Hero Section */}
       <section className="hero">
         <div className="hero-overlay"></div>
-        <div className="hero-content">
-          <h1 className="hero-title">
-            Together We Can Make a Difference
-          </h1>
-          <p className="hero-subtitle">
-            Join hands with Kakinada Redcross to provide humanitarian aid and save lives
-          </p>
-          <div className="hero-buttons">
-            <Link to="/donate" className="btn btn-primary">
-              <i className="fas fa-heart"></i> Donate Now
-            </Link>
-            <Link to="/services" className="btn btn-secondary">
-              <i className="fas fa-info-circle"></i> Learn More
-            </Link>
+        <div className="hero-container">
+          <div className="hero-image-wrapper">
+            <div className="hero-image-bg"></div>
+            <div className="hero-image">
+              <img 
+                src={dunantImage} 
+                alt="Henry Dunant - Founder of the Red Cross" 
+                loading="eager"
+              />
+              <div className="hero-image-overlay"></div>
+              
+              </div>
+              
+  
+            <div className="hero-decoration">
+              <div className="decoration-cross"></div>
+              <div className="decoration-circle"></div>
+            </div>
+          </div>
+          <div className="hero-content">
+            <h1 className="hero-title">
+              Together We Can Make a Difference
+            </h1>
+            <p className="hero-subtitle">
+              Join hands with Kakinada Redcross to provide humanitarian aid and save lives
+            </p>
+            <blockquote className="hero-quote">
+              "Humanity is our greatest strength."
+              <cite>— Henry Dunant</cite>
+            </blockquote>
+            <div className="hero-buttons">
+              <Link to="/donate" className="btn btn-primary">
+                <i className="fas fa-heart"></i> Donate Now
+              </Link>
+              <Link to="/services" className="btn btn-secondary">
+                <i className="fas fa-info-circle"></i> Learn More
+              </Link>
+            </div>
           </div>
         </div>
       </section>
