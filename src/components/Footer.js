@@ -17,12 +17,12 @@ const Footer = () => {
               }}
             />
             <div className="footer-logo-text-wrapper">
-              <span className="footer-logo-text">APREDCROSS</span>
+              <span className="footer-logo-text">KAKINADA REDCROSS</span>
               <span className="footer-logo-subtitle">Government Of Andhra Pradesh</span>
             </div>
           </div>
           <p className="footer-description">
-            The AP Red Cross Society is a humanitarian organization dedicated to providing emergency assistance, 
+            The Kakinada Red Cross Society is a humanitarian organization dedicated to providing emergency assistance, 
             disaster relief, and education in communities across Andhra Pradesh. We work tirelessly to save lives 
             and support those in need.
           </p>
@@ -93,33 +93,55 @@ const Footer = () => {
 
         {/* Column 3 - Contact Us */}
         <div className="footer-section">
-          <h3 className="footer-heading">Contact Us</h3>
+          <h3 className="footer-heading">CONTACT US</h3>
           <div className="footer-heading-underline"></div>
           <div className="footer-contact">
             <div className="contact-item">
-              <i className="fas fa-map-marker-alt"></i>
-              <div className="contact-info">
-                <p className="contact-primary">Kakinada Red Cross Society, Andhra Pradesh, India</p>
+              <div className="contact-icon">
+                <i className="fas fa-map-marker-alt"></i>
+              </div>
+              <div className="contact-text">
+                <p className="contact-label">123 Red Cross Road, Hyderabad, Telangana 500001</p>
               </div>
             </div>
             <div className="contact-item">
-              <i className="fas fa-phone-alt"></i>
-              <div className="contact-info">
-                <p className="contact-primary">Office: +91-XXX-XXXX-XXX</p>
-                <p className="contact-secondary">Emergency: 108</p>
+              <div className="contact-icon">
+                <i className="fas fa-phone-alt"></i>
+              </div>
+              <div className="contact-text">
+                <p className="contact-label">+91 1234 567 890</p>
               </div>
             </div>
             <div className="contact-item">
-              <i className="fas fa-envelope"></i>
-              <div className="contact-info">
-                <p className="contact-primary">info@kakinadaredcross.org</p>
+              <div className="contact-icon">
+                <i className="fas fa-phone-alt"></i>
+              </div>
+              <div className="contact-text">
+                <p className="contact-label">+91 9876 543 210 (Emergency)</p>
               </div>
             </div>
             <div className="contact-item">
-              <i className="fas fa-clock"></i>
-              <div className="contact-info">
-                <p className="contact-primary">Office Hours: 9:00 AM – 6:00 PM</p>
-                <p className="contact-secondary">Emergency: 24 Hours</p>
+              <div className="contact-icon">
+                <i className="fas fa-envelope"></i>
+              </div>
+              <div className="contact-text">
+                <p className="contact-label">info@apredcross.org</p>
+              </div>
+            </div>
+            <div className="contact-item">
+              <div className="contact-icon">
+                <i className="fas fa-clock"></i>
+              </div>
+              <div className="contact-text">
+                <p className="contact-label">Mon - Fri: 9:00 AM - 6:00 PM</p>
+              </div>
+            </div>
+            <div className="contact-item">
+              <div className="contact-icon">
+                <i className="fas fa-clock"></i>
+              </div>
+              <div className="contact-text">
+                <p className="contact-label">Emergency: 24/7</p>
               </div>
             </div>
           </div>
@@ -161,7 +183,7 @@ const Footer = () => {
       <div className="footer-bottom">
         <div className="footer-bottom-container">
           <p className="copyright">
-            © 2026 AP Red Cross Society. All Rights Reserved.
+            © 2026 Kakinada Red Cross Society. All Rights Reserved.
           </p>
           <div className="footer-bottom-links">
             <a href="/about">About</a>

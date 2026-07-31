@@ -163,57 +163,59 @@
 .footer-contact {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 20px;
 }
 
 .contact-item {
   display: flex;
   align-items: flex-start;
-  gap: 16px;
+  gap: 14px;
   color: #fff;
-  line-height: 1.6;
-  transition: all 0.3s ease;
+  line-height: 1.5;
 }
 
-.contact-item i {
-  color: #E63946;
-  font-size: 1.4rem;
-  margin-top: 4px;
+.contact-icon {
+  width: 20px;
   flex-shrink: 0;
-  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #D32F2F;
+  font-size: 1.1rem;
+  margin-top: 3px;
 }
 
-.contact-item:hover i {
-  color: #ff4d5a;
-  transform: scale(1.1);
-}
-
-.contact-item:hover .contact-primary,
-.contact-item:hover .contact-secondary {
-  color: #fff;
-}
-
-.contact-info {
+.contact-text {
+  flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 2px;
 }
 
-.contact-primary {
-  margin: 0;
-  font-size: 1.2rem;
-  font-weight: 500;
-  color: #fff;
-  line-height: 1.6;
-  transition: all 0.3s ease;
-}
-
-.contact-secondary {
+.contact-label {
   margin: 0;
   font-size: 1rem;
-  color: rgba(255, 255, 255, 0.7);
-  line-height: 1.6;
+  font-weight: 500;
+  color: #fff;
+  line-height: 1.4;
+  letter-spacing: 0.3px;
+}
+
+.contact-detail {
+  margin: 0;
+  font-size: 0.95rem;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.5;
   transition: all 0.3s ease;
+}
+
+.contact-detail.clickable {
+  cursor: pointer;
+}
+
+.contact-detail.clickable:hover {
+  color: #C8102E;
 }
 
 /* Newsletter */
