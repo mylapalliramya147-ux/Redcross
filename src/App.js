@@ -8,26 +8,90 @@ import Services from './pages/Services';
 import Contact from './pages/Contact';
 import Donate from './pages/Donate';
 import Calendar from './pages/Calendar';
+import Login from './pages/Login';
+import AdminDashboard from './pages/AdminDashboard';
+import ProtectedRoute from './components/ProtectedRoute';
+import { AuthProvider } from './contexts/AuthContext';
 import './App.css';
 
 function App() {
   return (
-    <Router>
-      <div className="app">
-        <Header />
-        <main className="main-content">
+    <AuthProvider>
+      <Router>
+        <div className="app">
           <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/services" element={<Services />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/donate" element={<Donate />} />
-            <Route path="/calender" element={<Calendar />} />
+            <Route path="/" element={
+              <>
+                <Header />
+                <main className="main-content">
+                  <Home />
+                </main>
+                <Footer />
+              </>
+            } />
+            <Route path="/about" element={
+              <>
+                <Header />
+                <main className="main-content">
+                  <About />
+                </main>
+                <Footer />
+              </>
+            } />
+            <Route path="/services" element={
+              <>
+                <Header />
+                <main className="main-content">
+                  <Services />
+                </main>
+                <Footer />
+              </>
+            } />
+            <Route path="/contact" element={
+              <>
+                <Header />
+                <main className="main-content">
+                  <Contact />
+                </main>
+                <Footer />
+              </>
+            } />
+            <Route path="/donate" element={
+              <>
+                <Header />
+                <main className="main-content">
+                  <Donate />
+                </main>
+                <Footer />
+              </>
+            } />
+            <Route path="/calender" element={
+              <>
+                <Header />
+                <main className="main-content">
+                  <Calendar />
+                </main>
+                <Footer />
+              </>
+            } />
+            <Route path="/admin/login" element={
+              <>
+                <Header />
+                <main className="main-content">
+                  <Login />
+                </main>
+                <Footer />
+              </>
+            } />
+            <Route path="/admin/dashboard" element={
+              <ProtectedRoute>
+                <AdminDashboard />
+              </ProtectedRoute>
+            } />
           </Routes>
-        </main>
-        <Footer />
-      </div>
-    </Router>
+        </div>
+      </Router>
+    </AuthProvider>
   );
 }
 

@@ -120,36 +120,72 @@ const Donate = () => {
         </div>
       </section>
 
-      {/* Other Ways Section */}
-      <section className="other-ways">
-        <div className="section-container">
-          <h2>Other Ways to Help</h2>
-          <div className="ways-grid">
-            <div className="way-card">
-              <i className="fas fa-tshirt"></i>
-              <h3>Donate Clothes</h3>
-              <p>Donate unused clothes to help disaster victims.</p>
-            </div>
-            <div className="way-card">
-              <i className="fas fa-apple-alt"></i>
-              <h3>Food Donations</h3>
-              <p>Contribute food items for emergency relief.</p>
-            </div>
-            <div className="way-card">
-              <i className="fas fa-user-friends"></i>
-              <h3>Volunteer</h3>
-              <p>Give your time and skills to save lives.</p>
-            </div>
-            <div className="way-card">
-              <i className="fas fa-piggy-bank"></i>
-              <h3>Fundraise</h3>
-              <p>Organize fundraising events in your community.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
-  );
-};
+       {/* Other Ways Section */}
+       <section className="other-ways">
+         <div className="section-container">
+           <h2>Other Ways to Help</h2>
+           <div className="ways-grid">
+           <div className="way-card">
+               <i className="fas fa-tshirt"></i>
+               <h3>Donate Clothes</h3>
+               <p>Donate unused clothes to help disaster victims.</p>
+             </div>
+             <div className="way-card">
+               <i className="fas fa-apple-alt"></i>
+               <h3>Food Donations</h3>
+               <p>Contribute food items for emergency relief.</p>
+             </div>
+             <div className="way-card">
+               <i className="fas fa-user-friends"></i>
+               <h3>Volunteer</h3>
+               <p>Give your time and skills to save lives.</p>
+             </div>
+             <div className="way-card">
+               <i className="fas fa-piggy-bank"></i>
+               <h3>Fundraise</h3>
+               <p>Organize fundraising events in your community.</p>
+             </div>
+           </div>
+         </div>
+       </section>
+
+       {/* Blood Donation Requirements Section */}
+       <section className="blood-requirements-section">
+         <div className="section-container">
+           <h2>Blood Donation Requirements</h2>
+           <p className="requirements-intro">
+             Before donating blood, please ensure you meet the following basic requirements:
+           </p>
+           <div className="requirements-grid">
+             <div className="requirement-item">
+               <i className="fas fa-birthday-cake"></i>
+               <span>Age: You must be between 18 to 65 years old</span>
+             </div>
+             <div className="requirement-item">
+               <i className="fas fa-weight"></i>
+               <span>Weight: You must weigh at least 45 kgs</span>
+             </div>
+             <div className="requirement-item">
+               <i className="fas fa-heartbeat"></i>
+               <span>Health: On the day of donation your health condition should be good</span>
+             </div>
+             <div className="requirement-item">
+               <i className="fas fa-virus"></i>
+               <span>Medical History: No history of exposure to hepatitis or AIDS</span>
+             </div>
+             <div className="requirement-item">
+               <i className="fas fa-calendar-alt"></i>
+               <span>Frequency: Your last blood donation was at least 90 days (12 weeks) ago</span>
+             </div>
+             <div className="requirement-item">
+               <i className="fas fa-tachometer-alt"></i>
+               <span>Blood Pressure: Have normal BP at the time of donation</span>
+             </div>
+           </div>
+         </div>
+       </section>
+     </div>
+   );
+ };
 
 export default Donate;

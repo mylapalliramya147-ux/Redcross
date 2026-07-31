@@ -47,6 +47,7 @@ a {
   color: inherit;
 }
 
+<<<<<<< HEAD
 /* Scrollbar */
 ::-webkit-scrollbar {
   width: 10px;
@@ -64,11 +65,75 @@ a {
 ::-webkit-scrollbar-thumb:hover {
   background: #c0392b;
 }
+=======
+.btn-primary {
+   background: linear-gradient(135deg, var(--red) 0%, var(--red) 100%);
+   color: #fff;
+ }
+
+ .btn-primary:hover {
+   transform: translateY(-3px);
+   box-shadow: 0 4px 15px rgba(211, 74, 58, 0.3);
+ }
+
+ .btn-outline {
+   background: transparent;
+   color: var(--red);
+   border: 2px solid var(--red);
+ }
+
+ .btn-outline:hover {
+   background: var(--red);
+   color: #fff;
+   transform: translateY(-3px);
+ }
+
+ .btn-danger {
+   background: #dc2626;
+   color: white;
+ }
+
+ .btn-danger:hover {
+   background: #b91c1c;
+   transform: translateY(-3px);
+   box-shadow: 0 4px 15px rgba(220, 38, 38, 0.3);
+ }
+>>>>>>> 7495cc18ed771f53c91584226972bcb8b1f1dea6
 
 /* Selection */
 ::selection {
   background: rgba(231, 76, 60, 0.2);
   color: #c0392b;
+}
+
+/* Loading Styles */
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  gap: 20px;
+}
+
+.loading-spinner {
+  width: 50px;
+  height: 50px;
+  border: 4px solid var(--cream);
+  border-top-color: var(--red);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.loading-container p {
+  color: var(--muted);
+  font-size: 1.1rem;
 }
 
 /* Responsive Design */
@@ -87,9 +152,12 @@ a {
     padding: 0 15px;
   }
 }
+<<<<<<< HEAD
 
 @media screen and (max-width: 480px) {
   body {
     font-size: 14px;
   }
 }
+=======
+>>>>>>> 7495cc18ed771f53c91584226972bcb8b1f1dea6

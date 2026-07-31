@@ -44,7 +44,14 @@ const About = () => {
               armed conflicts, health emergencies, and other crises.
             </p>
           </div>
-          <div className="mission-values">
+        </div>
+      </section>
+
+      {/* Seven Fundamental Principles Section */}
+      <section className="principles-section">
+        <div className="section-container">
+          <h2 className="principles-title">Seven Fundamental Principles</h2>
+          <div className="principles-grid">
             <div className="value-card">
               <i className="fas fa-heart value-icon"></i>
               <h3>Humanity</h3>
@@ -64,6 +71,23 @@ const About = () => {
               <i className="fas fa-shield-alt value-icon"></i>
               <h3>Independence</h3>
               <p>We maintain independence and autonomy in our operations.</p>
+            </div>
+          </div>
+          <div className="principles-row">
+            <div className="value-card">
+              <i className="fas fa-hands-helping value-icon"></i>
+              <h3>Voluntary Service</h3>
+              <p>Serve selflessly</p>
+            </div>
+            <div className="value-card">
+              <i className="fas fa-users value-icon"></i>
+              <h3>Unity</h3>
+              <p>One for all</p>
+            </div>
+            <div className="value-card">
+              <i className="fas fa-globe-americas value-icon"></i>
+              <h3>Universality</h3>
+              <p>Equal for everyone</p>
             </div>
           </div>
         </div>

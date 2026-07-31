@@ -13,15 +13,15 @@
   border-radius: 12px;
 
   border: 1px solid #f3dada;
-  box-shadow: 0 4px 12px rgba(160, 37, 37, 0.08);
+   box-shadow: 0 4px 12px rgba(211, 74, 58, 0.08);
 
-  transition: all 0.3s ease;
-  cursor: pointer;
-}
+   transition: all 0.3s ease;
+   cursor: pointer;
+ }
 
-.day-card:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 16px rgba(160, 37, 37, 0.15);
+ .day-card:hover {
+   transform: translateY(-2px);
+   box-shadow: 0 6px 16px rgba(211, 74, 58, 0.15);
 }
 
 .icon-wrapper {
@@ -29,7 +29,7 @@
   height: 40px;
   min-width: 40px;
 
-  background: #a02525;
+  background: var(--red);
   border-radius: 50%;
 
   display: flex;
@@ -38,7 +38,7 @@
 
   color: white;
 
-  box-shadow: 0 4px 10px rgba(160, 37, 37, 0.3);
+  box-shadow: 0 4px 10px rgba(211, 74, 58, 0.3);
 }
 
 .calendar-icon {
