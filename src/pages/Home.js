@@ -109,31 +109,8 @@ const Home = () => {
           </div>
         </div>
       </section>
-
-      {/* Stats Section */}
-      <section className="stats-section">
-        <div className="section-container">
-          <div className="stats-grid">
-            <div className="stat-item">
-              <h3>5000+</h3>
-              <p>Volunteers</p>
-            </div>
-            <div className="stat-item">
-              <h3>10000+</h3>
-              <p>Blood Units Donated</p>
-            </div>
-            <div className="stat-item">
-              <h3>200+</h3>
-              <p>Disaster Reliefs</p>
-            </div>
-            <div className="stat-item">
-              <h3>500+</h3>
-              <p>Training Programs</p>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
+   </div>
+    
   );
 };
 
