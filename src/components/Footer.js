@@ -17,14 +17,14 @@ const Footer = () => {
               }}
             />
             <div className="footer-logo-text-wrapper">
-              <span className="footer-logo-text">Kakinada Redcross</span>
+              <span className="footer-logo-text">APREDCROSS</span>
               <span className="footer-logo-subtitle">Government Of Andhra Pradesh</span>
             </div>
           </div>
           <p className="footer-description">
-            The Kakinada Redcross Society is dedicated to providing emergency assistance, 
-            disaster relief, blood donation services and humanitarian support 
-            throughout Andhra Pradesh.
+            The AP Red Cross Society is a humanitarian organization dedicated to providing emergency assistance, 
+            disaster relief, and education in communities across Andhra Pradesh. We work tirelessly to save lives 
+            and support those in need.
           </p>
           <div className="social-links">
             <a href="#" className="social-link" aria-label="Facebook">
@@ -70,9 +70,9 @@ const Footer = () => {
                 </a>
               </li>
               <li>
-                <a href="/calendar" className="footer-link">
+                <a href="/events" className="footer-link">
                   <i className="fas fa-chevron-right"></i>
-                  Calendar
+                  Events Calendar
                 </a>
               </li>
               <li>
@@ -130,8 +130,8 @@ const Footer = () => {
           <h3 className="footer-heading">Newsletter</h3>
           <div className="footer-heading-underline"></div>
           <p className="footer-newsletter-text">
-            Subscribe to our newsletter for the latest updates on our activities 
-            and humanitarian initiatives.
+            Subscribe to our newsletter to stay updated with our latest news, events, and 
+            humanitarian activities.
           </p>
           <form className="newsletter-form" onSubmit={(e) => e.preventDefault()}>
             <input 
@@ -161,7 +161,7 @@ const Footer = () => {
       <div className="footer-bottom">
         <div className="footer-bottom-container">
           <p className="copyright">
-            © 2026 Kakinada Redcross Society. All Rights Reserved.
+            © 2026 AP Red Cross Society. All Rights Reserved.
           </p>
           <div className="footer-bottom-links">
             <a href="/about">About</a>
