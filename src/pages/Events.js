@@ -16,7 +16,7 @@ const Events = () => {
     // January Awareness Days
     {
       id: 1,
-      title: 'National Human Trafficking Awareness Month',
+      title: 'National Human Trafficking  Awareness Month',
       date: '2024-01-01',
       time: 'January',
       location: 'Global',
