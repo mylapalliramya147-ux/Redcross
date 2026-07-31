@@ -12,16 +12,16 @@
   background: #fff;
   border-radius: 12px;
 
-  border: 1px solid #f3dada;
-   box-shadow: 0 4px 12px rgba(211, 74, 58, 0.08);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
 
-   transition: all 0.3s ease;
-   cursor: pointer;
- }
+  transition: transform .35s ease, box-shadow .35s ease;
+  cursor: pointer;
+}
 
- .day-card:hover {
-   transform: translateY(-2px);
-   box-shadow: 0 6px 16px rgba(211, 74, 58, 0.15);
+.day-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 18px 35px rgba(193, 18, 31, 0.18), 0 0 24px rgba(193, 18, 31, 0.14);
 }
 
 .icon-wrapper {
@@ -29,7 +29,7 @@
   height: 40px;
   min-width: 40px;
 
-  background: var(--red);
+  background: var(--primary);
   border-radius: 50%;
 
   display: flex;
@@ -38,11 +38,18 @@
 
   color: white;
 
-  box-shadow: 0 4px 10px rgba(211, 74, 58, 0.3);
+  box-shadow: 0 4px 10px rgba(193, 18, 31, 0.3);
+  transition: transform 0.3s ease;
 }
 
 .calendar-icon {
   font-size: 18px;
+  color: white;
+  transition: transform 0.3s ease;
+}
+
+.day-card:hover .calendar-icon {
+  transform: translateY(-2px) scale(1.08);
 }
 
 .day-content {
@@ -52,7 +59,7 @@
 
 .day-content h3 {
   margin: 0;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 600;
   color: #1d1d1d;
   white-space: nowrap;
@@ -62,7 +69,7 @@
 
 .day-content p {
   margin-top: 4px;
-  font-size: 14px;
+  font-size: 16px;
   color: #555;
   font-weight: 400;
   white-space: nowrap;
