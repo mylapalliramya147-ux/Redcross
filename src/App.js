@@ -7,7 +7,7 @@ import About from './pages/About';
 import Services from './pages/Services';
 import Contact from './pages/Contact';
 import Donate from './pages/Donate';
-import Calendar from './pages/Calendar';
+import Events from './pages/Events';
 import Login from './pages/Login';
 import AdminDashboard from './pages/AdminDashboard';
 import ProtectedRoute from './components/ProtectedRoute';
@@ -65,11 +65,11 @@ function App() {
                 <Footer />
               </>
             } />
-            <Route path="/calender" element={
+            <Route path="/events" element={
               <>
                 <Header />
                 <main className="main-content">
-                  <Calendar />
+                  <Events />
                 </main>
                 <Footer />
               </>

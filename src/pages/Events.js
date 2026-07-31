@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './Calendar.css';
+import './Events.css';
 import DayCard from '../components/DayCard';
 
 const formatDate = (dateString) => {
@@ -11,7 +11,7 @@ const formatDate = (dateString) => {
   });
 };
 
-const Calendar = () => {
+const Events = () => {
   const events = [
     // January Awareness Days
     {
@@ -600,4 +600,4 @@ const Calendar = () => {
   );
 };
 
-export default Calendar;
+export default Events;

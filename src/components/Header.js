@@ -65,13 +65,13 @@ const Header = () => {
 
             <li className="nav-item">
               <NavLink
-                to="/calender"
+                to="/events"
                 className={({ isActive }) =>
                   isActive ? 'nav-link active' : 'nav-link'
                 }
                 onClick={() => setIsMenuOpen(false)}
               >
-                Calendar
+                Events
               </NavLink>
             </li>
 
