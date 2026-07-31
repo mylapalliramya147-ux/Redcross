@@ -27,7 +27,7 @@ const About = () => {
 <section className="about-hero">
          <div className="about-hero-overlay"></div>
          <div className="about-hero-content">
-            <h1>About AP Red Cross</h1>
+            <h1>About Kakinada Redcross</h1>
             <p>Dedicated to humanity since 1920</p>
           </div>
        </section>
@@ -38,7 +38,7 @@ const About = () => {
           <div className="mission-content">
             <h2>Our Mission</h2>
             <p>
-              The AP Red Cross Society is committed to protecting life and health, 
+              The Kakinada Redcross Society is committed to protecting life and health, 
               ensuring respect for all people, and reducing the vulnerability of 
               the population. We provide assistance to those affected by disasters, 
               armed conflicts, health emergencies, and other crises.
@@ -102,7 +102,7 @@ const About = () => {
               <div className="timeline-year">1920</div>
               <div className="timeline-content">
                 <h3>Foundation</h3>
-                <p>AP Red Cross Society was established to serve the people of Andhra Pradesh.</p>
+                <p>Kakinada Redcross Society was established to serve the people of Andhra Pradesh.</p>
               </div>
             </div>
             <div className="timeline-item">

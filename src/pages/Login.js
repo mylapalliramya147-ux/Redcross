@@ -45,11 +45,12 @@ const Login = () => {
         <div className="login-header">
           <img 
             src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Indian_Red_Cross_Society_Logo.png/120px-Indian_Red_Cross_Society_Logo.png" 
-            alt="Red Cross Logo" 
+            alt="Kakinada Redcross Logo" 
             className="login-logo"
           />
-          <h1>User Login</h1>
-          <p>Sign in to access your account</p>
+          <h1>Kakinada Redcross</h1>
+          <p>Government Of Andhra Pradesh</p>
+          <p className="login-subtitle">Admin Login</p>
         </div>
         
         <form className="login-form" onSubmit={handleSubmit}>

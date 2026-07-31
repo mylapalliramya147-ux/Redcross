@@ -36,7 +36,7 @@ const Home = () => {
             Together We Can Make a Difference
           </h1>
           <p className="hero-subtitle">
-            Join hands with AP Red Cross to provide humanitarian aid and save lives
+            Join hands with Kakinada Redcross to provide humanitarian aid and save lives
           </p>
           <div className="hero-buttons">
             <Link to="/donate" className="btn btn-primary">
@@ -55,7 +55,7 @@ const Home = () => {
           <div className="about-content">
             <h2>Who We Are</h2>
             <p>
-              The AP Red Cross Society is a humanitarian organization dedicated to 
+              The Kakinada Redcross Society is a humanitarian organization dedicated to 
               providing emergency assistance, disaster relief, and education in 
               communities affected by natural and man-made disasters. We work tirelessly 
               to save lives and support those in need.
