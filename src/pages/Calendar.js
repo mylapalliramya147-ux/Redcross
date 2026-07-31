@@ -484,15 +484,6 @@ const Calendar = () => {
       category: 'awareness'
     },
     {
-      id: 52,
-      title: 'World Toilet Day',
-      date: '2024-11-19',
-      time: 'All Day',
-      location: 'Global',
-      description: 'Raises awareness about the sanitation crisis and the need for clean toilets worldwide.',
-      category: 'awareness'
-    },
-    {
       id: 53,
       title: 'World Philosophy Day',
       date: '2024-11-21',

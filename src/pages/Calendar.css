@@ -62,11 +62,16 @@
 
 /* Events Grid - spacing between cards */
 .events-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
   gap: 24px;
   max-width: 1200px;
   margin: 0 auto;
+  justify-content: center;
+}
+
+.events-grid > div {
+  flex: 0 0 auto;
 }
 
 .events-list-section h2 {
