@@ -108,10 +108,10 @@
 /* Footer Headings */
 .footer-heading {
   font-family: 'Playfair Display', serif;
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-weight: 700;
   color: #C8102E;
-  margin-bottom: 8px;
+  margin-bottom: 12px;
   letter-spacing: 0.5px;
 }
 
@@ -119,7 +119,7 @@
   width: 50px;
   height: 3px;
   background: linear-gradient(90deg, #C8102E, #ff3d5c);
-  margin-bottom: 28px;
+  margin-bottom: 32px;
   border-radius: 2px;
 }
 
@@ -163,31 +163,57 @@
 .footer-contact {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 24px;
 }
 
 .contact-item {
   display: flex;
   align-items: flex-start;
-  gap: 14px;
-  color: #B7BCC5;
-  font-size: 0.95rem;
+  gap: 16px;
+  color: #fff;
   line-height: 1.6;
+  transition: all 0.3s ease;
 }
 
 .contact-item i {
-  color: #C8102E;
-  font-size: 1.1rem;
-  margin-top: 3px;
+  color: #E63946;
+  font-size: 1.4rem;
+  margin-top: 4px;
   flex-shrink: 0;
+  transition: all 0.3s ease;
 }
 
-.contact-item p {
+.contact-item:hover i {
+  color: #ff4d5a;
+  transform: scale(1.1);
+}
+
+.contact-item:hover .contact-primary,
+.contact-item:hover .contact-secondary {
+  color: #fff;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.contact-primary {
   margin: 0;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #fff;
+  line-height: 1.6;
+  transition: all 0.3s ease;
 }
 
-.contact-text p {
-  margin: 2px 0;
+.contact-secondary {
+  margin: 0;
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.6;
+  transition: all 0.3s ease;
 }
 
 /* Newsletter */

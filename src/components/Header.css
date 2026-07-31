@@ -10,9 +10,9 @@
 }
 
 .header-container {
-  max-width: 1400px;
+  width: 100%;
   height: 80px;
-  margin: auto;
+  margin: 0;
   padding: 0 30px;
   display: flex;
   justify-content: flex-start;
@@ -25,6 +25,7 @@
   align-items: center;
   text-decoration: none;
   gap: 14px;
+  margin-left: -10px;
 }
 
 .logo {
@@ -52,7 +53,11 @@
 .logo-subtitle {
   font-family: 'Poppins', sans-serif;
   font-size: 0.75rem;
+<<<<<<< HEAD
+  color: rgba(0, 0, 0, 1);
+=======
   color: #000000;
+>>>>>>> 5016538bd2c8d71c69cc1a57931661589170678f
   letter-spacing: 0.5px;
   font-weight: 400;
 }
