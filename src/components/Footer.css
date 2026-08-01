@@ -22,10 +22,11 @@
   margin: 0 auto;
   padding: 0 40px;
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr 1.5fr;
-  gap: 40px;
+  grid-template-columns: 2fr 1fr 1.2fr 1.4fr;
+  gap: 35px;
   position: relative;
   z-index: 1;
+  align-items: flex-start;
 }
 
 /* Column 1 - Logo & About */
@@ -59,7 +60,7 @@
   font-family: 'Algerian', 'Times New Roman', serif;
   font-weight: bold;
   font-size: 1.8rem;
-  color: #fff;
+  color: #C8102E;
   letter-spacing: 0.5px;
   line-height: 1.1;
 }
@@ -150,68 +151,43 @@
 .footer-link:hover i {
   transform: translateX(3px);
 }
-
-/* CONTACT US heading - uppercase to match reference */
-.footer-heading.contact-heading {
-  text-transform: uppercase;
-}
-
 /* Contact Us */
-.footer-contact {
+.footer-contact-list {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 20px;
 }
 
-.contact-item {
+.footer-contact-item {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 16px;
-  color: #fff;
 }
 
-.contact-icon {
-  width: 40px;
+.footer-contact-icon {
+  color: #C8102E !important;
+  font-size: 20px;
+  min-width: 24px;
+  width: 24px;
+  margin-top: 4px;
   flex-shrink: 0;
+}
+
+.footer-contact-text {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #C8102E;
-  font-size: 1.25rem;
+  flex-direction: column;
 }
 
-.contact-text {
-  flex: 1;
-}
-
-.contact-detail {
+.footer-contact-text p {
   margin: 0;
-  font-size: 0.95rem;
-  font-weight: 500;
-  color: #fff;
-  line-height: 1.5;
-  letter-spacing: 0.3px;
-  transition: all 0.3s ease;
-  display: block;
+  color: #ffffff;
+  font-size: 15px;
+  line-height: 1.6;
 }
 
-.contact-detail.clickable {
-  color: #fff;
-  cursor: pointer;
+.footer-contact-text .emergency {
+  font-weight: 600;
 }
-
-.contact-detail.clickable:hover {
-  color: #C8102E;
-}
-
-/* Emergency note - secondary line under emergency phone */
-.emergency-note {
-  display: block;
-  font-size: 0.8rem;
-  font-weight: 400;
-  opacity: 0.85;
-}
-
 /* Newsletter */
 .footer-newsletter-text {
   color: #B7BCC5;
@@ -372,16 +348,6 @@
     flex-wrap: wrap;
     justify-content: center;
   }
-
-  /* Contact Us - tablet */
-  .contact-item {
-    gap: 14px;
-  }
-
-  .contact-icon {
-    width: 36px;
-    font-size: 1.15rem;
-  }
 }
 
 @media screen and (max-width: 480px) {
@@ -396,4 +362,5 @@
   .security-badges {
     justify-content: center;
   }
+  
 }
