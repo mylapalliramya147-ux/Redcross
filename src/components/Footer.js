@@ -100,7 +100,9 @@ const Footer = () => {
                 <i className="fas fa-map-marker-alt"></i>
               </div>
               <div className="contact-text">
-                <p className="contact-label">123 Red Cross Road, Hyderabad, Telangana 500001</p>
+                <p className="contact-label">123 Red Cross Road,</p>
+                <p className="contact-label">Hyderabad, Telangana</p>
+                <p className="contact-label">500001</p>
               </div>
             </div>
             <div className="contact-item">
@@ -116,7 +118,8 @@ const Footer = () => {
                 <i className="fas fa-phone-alt"></i>
               </div>
               <div className="contact-text">
-                <p className="contact-label">+91 9876 543 210 (Emergency)</p>
+                <p className="contact-label">+91 9876 543 210</p>
+                <p className="contact-label contact-subtext">(Emergency)</p>
               </div>
             </div>
             <div className="contact-item">

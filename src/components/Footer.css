@@ -188,7 +188,7 @@
   margin: 0;
   font-size: 0.95rem;
   font-weight: 500;
-  color: #B7BCC5;
+  color: #fff;
   line-height: 1.5;
   letter-spacing: 0.3px;
 }
@@ -207,7 +207,7 @@
 }
 
 .contact-detail.clickable:hover {
-  color: #C8102E;
+  color: #d0d4da;
 }
 
 /* Newsletter */
