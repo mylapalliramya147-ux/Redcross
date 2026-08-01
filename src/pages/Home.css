@@ -15,7 +15,7 @@
   position: relative;
   min-height: 80vh;
   height: 80vh;
-  background: linear-gradient(135deg, #5b120d 0%, #7b1d18 50%, #8f2b21 100%);
+  background: linear-gradient(135deg, #a3271e 0%, #7b1d18 50%, #8f2b21 100%);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -497,7 +497,7 @@
 
   .hero {
     min-height: auto;
-    height: auto;
+    height: 1000px;
     padding: 80px 0;
   }
 
