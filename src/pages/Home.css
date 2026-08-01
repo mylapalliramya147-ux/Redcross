@@ -13,116 +13,42 @@
 /* Hero Section */
 .hero {
   position: relative;
-  min-height: 80vh;
-  height: 80vh;
-  background: linear-gradient(135deg, #5b120d 0%, #7b1d18 50%, #8f2b21 100%);
+  width: 100%;
+  height: 100vh;
+  min-height: 600px;
+  background: linear-gradient(135deg, #d2382daa 0%, #7b1d18 50%, #8f2b21 100%);
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  padding: 60px 0 80px;
-}
-
-.hero::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: none;
-  display: none;
-}
-
-.hero-container {
-  position: relative;
-  z-index: 2;
-  max-width: 1400px;
-  width: 100%;
-  margin: auto;
-  padding: 0 80px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 70px;
+  padding: 0;
 }
 
 .hero-image-wrapper {
   position: relative;
+  width: 100%;
+  height: 100%;
   display: flex;
   align-items: center;
-  justify-content: flex-end;
-  flex: 1;
-  max-width: 560px;
+  justify-content: center;
   animation: founderFadeIn 1s ease-out;
 }
 
 .hero-image-wrapper img {
   width: 100%;
-  max-width: 560px;
-  height: auto;
-  object-fit: contain;
+  height: 100%;
+  max-width: 100%;
+  object-fit: cover;
   display: block;
+  transform: scale(1.05);
   transition: transform 0.4s ease;
 }
 
 .hero-image-wrapper:hover img {
-  transform: scale(1.03);
+  transform: scale(1.08);
 }
 
-.hero-content {
-  position: relative;
-  z-index: 3;
-  flex: 1;
-  max-width: 50%;
-  animation: fadeInRight 0.8s ease-out 150ms both;
-}
-
-.hero-title {
-  font-family: 'Playfair Display', serif;
-  font-size: 64px;
-  font-weight: 800;
-  color: #fff;
-  margin-bottom: 24px;
-  line-height: 1.1;
-  letter-spacing: -1px;
-}
-
-.hero-subtitle {
-  font-family: 'Poppins', sans-serif;
-  font-size: 22px;
-  color: rgba(255, 255, 255, 0.85);
-  margin-bottom: 24px;
-  font-weight: 300;
-  line-height: 1.6;
-}
-
-.hero-quote {
-  font-family: 'Playfair Display', serif;
-  font-style: italic;
-  font-size: 1.25rem;
-  color: rgba(255, 255, 255, 0.9);
-  margin: 24px 0 32px;
-  padding-left: 24px;
-  border-left: 3px solid rgba(255, 255, 255, 0.5);
-  line-height: 1.6;
-}
-
-.hero-quote cite {
-  display: block;
-  margin-top: 10px;
-  font-size: 1rem;
-  font-style: normal;
-  color: rgba(255, 255, 255, 0.75);
-}
-
-.hero-buttons {
-  display: flex;
-  gap: 20px;
-  justify-content: flex-start;
-  flex-wrap: wrap;
-  animation: fadeUp 0.8s ease-out 300ms both;
-}
+/* Hero content styles removed - hero now displays only founder photo */
 
 /* About Preview Section */
 .about-preview {
@@ -353,7 +279,7 @@
 
 /* CTA Section */
 .cta-section {
-  background: linear-gradient(135deg, #8B0000 0%, #C1121F 100%);
+  background: linear-gradient(135deg, #8B0000 0%, #c1121ea7 100%);
   padding: 100px 0;
   text-align: center;
   position: relative;
@@ -462,32 +388,6 @@
   .about-preview .section-container {
     gap: 50px;
   }
-
-  .hero-container {
-    flex-direction: column;
-    gap: 50px;
-    text-align: center;
-    padding: 0 40px;
-  }
-
-  .hero-image-wrapper {
-    order: -1;
-    max-width: 450px;
-  }
-
-  .hero-content {
-    max-width: 100%;
-    text-align: center;
-  }
-
-  .hero-buttons {
-    justify-content: center;
-  }
-
-  .hero-quote {
-    text-align: left;
-    padding-left: 30px;
-  }
 }
 
 @media screen and (max-width: 768px) {
@@ -498,38 +398,7 @@
   .hero {
     min-height: auto;
     height: auto;
-    padding: 80px 0;
-  }
-
-  .hero-container {
-    padding: 0 24px;
-    gap: 40px;
-  }
-
-  .hero-image-wrapper {
-    max-width: 380px;
-  }
-
-  .hero-title {
-    font-size: 2.5rem;
-  }
-
-  .hero-subtitle {
-    font-size: 1.15rem;
-  }
-
-  .hero-quote {
-    font-size: 1.1rem;
-  }
-
-  .hero-buttons {
-    flex-direction: column;
-    align-items: stretch;
-  }
-
-  .hero-buttons .btn {
-    width: 100%;
-    justify-content: center;
+    padding: 0;
   }
 
   .about-preview .section-container {
@@ -577,14 +446,6 @@
 @media screen and (max-width: 480px) {
   .section-container {
     padding: 60px 20px;
-  }
-
-  .hero-title {
-    font-size: 2rem;
-  }
-
-  .hero-container {
-    padding: 0 16px;
   }
 
   .btn {

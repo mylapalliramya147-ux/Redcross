@@ -355,15 +355,6 @@ const Events = () => {
     },
     // August Awareness Days
     {
-      id: 38,
-      title: 'World Breastfeeding Day',
-      date: '2024-08-01',
-      time: 'All Day',
-      location: 'Global',
-      description: 'Promotes exclusive breastfeeding for the first six months of life for optimal child growth and development.',
-      category: 'health'
-    },
-    {
       id: 39,
       title: 'International Youth Day',
       date: '2024-08-12',
