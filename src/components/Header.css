@@ -295,7 +295,6 @@
 
   .nav-link.active {
     background: var(--primary);
-    color: white;
   }
 
   .nav-divider {
