@@ -89,98 +89,21 @@ const Footer = () => {
             </ul>
           </nav>
         </div>
+{/* Column 3 - Contact Us */}
+<div className="footer-section footer-contact">
+  <h3 className="footer-heading">Contact Us</h3>
+  <div className="footer-heading-underline"></div>
 
-        {/* Column 3 - Newsletter */}
-        <div className="footer-section">
-          <h3 className="footer-heading">Newsletter</h3>
-          <div className="footer-heading-underline"></div>
-          <p className="footer-newsletter-text">
-            Subscribe to our newsletter to stay updated with our latest news, events, and 
-            humanitarian activities.
-          </p>
-          <form className="newsletter-form" onSubmit={(e) => e.preventDefault()}>
-            <input 
-              type="email" 
-              placeholder="Enter your Email Address" 
-              className="newsletter-input"
-              aria-label="Email address for newsletter"
-            />
-            <button type="submit" className="newsletter-btn" aria-label="Subscribe">
-              <i className="fas fa-paper-plane"></i>
-            </button>
-          </form>
-          <div className="security-badges">
-            <div className="badge">
-              <i className="fas fa-shield-alt"></i>
-              <span>100% Secure</span>
-            </div>
-              </div>
-              <div className="contact-text">
-<<<<<<< HEAD
-                <p className="contact-label">123 Red Cross Road,</p>
-                <p className="contact-label">Hyderabad, Telangana</p>
-                <p className="contact-label">500001</p>
-=======
-                <p className="contact-detail">Andhra Pradesh Red Cross Society<br />Red Cross Bhavan,<br />Governorpet,<br />Vijayawada - 520002</p>
->>>>>>> 7bbe395e992a519c96bbe4cddfd7bf4838e53cf8
-              </div>
-            </div>
-            {/* Phone */}
-            <div className="contact-item">
-              <div className="contact-icon">
-                <i className="fas fa-phone-alt"></i>
-              </div>
-              <div className="contact-text">
-                <a href="tel:+919876543210" className="contact-detail clickable">+91 XXXXX XXXXX</a>
-              </div>
-            </div>
-            {/* Emergency Phone */}
-            <div className="contact-item">
-              <div className="contact-icon">
-                <i className="fas fa-phone-alt"></i>
-              </div>
-              <div className="contact-text">
-<<<<<<< HEAD
-                <p className="contact-label">+91 9876 543 210</p>
-                <p className="contact-label contact-subtext">(Emergency)</p>
-=======
-                <a href="tel:+919876543210" className="contact-detail clickable">
-                  +91 XXXXX XXXXX<br />
-                  <span className="emergency-note">(Emergency)</span>
-                </a>
->>>>>>> 7bbe395e992a519c96bbe4cddfd7bf4838e53cf8
-              </div>
-            </div>
-            {/* Email */}
-            <div className="contact-item">
-              <div className="contact-icon">
-                <i className="fas fa-envelope"></i>
-              </div>
-              <div className="contact-text">
-                <a href="mailto:info@apredcross.org" className="contact-detail clickable">info@apredcross.org</a>
-              </div>
-            </div>
-            {/* Office Hours */}
-            <div className="contact-item">
-              <div className="contact-icon">
-                <i className="fas fa-clock"></i>
-              </div>
-              <div className="contact-text">
-                <p className="contact-detail">Mon - Fri: 9:00 AM - 6:00 PM</p>
-              </div>
-            </div>
-            {/* Emergency Service Hours */}
-            <div className="contact-item">
-              <div className="contact-icon">
-                <i className="fas fa-clock"></i>
-              </div>
-              <div className="contact-text">
-                <p className="contact-detail">Emergency: 24/7</p>
-              </div>
-            </div>
-          </div>
-        </div>
->>>>>>> 8bb8e07ac769cffe658e216897bd4188d948c620
+  <div className="footer-contact-list">
+
+    <div className="footer-contact-item">
+      <i className="fas fa-map-marker-alt footer-contact-icon"></i>
+      <div className="footer-contact-text">
+        <p>123 Red Cross Road,</p>
+        <p>Hyderabad, Telangana</p>
+        <p>500001</p>
+      </div>
+    </div>
 
     <div className="footer-contact-item">
       <i className="fas fa-phone-alt footer-contact-icon"></i>
@@ -217,6 +140,7 @@ const Footer = () => {
         <p>Emergency: 24/7</p>
       </div>
     </div>
+
   </div>
 </div>
         {/* Column 4 - Newsletter */}

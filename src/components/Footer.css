@@ -22,8 +22,8 @@
   margin: 0 auto;
   padding: 0 40px;
   display: grid;
-  grid-template-columns: 2fr 1fr 1.5fr;
-  gap: 40px;
+  grid-template-columns: 2fr 1fr 1.2fr 1.4fr;
+  gap: 35px;
   position: relative;
   z-index: 1;
   align-items: flex-start;
@@ -150,6 +150,43 @@
 
 .footer-link:hover i {
   transform: translateX(3px);
+}
+/* Contact Us */
+.footer-contact-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.footer-contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.footer-contact-icon {
+  color: #C8102E !important;
+  font-size: 20px;
+  min-width: 24px;
+  width: 24px;
+  margin-top: 4px;
+  flex-shrink: 0;
+}
+
+.footer-contact-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-contact-text p {
+  margin: 0;
+  color: #ffffff;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.footer-contact-text .emergency {
+  font-weight: 600;
 }
 
 /* Newsletter */
@@ -326,4 +363,5 @@
   .security-badges {
     justify-content: center;
   }
+  
 }
