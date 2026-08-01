@@ -17,12 +17,12 @@ const Footer = () => {
               }}
             />
             <div className="footer-logo-text-wrapper">
-            <span className="footer-logo-text">APREDCROSS</span>
+              <span className="footer-logo-text">KAKINADA REDCROSS</span>
             </div>
           </div>
           <p className="footer-description">
-            The AP Red Cross Society is a humanitarian organization dedicated to providing emergency assistance, 
-            disaster relief, and education in communities across Andhra Pradesh. We work tirelessly to save lives 
+            The Kakinada Red Cross Society is a humanitarian organization dedicated to providing emergency assistance, 
+            disaster relief, and education in communities across Kakinada and Andhra Pradesh. We work tirelessly to save lives 
             and support those in need.
           </p>
           <div className="social-links">
@@ -81,7 +81,7 @@ const Footer = () => {
                 </a>
               </li>
               <li>
-              <a href="/donate" className="footer-link">
+                <a href="/donate" className="footer-link">
                   <i className="fas fa-chevron-right"></i>
                   Donate Now
                 </a>
@@ -89,63 +89,60 @@ const Footer = () => {
             </ul>
           </nav>
         </div>
+{/* Column 3 - Contact Us */}
+<div className="footer-section footer-contact">
+  <h3 className="footer-heading">Contact Us</h3>
+  <div className="footer-heading-underline"></div>
 
-        {/* Column 3 - Contact Us */}
-        <div className="footer-section">
-          <h3 className="footer-heading">CONTACT US</h3>
-          <div className="footer-heading-underline"></div>
-          <div className="footer-contact">
-            <div className="contact-item">
-              <div className="contact-icon">
-                <i className="fas fa-map-marker-alt"></i>
-              </div>
-              <div className="contact-text">
-                <p className="contact-label">123 Red Cross Road, Hyderabad, Telangana 500001</p>
-              </div>
-            </div>
-            <div className="contact-item">
-              <div className="contact-icon">
-                <i className="fas fa-phone-alt"></i>
-              </div>
-              <div className="contact-text">
-                <p className="contact-label">+91 1234 567 890</p>
-              </div>
-            </div>
-            <div className="contact-item">
-              <div className="contact-icon">
-                <i className="fas fa-phone-alt"></i>
-              </div>
-              <div className="contact-text">
-                <p className="contact-label">+91 9876 543 210 (Emergency)</p>
-              </div>
-            </div>
-            <div className="contact-item">
-              <div className="contact-icon">
-                <i className="fas fa-envelope"></i>
-              </div>
-              <div className="contact-text">
-                <p className="contact-label">info@apredcross.org</p>
-              </div>
-            </div>
-            <div className="contact-item">
-              <div className="contact-icon">
-                <i className="fas fa-clock"></i>
-              </div>
-              <div className="contact-text">
-                <p className="contact-label">Mon - Fri: 9:00 AM - 6:00 PM</p>
-              </div>
-            </div>
-            <div className="contact-item">
-              <div className="contact-icon">
-                <i className="fas fa-clock"></i>
-              </div>
-              <div className="contact-text">
-                <p className="contact-label">Emergency: 24/7</p>
-              </div>
-            </div>
-          </div>
-        </div>
+  <div className="footer-contact-list">
 
+    <div className="footer-contact-item">
+      <i className="fas fa-map-marker-alt footer-contact-icon"></i>
+      <div className="footer-contact-text">
+        <p>123 Red Cross Road,</p>
+        <p>Hyderabad, Telangana</p>
+        <p>500001</p>
+      </div>
+    </div>
+
+    <div className="footer-contact-item">
+      <i className="fas fa-phone-alt footer-contact-icon"></i>
+      <div className="footer-contact-text">
+        <p>+91 1234 567 890</p>
+      </div>
+    </div>
+
+    <div className="footer-contact-item">
+      <i className="fas fa-phone-alt footer-contact-icon"></i>
+      <div className="footer-contact-text">
+        <p>+91 9876 543 210</p>
+        <p className="emergency">(Emergency)</p>
+      </div>
+    </div>
+
+    <div className="footer-contact-item">
+      <i className="fas fa-envelope footer-contact-icon"></i>
+      <div className="footer-contact-text">
+        <p>info@apredcross.org</p>
+      </div>
+    </div>
+
+    <div className="footer-contact-item">
+      <i className="far fa-clock footer-contact-icon"></i>
+      <div className="footer-contact-text">
+        <p>Mon - Fri: 9:00 AM - 6:00 PM</p>
+      </div>
+    </div>
+
+    <div className="footer-contact-item">
+      <i className="far fa-clock footer-contact-icon"></i>
+      <div className="footer-contact-text">
+        <p>Emergency: 24/7</p>
+      </div>
+    </div>
+
+  </div>
+</div>
         {/* Column 4 - Newsletter */}
         <div className="footer-section">
           <h3 className="footer-heading">Newsletter</h3>

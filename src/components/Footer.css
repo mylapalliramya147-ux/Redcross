@@ -22,10 +22,11 @@
   margin: 0 auto;
   padding: 0 40px;
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr 1.5fr;
-  gap: 40px;
+  grid-template-columns: 2fr 1fr 1.2fr 1.4fr;
+  gap: 35px;
   position: relative;
   z-index: 1;
+  align-items: flex-start;
 }
 
 /* Column 1 - Logo & About */
@@ -59,7 +60,7 @@
   font-family: 'Algerian', 'Times New Roman', serif;
   font-weight: bold;
   font-size: 1.8rem;
-  color: #fff;
+  color: #C8102E;
   letter-spacing: 0.5px;
   line-height: 1.1;
 }
@@ -150,64 +151,42 @@
 .footer-link:hover i {
   transform: translateX(3px);
 }
-
 /* Contact Us */
-.footer-contact {
+.footer-contact-list {
   display: flex;
   flex-direction: column;
-  gap: 18px;
+  gap: 20px;
 }
 
-.contact-item {
+.footer-contact-item {
   display: flex;
   align-items: flex-start;
-  gap: 12px;
-  color: #fff;
-  line-height: 1.5;
+  gap: 16px;
 }
 
-.contact-icon {
+.footer-contact-icon {
+  color: #C8102E !important;
+  font-size: 20px;
+  min-width: 24px;
   width: 24px;
+  margin-top: 4px;
   flex-shrink: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #C8102E;
-  font-size: 1.2rem;
-  margin-top: 2px;
 }
 
-.contact-text {
-  flex: 1;
+.footer-contact-text {
   display: flex;
   flex-direction: column;
-  gap: 2px;
 }
 
-.contact-label {
+.footer-contact-text p {
   margin: 0;
-  font-size: 0.95rem;
-  font-weight: 500;
-  color: #B7BCC5;
-  line-height: 1.5;
-  letter-spacing: 0.3px;
+  color: #ffffff;
+  font-size: 15px;
+  line-height: 1.6;
 }
 
-.contact-detail {
-  margin: 0;
-  font-size: 0.95rem;
-  font-weight: 400;
-  color: #B7BCC5;
-  line-height: 1.5;
-  transition: all 0.3s ease;
-}
-
-.contact-detail.clickable {
-  cursor: pointer;
-}
-
-.contact-detail.clickable:hover {
-  color: #C8102E;
+.footer-contact-text .emergency {
+  font-weight: 600;
 }
 
 /* Newsletter */
@@ -384,4 +363,5 @@
   .security-badges {
     justify-content: center;
   }
+  
 }
