@@ -31,12 +31,34 @@ const Home = () => {
     <div className="home">
       {/* Hero Section */}
       <section className="hero">
-        <div className="hero-image-wrapper">
-          <img 
-            src={dunantImage} 
-            alt="Henry Dunant - Founder of the Red Cross" 
-            loading="lazy"
-          />
+        <div className="hero-container">
+          <div className="hero-content">
+            <h1 className="hero-title">
+              Together We Can Make a Difference
+            </h1>
+            <p className="hero-subtitle">
+              Join hands with Kakinada Redcross to provide humanitarian aid and save lives
+            </p>
+            <blockquote className="hero-quote">
+              "Humanity is our greatest strength."
+              <cite>— Henry Dunant</cite>
+            </blockquote>
+            <div className="hero-buttons">
+              <Link to="/donate" className="btn btn-primary">
+                <i className="fas fa-heart"></i> Donate Now
+              </Link>
+              <Link to="/services" className="btn btn-secondary">
+                <i className="fas fa-info-circle"></i> Learn More
+              </Link>
+            </div>
+          </div>
+          <div className="hero-image-wrapper">
+            <img 
+              src={dunantImage} 
+              alt="Henry Dunant - Founder of the Red Cross" 
+              loading="lazy"
+            />
+          </div>
         </div>
       </section>
 
