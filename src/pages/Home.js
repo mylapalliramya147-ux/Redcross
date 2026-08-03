@@ -28,6 +28,24 @@ const Home = () => {
     },
   ];
 
+  const teamMembers = [
+    {
+      name: 'Dr. Rajesh Kumar',
+      position: 'President',
+      image: 'https://images.unsplash.com/photo-1567468255534-9d441a1b6e3b?w=300&h=300&fit=crop',
+    },
+    {
+      name: 'Sneha Reddy',
+      position: 'Vice President',
+      image: 'https://images.unsplash.com/photo-1494790108377-be9c2f2f5c83?w=300&h=300&fit=crop',
+    },
+    {
+      name: 'Amit Sharma',
+      position: 'Treasurer',
+      image: 'https://images.unsplash.com/photo-1557862433-33c1b0c7e6d3?w=300&h=300&fit=crop',
+    },
+  ];
+
   const galleryImages = [
     { src: 'https://images.unsplash.com/photo-1573497620053-ea5300f5f4cb?w=800&h=600&fit=crop', title: 'Volunteer Team', alt: 'Red Cross volunteer team' },
     { src: 'https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?w=800&h=600&fit=crop', title: 'Community Outreach', alt: 'Community outreach program' },
@@ -112,6 +130,27 @@ const Home = () => {
             ))}
           </div>
         </div>e
+      </section>
+
+      {/* Leadership Team Section */}
+      <section className="leadership-section">
+        <div className="section-container">
+          <h2 className="section-title">Our Leadership Team</h2>
+          <p className="leadership-subtitle">
+            Meet the dedicated individuals who guide our mission and lead our humanitarian efforts.
+          </p>
+          <div className="leadership-grid">
+            {teamMembers.map((member, index) => (
+              <div key={index} className="leadership-card">
+                <div className="leadership-image">
+                  <img src={member.image} alt={member.name} />
+                </div>
+                <h3>{member.name}</h3>
+                <p>{member.position}</p>
+              </div>
+            ))}
+          </div>
+        </div>
       </section>
 
       {/* Gallery Section */}
