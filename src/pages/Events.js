@@ -563,6 +563,26 @@ const Events = () => {
   const monthOrder = ['January', 'February', 'March', 'April', 'May', 'June', 
                        'July', 'August', 'September', 'October', 'November', 'December'];
 
+  const [selectedEvent, setSelectedEvent] = React.useState(events[0]);
+
+  const getMonthImage = (month) => {
+    const monthImages = {
+      'January': '/month-awareness/january.jpg',
+      'February': '/month-awareness/february.jpg',
+      'March': '/month-awareness/march.jpg',
+      'April': '/month-awareness/april.jpg',
+      'May': '/month-awareness/may.jpg',
+      'June': '/month-awareness/june.jpg',
+      'July': '/month-awareness/july.jpg',
+      'August': '/month-awareness/august.jpg',
+      'September': '/month-awareness/september.jpg',
+      'October': '/month-awareness/october.jpg',
+      'November': '/month-awareness/november.jpg',
+      'December': '/month-awareness/december.jpg'
+    };
+    return monthImages[month];
+  };
+
   return (
     <div className="calendar">
       {/* Hero Section */}
@@ -586,15 +606,31 @@ const Events = () => {
             return (
               <div key={month} className="month-section">
                 <h3 className="month-title">{month}</h3>
-                <div className="events-grid">
-                  {monthEvents.map((event) => (
-                    <div key={event.id} className="event-card-wrapper">
-                      <DayCard 
-                        date={formatDate(event.date)}
-                        title={event.title}
+                <div className="events-with-image">
+                  <div className="events-column">
+                    {monthEvents.map((event) => (
+                      <div 
+                        key={event.id} 
+                        className="event-card-wrapper"
+                        onClick={() => setSelectedEvent(event)}
+                      >
+                        <DayCard 
+                          date={formatDate(event.date)}
+                          title={event.title}
+                        />
+                      </div>
+                    ))}
+                  </div>
+                  <div className="image-column">
+                    <div className="image-container">
+                      <img 
+                        src={getMonthImage(month) || '/january-awareness.png'} 
+                        alt={`${month} Awareness`}
+                        className="awareness-image"
+                        key={selectedEvent?.id}
                       />
                     </div>
-                  ))}
+                  </div>
                 </div>
               </div>
             );
