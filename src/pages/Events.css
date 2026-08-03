@@ -83,18 +83,43 @@
   line-height: 1.2;
 }
 
+/* Month Section Styles */
+.month-section {
+  margin-bottom: 60px;
+  text-align: left;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.month-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  color: var(--primary);
+  text-align: center;
+  margin-bottom: 30px;
+  padding-bottom: 10px;
+  font-weight: 700;
+  border-bottom: none;
+  display: block;
+  width: 100%;
+}
+
 /* Events Grid - spacing between cards */
 .events-grid {
   display: flex;
-  flex-wrap: wrap;
-  gap: 24px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
   max-width: 1200px;
   margin: 0 auto;
-  justify-content: center;
+  padding-left: 40px;
 }
 
 .events-grid > div {
-  flex: 0 0 auto;
+  width: auto;
+  display: block;
+  align-self: flex-start;
 }
 
 /* CTA Section */
