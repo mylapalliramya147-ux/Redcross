@@ -549,6 +549,20 @@ const Events = () => {
     }
   ];
 
+  // Group events by month
+  const groupedEvents = events.reduce((acc, event) => {
+    const date = new Date(event.date);
+    const monthName = date.toLocaleDateString('en-US', { month: 'long' });
+    if (!acc[monthName]) {
+      acc[monthName] = [];
+    }
+    acc[monthName].push(event);
+    return acc;
+  }, {});
+
+  const monthOrder = ['January', 'February', 'March', 'April', 'May', 'June', 
+                       'July', 'August', 'September', 'October', 'November', 'December'];
+
   return (
     <div className="calendar">
       {/* Hero Section */}
@@ -564,16 +578,27 @@ const Events = () => {
       <section className="events-list-section">
         <div className="section-container">
           <h2>National & International Awareness Days</h2>
-          <div className="events-grid">
-            {events.map((event) => (
-              <div key={event.id}>
-                <DayCard 
-                  date={formatDate(event.date)}
-                  title={event.title}
-                />
+          
+          {monthOrder.map((month) => {
+            const monthEvents = groupedEvents[month];
+            if (!monthEvents || monthEvents.length === 0) return null;
+            
+            return (
+              <div key={month} className="month-section">
+                <h3 className="month-title">{month}</h3>
+                <div className="events-grid">
+                  {monthEvents.map((event) => (
+                    <div key={event.id} className="event-card-wrapper">
+                      <DayCard 
+                        date={formatDate(event.date)}
+                        title={event.title}
+                      />
+                    </div>
+                  ))}
+                </div>
               </div>
-            ))}
-          </div>
+            );
+          })}
         </div>
       </section>
 
