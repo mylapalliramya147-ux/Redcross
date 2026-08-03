@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import henryImage from '../assets/henry.png';
+import henryImage from '../assets/Events/henry.png';
 import Gallery from '../components/Gallery';
 import './Home.css';
 
