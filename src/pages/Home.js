@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import dunantImage from '../assets/dunaun.png';
+import Gallery from '../components/Gallery';
 import './Home.css';
 
 const Home = () => {
@@ -27,17 +28,48 @@ const Home = () => {
     },
   ];
 
+  const teamMembers = [
+    {
+      name: 'Dr. Rajesh Kumar',
+      position: 'President',
+      image: 'https://images.unsplash.com/photo-1567468255534-9d441a1b6e3b?w=300&h=300&fit=crop',
+    },
+    {
+      name: 'Sneha Reddy',
+      position: 'Vice President',
+      image: 'https://images.unsplash.com/photo-1494790108377-be9c2f2f5c83?w=300&h=300&fit=crop',
+    },
+    {
+      name: 'Amit Sharma',
+      position: 'Treasurer',
+      image: 'https://images.unsplash.com/photo-1557862433-33c1b0c7e6d3?w=300&h=300&fit=crop',
+    },
+  ];
+
+  const galleryImages = [
+    { src: 'https://images.unsplash.com/photo-1573497620053-ea5300f5f4cb?w=800&h=600&fit=crop', title: 'Volunteer Team', alt: 'Red Cross volunteer team' },
+    { src: 'https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?w=800&h=600&fit=crop', title: 'Community Outreach', alt: 'Community outreach program' },
+    { src: 'https://images.unsplash.com/photo-1559429216-99f1f9184a9c?w=800&h=600&fit=crop', title: 'Medical Camp', alt: 'Medical camp for community' },
+    { src: 'https://images.unsplash.com/photo-1582750675730-23b5f5b5e1b5?w=800&h=600&fit=crop', title: 'Disaster Relief', alt: 'Disaster relief efforts' },
+    { src: 'https://images.unsplash.com/photo-1593113630166-c5e7dfc0e4d9?w=800&h=600&fit=crop', title: 'Healthcare Services', alt: 'Healthcare services' },
+    { src: 'https://images.unsplash.com/photo-1532629555105-1cbb2f6839f5?w=800&h=600&fit=crop', title: 'Emergency Response', alt: 'Emergency response team' },
+    { src: 'https://images.unsplash.com/photo-1463173223085-5b9357f29649?w=800&h=600&fit=crop', title: 'Training Session', alt: 'First aid training session' },
+    { src: 'https://images.unsplash.com/photo-1517048676719-4e9c4e3c4b1b?w=800&h=600&fit=crop', title: 'Community Support', alt: 'Community support program' },
+  ];
+
   return (
     <div className="home">
       {/* Hero Section */}
       <section className="hero">
+        <div className="hero-bg">
+          <img src={dunantImage} alt="Sir Jean-Henri Dunant - Founder of the Red Cross" />
+          <div className="hero-bg-overlay"></div>
+        </div>
         <div className="hero-container">
           <div className="hero-content">
-            <h1 className="hero-title">
-              Together We Can Make a Difference
-            </h1>
+            <h1 className="hero-title">Together We Can Make a Difference</h1>
             <p className="hero-subtitle">
-              Join hands with Kakinada Redcross to provide humanitarian aid and save lives
+              Join hands with Kakinada Red Cross to provide humanitarian aid and save lives.
             </p>
             <blockquote className="hero-quote">
               "Humanity is our greatest strength."
@@ -47,17 +79,10 @@ const Home = () => {
               <Link to="/donate" className="btn btn-primary">
                 <i className="fas fa-heart"></i> Donate Now
               </Link>
-              <Link to="/services" className="btn btn-secondary">
+              <Link to="/services" className="btn btn-outline-light">
                 <i className="fas fa-info-circle"></i> Learn More
               </Link>
             </div>
-          </div>
-          <div className="hero-image-wrapper">
-            <img 
-              src={dunantImage} 
-              alt="Henry Dunant - Founder of the Red Cross" 
-              loading="lazy"
-            />
           </div>
         </div>
       </section>
@@ -104,8 +129,32 @@ const Home = () => {
               </div>
             ))}
           </div>
+        </div>e
+      </section>
+
+      {/* Leadership Team Section */}
+      <section className="leadership-section">
+        <div className="section-container">
+          <h2 className="section-title">Our Leadership Team</h2>
+          <p className="leadership-subtitle">
+            Meet the dedicated individuals who guide our mission and lead our humanitarian efforts.
+          </p>
+          <div className="leadership-grid">
+            {teamMembers.map((member, index) => (
+              <div key={index} className="leadership-card">
+                <div className="leadership-image">
+                  <img src={member.image} alt={member.name} />
+                </div>
+                <h3>{member.name}</h3>
+                <p>{member.position}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
+
+      {/* Gallery Section */}
+      <Gallery images={galleryImages} />
 
       {/* Call to Action Section */}
       <section className="cta-section">
@@ -122,8 +171,7 @@ const Home = () => {
           </div>
         </div>
       </section>
-   </div>
-    
+    </div>
   );
 };
 
