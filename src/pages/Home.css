@@ -40,7 +40,7 @@
   object-fit: cover;
   object-position: center top;
   display: block;
-  filter: grayscale(15%) contrast(1.05);
+  filter: grayscale(8%) contrast(1.02);
 }
 
 /* Black-to-red gradient overlay — blends image naturally with content */
@@ -55,8 +55,13 @@
       to right,
       rgba(17, 17, 17, 0.7) 0%,
       rgba(17, 17, 17, 0.6) 20%,
+<<<<<<< HEAD
       rgba(17, 17, 17, 0.4) 38%,
       rgba(17, 17, 17, 0.2) 55%,
+=======
+      rgba(17, 17, 17, 0.45) 38%,
+      rgba(17, 17, 17, 0.3) 55%,
+>>>>>>> 0216e9ad39c84df3d5c189d0d1e521a762461aba
       transparent 70%
     ),
     linear-gradient(
@@ -70,9 +75,15 @@
       100deg,
       rgba(17, 17, 17, 0.7) 0%,
       rgba(17, 17, 17, 0.6) 35%,
+<<<<<<< HEAD
       rgba(17, 17, 17, 0.4) 55%,
       rgba(80, 8, 12, 0.4) 75%,
       rgba(200, 16, 46, 0.25) 100%
+=======
+      rgba(17, 17, 17, 0.45) 55%,
+      rgba(80, 8, 12, 0.35) 75%,
+      rgba(200, 16, 46, 0.2) 100%
+>>>>>>> 0216e9ad39c84df3d5c189d0d1e521a762461aba
     );
 }
 
@@ -708,9 +719,9 @@
       ),
       linear-gradient(
         180deg,
-        rgba(17, 17, 17, 0.92) 0%,
-        rgba(17, 17, 17, 0.85) 50%,
-        rgba(80, 8, 12, 0.7) 100%
+        rgba(17, 17, 17, 0.6) 0%,
+        rgba(17, 17, 17, 0.55) 50%,
+        rgba(80, 8, 12, 0.4) 100%
       );
   }
 
