@@ -1,6 +1,8 @@
 /* Home Page Styles */
 .home {
   min-height: 100vh;
+  margin: 0;
+  padding: 0;
 }
 
 /* Section Spacing */
@@ -92,6 +94,29 @@
     transparent 0%,
     rgba(17, 17, 17, 0.15) 100%
   );
+}
+
+/* Light blackness overlay on the left side of the hero image
+   — a subtle dark gradient that makes left-side content readable
+   while keeping the right side of the image pristine. */
+.hero-bg-left-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 35%;
+  max-width: 600px;
+  z-index: 2;
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.45) 0%,
+    rgba(0, 0, 0, 0.35) 15%,
+    rgba(0, 0, 0, 0.22) 30%,
+    rgba(0, 0, 0, 0.1) 50%,
+    rgba(0, 0, 0, 0.05) 65%,
+    transparent 85%
+  );
+  pointer-events: none;
 }
 
 /* Content container — left aligned */

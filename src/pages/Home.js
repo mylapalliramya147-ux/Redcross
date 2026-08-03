@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import henryImage from '../assets/Events/henry.png';
+import henryImage from '../assets/Events/henrii.png';
 import Gallery from '../components/Gallery';
 import './Home.css';
 
@@ -64,6 +64,7 @@ const Home = () => {
         <div className="hero-bg">
           <img src={henryImage} alt="Sir Jean-Henri Dunant - Founder of the Red Cross" />
           <div className="hero-bg-overlay"></div>
+          <div className="hero-bg-left-overlay"></div>
         </div>
         <div className="hero-container">
           <div className="hero-content">
