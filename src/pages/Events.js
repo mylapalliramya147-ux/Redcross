@@ -1,7 +1,19 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Events.css';
 import DayCard from '../components/DayCard';
+import januaryImage from '../assets/Events/january.jpeg';
+import februaryImage from '../assets/Events/february.jpeg';
+import marchImage from '../assets/Events/march.jpeg';
+import aprilImage from '../assets/Events/april.jpeg';
+import mayImage from '../assets/Events/may.jpeg';
+import juneImage from '../assets/Events/june.jpeg';
+import julyImage from '../assets/Events/july.jpeg';
+import augustImage from '../assets/Events/august.jpeg';
+import septemberImage from '../assets/Events/september.jpeg';
+import octoberImage from '../assets/Events/october.jpeg';
+import novemberImage from '../assets/Events/november.jpeg';
+import decemberImage from '../assets/Events/december.jpeg';
 
 const formatDate = (dateString) => {
   const date = new Date(dateString);
@@ -563,24 +575,25 @@ const Events = () => {
   const monthOrder = ['January', 'February', 'March', 'April', 'May', 'June', 
                        'July', 'August', 'September', 'October', 'November', 'December'];
 
-  const [selectedEvent, setSelectedEvent] = React.useState(events[0]);
+  const [selectedEvent, setSelectedEvent] = useState(events[0]);
+
+  const monthImageMap = {
+    'January': januaryImage,
+    'February': februaryImage,
+    'March': marchImage,
+    'April': aprilImage,
+    'May': mayImage,
+    'June': juneImage,
+    'July': julyImage,
+    'August': augustImage,
+    'September': septemberImage,
+    'October': octoberImage,
+    'November': novemberImage,
+    'December': decemberImage
+  };
 
   const getMonthImage = (month) => {
-    const monthImages = {
-      'January': '/month-awareness/january.jpg',
-      'February': '/month-awareness/february.jpg',
-      'March': '/month-awareness/march.jpg',
-      'April': '/month-awareness/april.jpg',
-      'May': '/month-awareness/may.jpg',
-      'June': '/month-awareness/june.jpg',
-      'July': '/month-awareness/july.jpg',
-      'August': '/month-awareness/august.jpg',
-      'September': '/month-awareness/september.jpg',
-      'October': '/month-awareness/october.jpg',
-      'November': '/month-awareness/november.jpg',
-      'December': '/month-awareness/december.jpg'
-    };
-    return monthImages[month];
+    return monthImageMap[month] || januaryImage;
   };
 
   return (
@@ -624,10 +637,13 @@ const Events = () => {
                   <div className="image-column">
                     <div className="image-container">
                       <img 
-                        src={getMonthImage(month) || '/january-awareness.png'} 
+                        src={getMonthImage(month)} 
                         alt={`${month} Awareness`}
                         className="awareness-image"
-                        key={selectedEvent?.id}
+                        key={`${month}-${selectedEvent?.id}`}
+                        onError={(e) => {
+                          e.target.src = januaryImage;
+                        }}
                       />
                     </div>
                   </div>

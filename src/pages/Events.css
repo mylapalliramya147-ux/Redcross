@@ -124,6 +124,8 @@
 .image-column {
   width: 75%;
   position: relative;
+  display: flex;
+  align-items: stretch;
 }
 
 .image-container {
@@ -134,15 +136,20 @@
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   background: #f5f5f5;
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .awareness-image {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   display: block;
   animation: fadeIn 0.4s ease-in-out;
   transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
+  background: #f5f5f5;
+  padding: 20px;
 }
 
 @keyframes fadeIn {

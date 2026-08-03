@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import dunantImage from '../assets/dunaun.png';
+import henryImage from '../assets/henry.png';
 import Gallery from '../components/Gallery';
 import './Home.css';
 
@@ -62,7 +62,7 @@ const Home = () => {
       {/* Hero Section */}
       <section className="hero">
         <div className="hero-bg">
-          <img src={dunantImage} alt="Sir Jean-Henri Dunant - Founder of the Red Cross" />
+          <img src={henryImage} alt="Sir Jean-Henri Dunant - Founder of the Red Cross" />
           <div className="hero-bg-overlay"></div>
         </div>
         <div className="hero-container">
