@@ -13,14 +13,17 @@
 /* Hero Section */
 .hero {
   position: relative;
-  min-height: 100vh;
-  height: 100vh;
+  /* Fill the viewport minus the 80px header — image starts flush under header */
+  min-height: calc(100vh - 80px);
+  height: calc(100vh - 80px);
   display: flex;
   align-items: center;
   justify-content: flex-start;
   overflow: hidden;
   background-color: #111111;
   padding: 0;
+  /* No gap above the hero image */
+  margin: 0;
 }
 
 /* Background image layer */
@@ -686,9 +689,10 @@
 
   /* Mobile: center content, reduce hero height, keep readable */
   .hero {
-    min-height: 90vh;
-    height: 90vh;
+    min-height: calc(90vh - 70px);
+    height: calc(90vh - 70px);
     padding: 0;
+    margin: 0;
   }
 
   /* Strengthen overlay on mobile for readability */
@@ -810,8 +814,9 @@
   }
 
   .hero {
-    min-height: 85vh;
-    height: 85vh;
+    min-height: calc(85vh - 70px);
+    height: calc(85vh - 70px);
+    margin: 0;
   }
 
   .hero-title {
