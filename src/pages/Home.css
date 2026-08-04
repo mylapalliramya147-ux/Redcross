@@ -15,9 +15,15 @@
 /* Hero Section */
 .hero {
   position: relative;
+<<<<<<< HEAD
+  min-height: 80vh;
+  height: 80vh;
+  background: linear-gradient(135deg, #a3271e 0%, #7b1d18 50%, #8f2b21 100%);
+=======
   /* Fill the viewport minus the 80px header — image starts flush under header */
   min-height: calc(100vh - 80px);
   height: calc(100vh - 80px);
+>>>>>>> f2e33b7025165aa9bcdf4d33caf259036e658567
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -714,6 +720,11 @@
 
   /* Mobile: center content, reduce hero height, keep readable */
   .hero {
+<<<<<<< HEAD
+    min-height: auto;
+    height: 1000px;
+    padding: 80px 0;
+=======
     min-height: calc(90vh - 70px);
     height: calc(90vh - 70px);
     padding: 0;
@@ -741,6 +752,7 @@
         rgba(17, 17, 17, 0.55) 50%,
         rgba(80, 8, 12, 0.4) 100%
       );
+>>>>>>> f2e33b7025165aa9bcdf4d33caf259036e658567
   }
 
   .hero-container {
@@ -748,9 +760,14 @@
     justify-content: center;
   }
 
+<<<<<<< HEAD
+  .hero-image-wrapper {
+    max-width: 380px;
+=======
   .hero-content {
     max-width: 100%;
     text-align: center;
+>>>>>>> f2e33b7025165aa9bcdf4d33caf259036e658567
   }
 
   .hero-title {
