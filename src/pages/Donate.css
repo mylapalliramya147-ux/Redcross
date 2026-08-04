@@ -331,26 +331,17 @@
   transform: translateY(-8px);
 }
 
-.way-card-icon {
-  width: 72px;
-  height: 72px;
-  background: var(--primary);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto 20px;
-  transition: transform 0.3s ease;
+.way-card i {
+  font-size: 48px;
+  color: var(--primary);
+  margin-bottom: 20px;
+  display: block;
+  transition: all 0.3s ease;
 }
 
-.way-card:hover .way-card-icon {
+.way-card:hover i {
   transform: scale(1.1) rotate(5deg);
-}
-
-.way-card-icon svg {
-  width: 32px;
-  height: 32px;
-  color: white;
+  color: var(--primary-dark);
 }
 
 .way-card h3 {
@@ -364,73 +355,6 @@
   color: var(--text-light);
   line-height: 1.7;
   margin: 0;
-}
-
-/* Blood Donation Requirements Section */
-.blood-requirements-section {
-  padding: 100px 0;
-  background: var(--surface);
-}
-
-.blood-requirements-section .section-container {
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 0 40px;
-}
-
-.blood-requirements-section h2 {
-  font-family: 'Playfair Display', serif;
-  font-size: 2.75rem;
-  text-align: center;
-  color: var(--text);
-  margin-bottom: 20px;
-  line-height: 1.2;
-}
-
-.requirements-intro {
-  text-align: center;
-  color: var(--text-light);
-  font-size: 1.125rem;
-  max-width: 700px;
-  margin: 0 auto 50px;
-  line-height: 1.7;
-}
-
-.requirements-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 25px;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.requirement-item {
-  display: flex;
-  align-items: center;
-  gap: 18px;
-  background: var(--surface);
-  padding: 28px 24px;
-  border-radius: 18px;
-  border: 1px solid var(--border);
-  box-shadow: var(--shadow);
-  transition: all 0.35s ease;
-}
-
-.requirement-item:hover {
-  transform: translateY(-8px);
-}
-
-.requirement-item svg {
-  width: 28px;
-  height: 28px;
-  color: var(--primary);
-  flex-shrink: 0;
-}
-
-.requirement-item span {
-  color: var(--text);
-  font-size: 1rem;
-  font-weight: 500;
 }
 
 /* Responsive Design */
@@ -455,8 +379,7 @@
 
   .donation-section,
   .impact-section,
-  .other-ways,
-  .blood-requirements-section {
+  .other-ways {
     padding: 80px 0;
   }
 
@@ -475,8 +398,7 @@
 
   .donation-content h2,
   .impact-section h2,
-  .other-ways h2,
-  .blood-requirements-section h2 {
+  .other-ways h2 {
     font-size: 2.25rem;
   }
 }
@@ -496,8 +418,7 @@
 
   .donation-content h2,
   .impact-section h2,
-  .other-ways h2,
-  .blood-requirements-section h2 {
+  .other-ways h2 {
     font-size: 2rem;
   }
 }

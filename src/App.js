@@ -10,6 +10,8 @@ import Donate from './pages/Donate';
 import Events from './pages/Events';
 import Login from './pages/Login';
 import AdminDashboard from './pages/AdminDashboard';
+import BecomeDonor from './pages/BecomeDonor';
+import BecomeVolunteer from './pages/BecomeVolunteer';
 import ProtectedRoute from './components/ProtectedRoute';
 import { AuthProvider } from './contexts/AuthContext';
 import './App.css';
@@ -87,6 +89,24 @@ function App() {
               <ProtectedRoute>
                 <AdminDashboard />
               </ProtectedRoute>
+            } />
+            <Route path="/become-a-donor" element={
+              <>
+                <Header />
+                <main className="main-content">
+                  <BecomeDonor />
+                </main>
+                <Footer />
+              </>
+            } />
+            <Route path="/become-a-volunteer" element={
+              <>
+                <Header />
+                <main className="main-content">
+                  <BecomeVolunteer />
+                </main>
+                <Footer />
+              </>
             } />
           </Routes>
         </div>
