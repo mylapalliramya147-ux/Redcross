@@ -15,11 +15,7 @@
   position: relative;
   min-height: 80vh;
   height: 80vh;
-<<<<<<< HEAD
-  background: linear-gradient(135deg, #5b120d 0%, #7b1d18 50%, #8f2b21 100%);
-=======
   background: linear-gradient(135deg, #a3271e 0%, #7b1d18 50%, #8f2b21 100%);
->>>>>>> a7f7e36719c2c6d73e143bdb0945c5fe1feda8d8
   display: flex;
   align-items: center;
   justify-content: center;
@@ -503,11 +499,7 @@
 
   .hero {
     min-height: auto;
-<<<<<<< HEAD
-    height: auto;
-=======
     height: 1000px;
->>>>>>> a7f7e36719c2c6d73e143bdb0945c5fe1feda8d8
     padding: 80px 0;
   }
 
@@ -517,12 +509,7 @@
   }
 
   .hero-image-wrapper {
-<<<<<<< HEAD
-    max-width: 450px;
-    height:100px
-=======
     max-width: 380px;
->>>>>>> a7f7e36719c2c6d73e143bdb0945c5fe1feda8d8
   }
 
   .hero-title {
