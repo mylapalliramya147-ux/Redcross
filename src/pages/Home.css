@@ -1,6 +1,8 @@
 /* Home Page Styles */
 .home {
   min-height: 100vh;
+  margin: 0;
+  padding: 0;
 }
 
 /* Section Spacing */
@@ -13,109 +15,177 @@
 /* Hero Section */
 .hero {
   position: relative;
+<<<<<<< HEAD
   min-height: 80vh;
   height: 80vh;
   background: linear-gradient(135deg, #a3271e 0%, #7b1d18 50%, #8f2b21 100%);
+=======
+  /* Fill the viewport minus the 80px header — image starts flush under header */
+  min-height: calc(100vh - 80px);
+  height: calc(100vh - 80px);
+>>>>>>> f2e33b7025165aa9bcdf4d33caf259036e658567
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   overflow: hidden;
-  padding: 60px 0 80px;
+  background-color: #111111;
+  padding: 0;
+  /* No gap above the hero image */
+  margin: 0;
 }
 
-.hero::before {
+/* Background image layer */
+.hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.hero-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+  filter: grayscale(8%) contrast(1.02);
+}
+
+/* Black-to-red gradient overlay — blends image naturally with content */
+.hero-bg-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  background: linear-gradient(
+      to right,
+      rgba(17, 17, 17, 0.55) 0%,
+      rgba(17, 17, 17, 0.4) 20%,
+      rgba(17, 17, 17, 0.3) 35%,
+      rgba(17, 17, 17, 0.2) 50%,
+      transparent 70%
+    ),
+    linear-gradient(
+      to bottom,
+      transparent 0%,
+      transparent 55%,
+      rgba(17, 17, 17, 0.3) 78%,
+      rgba(17, 17, 17, 0.5) 100%
+    ),
+    linear-gradient(
+      100deg,
+      rgba(17, 17, 17, 0.5) 0%,
+      rgba(17, 17, 17, 0.4) 35%,
+      rgba(17, 17, 17, 0.3) 55%,
+      rgba(80, 8, 12, 0.25) 75%,
+      rgba(200, 16, 46, 0.15) 100%
+    );
+}
+
+/* Subtle vignette for premium depth */
+.hero-bg-overlay::after {
   content: '';
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background: none;
-  display: none;
+  background: radial-gradient(
+    ellipse at 70% 50%,
+    transparent 0%,
+    rgba(17, 17, 17, 0.15) 100%
+  );
 }
 
+/* Light blackness overlay on the left side of the hero image
+   — a subtle dark gradient that makes left-side content readable
+   while keeping the right side of the image pristine. */
+.hero-bg-left-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 35%;
+  max-width: 600px;
+  z-index: 2;
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.45) 0%,
+    rgba(0, 0, 0, 0.35) 15%,
+    rgba(0, 0, 0, 0.22) 30%,
+    rgba(0, 0, 0, 0.1) 50%,
+    rgba(0, 0, 0, 0.05) 65%,
+    transparent 85%
+  );
+  pointer-events: none;
+}
+
+/* Content container — left aligned */
 .hero-container {
   position: relative;
-  z-index: 2;
+  z-index: 3;
   max-width: 1600px;
   width: 100%;
-  margin: auto;
+  margin: 0 auto;
   padding: 0 80px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 100px;
-}
-
-.hero-image-wrapper {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  flex: 1.2;
-  max-width: 700px;
-  animation: founderFadeIn 1s ease-out;
-}
-
-.hero-image-wrapper img {
-  width: 150%;
-  max-width: 700px;
-  height: auto;
-  object-fit: contain;
-  display: block;
-  border-radius: 30px;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
-  transition: transform 0.4s ease;
-}
-
-.hero-image-wrapper:hover img {
-  transform: scale(1.03);
+  justify-content: flex-start;
 }
 
 .hero-content {
   position: relative;
-  z-index: 3;
-  flex: 0.8;
-  max-width: 45%;
-  animation: fadeInRight 0.8s ease-out 150ms both;
+  z-index: 4;
+  max-width: 620px;
+  width: 100%;
 }
 
 .hero-title {
   font-family: 'Playfair Display', serif;
-  font-size: 64px;
+  font-size: 4rem;
   font-weight: 800;
-  color: #fff;
-  margin-bottom: 24px;
+  color: #FFFFFF;
+  margin-bottom: 28px;
   line-height: 1.1;
-  letter-spacing: -1px;
+  letter-spacing: -1.5px;
+  animation: heroFadeIn 1s ease-out 0.2s both;
 }
 
 .hero-subtitle {
   font-family: 'Poppins', sans-serif;
-  font-size: 22px;
+  font-size: 1.375rem;
   color: rgba(255, 255, 255, 0.85);
-  margin-bottom: 24px;
+  margin-bottom: 36px;
   font-weight: 300;
-  line-height: 1.6;
+  line-height: 1.7;
+  animation: heroFadeIn 1s ease-out 0.4s both;
 }
 
 .hero-quote {
   font-family: 'Playfair Display', serif;
   font-style: italic;
-  font-size: 1.25rem;
-  color: rgba(255, 255, 255, 0.9);
-  margin: 24px 0 32px;
+  font-size: 1.3rem;
+  color: rgba(255, 255, 255, 0.92);
+  margin: 0 0 44px;
   padding-left: 24px;
-  border-left: 3px solid rgba(255, 255, 255, 0.5);
+  border-left: 3px solid #C8102E;
   line-height: 1.6;
+  animation: heroFadeIn 1s ease-out 0.6s both;
 }
 
 .hero-quote cite {
   display: block;
-  margin-top: 10px;
+  margin-top: 12px;
   font-size: 1rem;
   font-style: normal;
-  color: rgba(255, 255, 255, 0.75);
+  color: rgba(255, 255, 255, 0.7);
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
 }
 
 .hero-buttons {
@@ -123,7 +193,90 @@
   gap: 20px;
   justify-content: flex-start;
   flex-wrap: wrap;
-  animation: fadeUp 0.8s ease-out 300ms both;
+  animation: heroFadeIn 1s ease-out 0.8s both;
+}
+
+/* ===== Button Styles ===== */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 16px 38px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
+  border: 2px solid transparent;
+  letter-spacing: 0.3px;
+}
+
+/* Primary Button — Red background */
+.btn-primary {
+  background: #C8102E;
+  color: #FFFFFF;
+  border: 2px solid #C8102E;
+  box-shadow: 0 8px 24px rgba(200, 16, 46, 0.4);
+}
+
+.btn-primary:hover {
+  background: #a00d24;
+  border-color: #a00d24;
+  color: #FFFFFF;
+  transform: translateY(-3px);
+  box-shadow: 0 14px 36px rgba(200, 16, 46, 0.55);
+}
+
+.btn-primary:active {
+  transform: translateY(-1px);
+}
+
+/* Secondary Button — White outline, transparent background */
+.btn-outline-light {
+  background: transparent;
+  color: #FFFFFF;
+  border: 2px solid rgba(255, 255, 255, 0.85);
+}
+
+.btn-outline-light:hover {
+  background: #C8102E;
+  border-color: #C8102E;
+  color: #FFFFFF;
+  transform: translateY(-3px);
+  box-shadow: 0 14px 36px rgba(200, 16, 46, 0.4);
+}
+
+.btn-outline-light:active {
+  transform: translateY(-1px);
+}
+
+/* Outline Button (used in About preview section) */
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 14px 32px;
+  background: transparent;
+  color: var(--primary);
+  border: 2px solid var(--primary);
+  border-radius: 50px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: all 0.35s ease;
+  cursor: pointer;
+}
+
+.btn-outline:hover {
+  background: var(--primary);
+  color: #FFFFFF;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(193, 18, 31, 0.3);
 }
 
 /* About Preview Section */
@@ -353,6 +506,79 @@
   background: var(--primary-dark);
 }
 
+/* Leadership Team Section */
+.leadership-section {
+  background: var(--background);
+  padding: 0;
+}
+
+.leadership-subtitle {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.125rem;
+  color: var(--text-light);
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 50px;
+  line-height: 1.7;
+}
+
+.leadership-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 32px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.leadership-card {
+  text-align: center;
+  padding: 36px 24px;
+  background: var(--surface);
+  border-radius: 18px;
+  box-shadow: var(--shadow);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  border: 1px solid var(--border);
+}
+
+.leadership-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
+}
+
+.leadership-image {
+  width: 140px;
+  height: 140px;
+  margin: 0 auto 20px;
+}
+
+.leadership-image img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid var(--primary);
+  transition: transform 0.4s ease;
+}
+
+.leadership-card:hover .leadership-image img {
+  transform: scale(1.05);
+}
+
+.leadership-card h3 {
+  font-family: 'Playfair Display', serif;
+  color: var(--text);
+  margin-bottom: 6px;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.leadership-card p {
+  color: var(--primary);
+  font-weight: 600;
+  font-size: 0.95rem;
+  margin: 0;
+}
+
 /* CTA Section */
 .cta-section {
   background: linear-gradient(135deg, #8B0000 0%, #c1121ea7 100%);
@@ -465,30 +691,25 @@
     gap: 50px;
   }
 
+  /* Tablet: slightly reduce text size, keep left-aligned */
   .hero-container {
-    flex-direction: column;
-    gap: 50px;
-    text-align: center;
-    padding: 0 40px;
-  }
-
-  .hero-image-wrapper {
-    order: -1;
-    max-width: 550px;
+    padding: 0 50px;
   }
 
   .hero-content {
-    max-width: 100%;
-    text-align: center;
+    max-width: 560px;
   }
 
-  .hero-buttons {
-    justify-content: center;
+  .hero-title {
+    font-size: 3.25rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.25rem;
   }
 
   .hero-quote {
-    text-align: left;
-    padding-left: 30px;
+    font-size: 1.2rem;
   }
 }
 
@@ -497,19 +718,56 @@
     padding: 80px 24px;
   }
 
+  /* Mobile: center content, reduce hero height, keep readable */
   .hero {
+<<<<<<< HEAD
     min-height: auto;
     height: 1000px;
     padding: 80px 0;
+=======
+    min-height: calc(90vh - 70px);
+    height: calc(90vh - 70px);
+    padding: 0;
+    margin: 0;
+  }
+
+  /* Strengthen overlay on mobile for readability */
+  .hero-bg-overlay {
+    background: linear-gradient(
+        to right,
+        rgba(17, 17, 17, 0.6) 0%,
+        rgba(17, 17, 17, 0.7) 30%,
+        rgba(17, 17, 17, 0.5) 60%,
+        transparent 80%
+      ),
+      linear-gradient(
+        to bottom,
+        rgba(17, 17, 17, 0.5) 0%,
+        rgba(17, 17, 17, 0.7) 50%,
+        rgba(17, 17, 17, 0.95) 100%
+      ),
+      linear-gradient(
+        180deg,
+        rgba(17, 17, 17, 0.6) 0%,
+        rgba(17, 17, 17, 0.55) 50%,
+        rgba(80, 8, 12, 0.4) 100%
+      );
+>>>>>>> f2e33b7025165aa9bcdf4d33caf259036e658567
   }
 
   .hero-container {
     padding: 0 24px;
-    gap: 40px;
+    justify-content: center;
   }
 
+<<<<<<< HEAD
   .hero-image-wrapper {
     max-width: 380px;
+=======
+  .hero-content {
+    max-width: 100%;
+    text-align: center;
+>>>>>>> f2e33b7025165aa9bcdf4d33caf259036e658567
   }
 
   .hero-title {
@@ -522,11 +780,17 @@
 
   .hero-quote {
     font-size: 1.1rem;
+    text-align: center;
+    padding-left: 0;
+    border-left: none;
+    border-top: 3px solid #C8102E;
+    padding-top: 20px;
   }
 
   .hero-buttons {
     flex-direction: column;
     align-items: stretch;
+    justify-content: center;
   }
 
   .hero-buttons .btn {
@@ -562,6 +826,16 @@
     gap: 24px;
   }
 
+  .leadership-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .leadership-subtitle {
+    font-size: 1rem;
+    margin-bottom: 40px;
+  }
+
   .cta-content h2 {
     font-size: 2.25rem;
   }
@@ -581,12 +855,26 @@
     padding: 60px 20px;
   }
 
+  .hero {
+    min-height: calc(85vh - 70px);
+    height: calc(85vh - 70px);
+    margin: 0;
+  }
+
   .hero-title {
     font-size: 2rem;
   }
 
   .hero-container {
     padding: 0 16px;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+
+  .hero-quote {
+    font-size: 1.05rem;
   }
 
   .btn {
@@ -600,6 +888,17 @@
 }
 
 /* Animations */
+@keyframes heroFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 @keyframes fadeInRight {
   from {
     opacity: 0;
@@ -630,5 +929,15 @@
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+/* Respect reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .hero-title,
+  .hero-subtitle,
+  .hero-quote,
+  .hero-buttons {
+    animation: none;
   }
 }

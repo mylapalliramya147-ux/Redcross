@@ -74,6 +74,33 @@
   padding: 0 40px;
 }
 
+/* Auto-scroll container */
+.events-scroll-container {
+  max-height: 70vh;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+  padding-right: 10px;
+}
+
+/* Custom scrollbar for better UX */
+.events-scroll-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.events-scroll-container::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.events-scroll-container::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+.events-scroll-container::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
 .events-list-section h2 {
   font-family: 'Playfair Display', serif;
   font-size: 2.75rem;
@@ -83,18 +110,127 @@
   line-height: 1.2;
 }
 
-/* Events Grid - spacing between cards */
-.events-grid {
+/* Month Section Styles */
+.month-section {
+  margin-bottom: 60px;
+  text-align: left;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.month-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  color: var(--primary);
+  text-align: center;
+  margin-bottom: 30px;
+  padding-bottom: 10px;
+  font-weight: 700;
+  border-bottom: none;
+  display: block;
+  width: 100%;
+}
+
+/* Two Column Layout - Events with Image */
+.events-with-image {
   display: flex;
-  flex-wrap: wrap;
-  gap: 24px;
+  gap: 30px;
+  align-items: stretch;
   max-width: 1200px;
   margin: 0 auto;
+}
+
+.events-column {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.image-column {
+  width: 75%;
+  position: relative;
+  display: flex;
+  align-items: stretch;
+}
+
+.image-container {
+  width: 100%;
+  height: 100%;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  background: #f5f5f5;
+  position: relative;
+  display: flex;
+  align-items: center;
   justify-content: center;
 }
 
+.awareness-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  animation: fadeIn 0.4s ease-in-out;
+  transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
+  background: #f5f5f5;
+  padding: 20px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(1.05);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Placeholder for missing images */
+.image-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 100%);
+  z-index: -1;
+  border-radius: 24px;
+}
+
+.image-container {
+  background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 100%);
+}
+
+/* Events Grid - spacing between cards */
+.events-grid {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: 40px;
+}
+
 .events-grid > div {
-  flex: 0 0 auto;
+  width: auto;
+  display: block;
+  align-self: flex-start;
+}
+
+.event-card-wrapper {
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.event-card-wrapper:hover {
+  transform: translateX(5px);
 }
 
 /* CTA Section */
@@ -176,6 +312,24 @@
   .calendar-cta h2 {
     font-size: 2.25rem;
   }
+
+  /* Tablet/Mobile: Stack image below events */
+  .events-with-image {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .events-column {
+    width: 100%;
+  }
+
+  .image-column {
+    width: 100%;
+  }
+
+  .image-container {
+    min-height: 300px;
+  }
 }
 
 @media screen and (max-width: 480px) {
@@ -186,5 +340,13 @@
   .events-list-section h2,
   .calendar-cta h2 {
     font-size: 2rem;
+  }
+
+  .month-title {
+    font-size: 2rem;
+  }
+
+  .events-with-image {
+    gap: 16px;
   }
 }
