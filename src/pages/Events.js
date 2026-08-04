@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState, useRef, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import './Events.css';
 import DayCard from '../components/DayCard';
 import januaryImage from '../assets/Events/january.jpeg';
@@ -596,6 +596,102 @@ const Events = () => {
     return monthImageMap[month] || januaryImage;
   };
 
+  const awarenessSectionRef = useRef(null);
+  const location = useLocation();
+  
+  // Auto-scroll configuration
+  const SCROLL_SPEED = 8.0; // pixels per frame - adjust for faster/slower scrolling
+  const PAUSE_DURATION = 3000; // milliseconds to wait before resuming after user interaction
+  const SCROLL_CONTAINER_ID = 'events-scroll-container';
+
+  useEffect(() => {
+    if (location.pathname !== '/events') return;
+
+    const container = document.getElementById(SCROLL_CONTAINER_ID);
+    if (!container) return;
+
+    let animationFrameId;
+    let pauseTimeoutId;
+    let isPaused = false;
+    let isReturningToTop = false;
+    let returnScrollPos = 0;
+    let lastScrollTop = container.scrollTop;
+
+    const smoothScrollToTop = () => {
+      if (!isReturningToTop || !container) return;
+      
+      const speed = SCROLL_SPEED; // same speed as scrolling down
+      returnScrollPos -= speed;
+      
+      if (returnScrollPos <= 0) {
+        container.scrollTop = 0;
+        isReturningToTop = false;
+        returnScrollPos = 0;
+      } else {
+        container.scrollTop = returnScrollPos;
+      }
+    };
+
+    const scrollStep = () => {
+      if (!isPaused && container) {
+        // If we're returning to top, use smooth scroll
+        if (isReturningToTop) {
+          smoothScrollToTop();
+          animationFrameId = requestAnimationFrame(scrollStep);
+          return;
+        }
+
+        // Auto-scroll down
+        container.scrollTop += SCROLL_SPEED;
+
+        // Check if we've reached the bottom
+        const maxScroll = container.scrollHeight - container.clientHeight;
+        if (container.scrollTop >= maxScroll && maxScroll > 0) {
+          // Start smooth return to top
+          isReturningToTop = true;
+          returnScrollPos = maxScroll;
+        }
+      }
+      animationFrameId = requestAnimationFrame(scrollStep);
+    };
+
+    // Detect user interaction
+    const handleUserInteraction = () => {
+      isPaused = true;
+      
+      // Clear any existing pause timeout
+      if (pauseTimeoutId) {
+        clearTimeout(pauseTimeoutId);
+      }
+
+      // Resume after inactivity
+      pauseTimeoutId = setTimeout(() => {
+        isPaused = false;
+      }, PAUSE_DURATION);
+    };
+
+    // Listen for scroll events from user
+    container.addEventListener('wheel', handleUserInteraction, { passive: true });
+    container.addEventListener('touchmove', handleUserInteraction, { passive: true });
+    container.addEventListener('touchstart', handleUserInteraction, { passive: true });
+    container.addEventListener('mousedown', handleUserInteraction);
+
+    // Start auto-scroll
+    animationFrameId = requestAnimationFrame(scrollStep);
+
+    // Cleanup
+    return () => {
+      cancelAnimationFrame(animationFrameId);
+      if (pauseTimeoutId) {
+        clearTimeout(pauseTimeoutId);
+      }
+      container.removeEventListener('wheel', handleUserInteraction);
+      container.removeEventListener('touchmove', handleUserInteraction);
+      container.removeEventListener('touchstart', handleUserInteraction);
+      container.removeEventListener('mousedown', handleUserInteraction);
+    };
+  }, [location.pathname]);
+
   return (
     <div className="calendar">
       {/* Hero Section */}
@@ -608,49 +704,51 @@ const Events = () => {
       </section>
 
       {/* Events List Section */}
-      <section className="events-list-section">
+      <section className="events-list-section" ref={awarenessSectionRef}>
         <div className="section-container">
           <h2>National & International Awareness Days</h2>
           
-          {monthOrder.map((month) => {
-            const monthEvents = groupedEvents[month];
-            if (!monthEvents || monthEvents.length === 0) return null;
-            
-            return (
-              <div key={month} className="month-section">
-                <h3 className="month-title">{month}</h3>
-                <div className="events-with-image">
-                  <div className="events-column">
-                    {monthEvents.map((event) => (
-                      <div 
-                        key={event.id} 
-                        className="event-card-wrapper"
-                        onClick={() => setSelectedEvent(event)}
-                      >
-                        <DayCard 
-                          date={formatDate(event.date)}
-                          title={event.title}
+          <div id={SCROLL_CONTAINER_ID} className="events-scroll-container">
+            {monthOrder.map((month) => {
+              const monthEvents = groupedEvents[month];
+              if (!monthEvents || monthEvents.length === 0) return null;
+              
+              return (
+                <div key={month} className="month-section">
+                  <h3 className="month-title">{month}</h3>
+                  <div className="events-with-image">
+                    <div className="events-column">
+                      {monthEvents.map((event) => (
+                        <div 
+                          key={event.id} 
+                          className="event-card-wrapper"
+                          onClick={() => setSelectedEvent(event)}
+                        >
+                          <DayCard 
+                            date={formatDate(event.date)}
+                            title={event.title}
+                          />
+                        </div>
+                      ))}
+                    </div>
+                    <div className="image-column">
+                      <div className="image-container">
+                        <img 
+                          src={getMonthImage(month)} 
+                          alt={`${month} Awareness`}
+                          className="awareness-image"
+                          key={`${month}-${selectedEvent?.id}`}
+                          onError={(e) => {
+                            e.target.src = januaryImage;
+                          }}
                         />
                       </div>
-                    ))}
-                  </div>
-                  <div className="image-column">
-                    <div className="image-container">
-                      <img 
-                        src={getMonthImage(month)} 
-                        alt={`${month} Awareness`}
-                        className="awareness-image"
-                        key={`${month}-${selectedEvent?.id}`}
-                        onError={(e) => {
-                          e.target.src = januaryImage;
-                        }}
-                      />
                     </div>
                   </div>
                 </div>
-              </div>
-            );
-          })}
+              );
+            })}
+          </div>
         </div>
       </section>
 

@@ -74,6 +74,33 @@
   padding: 0 40px;
 }
 
+/* Auto-scroll container */
+.events-scroll-container {
+  max-height: 70vh;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+  padding-right: 10px;
+}
+
+/* Custom scrollbar for better UX */
+.events-scroll-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.events-scroll-container::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.events-scroll-container::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+.events-scroll-container::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
 .events-list-section h2 {
   font-family: 'Playfair Display', serif;
   font-size: 2.75rem;
