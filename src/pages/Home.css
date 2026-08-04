@@ -1,6 +1,8 @@
 /* Home Page Styles */
 .home {
   min-height: 100vh;
+  margin: 0;
+  padding: 0;
 }
 
 /* Section Spacing */
@@ -13,14 +15,17 @@
 /* Hero Section */
 .hero {
   position: relative;
-  min-height: 100vh;
-  height: 100vh;
+  /* Fill the viewport minus the 80px header — image starts flush under header */
+  min-height: calc(100vh - 80px);
+  height: calc(100vh - 80px);
   display: flex;
   align-items: center;
   justify-content: flex-start;
   overflow: hidden;
   background-color: #111111;
   padding: 0;
+  /* No gap above the hero image */
+  margin: 0;
 }
 
 /* Background image layer */
@@ -89,6 +94,29 @@
     transparent 0%,
     rgba(17, 17, 17, 0.15) 100%
   );
+}
+
+/* Light blackness overlay on the left side of the hero image
+   — a subtle dark gradient that makes left-side content readable
+   while keeping the right side of the image pristine. */
+.hero-bg-left-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 35%;
+  max-width: 600px;
+  z-index: 2;
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.45) 0%,
+    rgba(0, 0, 0, 0.35) 15%,
+    rgba(0, 0, 0, 0.22) 30%,
+    rgba(0, 0, 0, 0.1) 50%,
+    rgba(0, 0, 0, 0.05) 65%,
+    transparent 85%
+  );
+  pointer-events: none;
 }
 
 /* Content container — left aligned */
@@ -686,9 +714,10 @@
 
   /* Mobile: center content, reduce hero height, keep readable */
   .hero {
-    min-height: 90vh;
-    height: 90vh;
+    min-height: calc(90vh - 70px);
+    height: calc(90vh - 70px);
     padding: 0;
+    margin: 0;
   }
 
   /* Strengthen overlay on mobile for readability */
@@ -810,8 +839,9 @@
   }
 
   .hero {
-    min-height: 85vh;
-    height: 85vh;
+    min-height: calc(85vh - 70px);
+    height: calc(85vh - 70px);
+    margin: 0;
   }
 
   .hero-title {
