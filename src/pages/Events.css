@@ -78,7 +78,7 @@
 .events-scroll-container {
   max-height: 70vh;
   overflow-y: auto;
-  scroll-behavior: smooth;
+  scroll-behavior: auto;
   padding-right: 10px;
 }
 
