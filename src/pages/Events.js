@@ -600,7 +600,7 @@ const Events = () => {
   const location = useLocation();
   
   // Auto-scroll configuration
-  const SCROLL_SPEED = 8.0; // pixels per frame - adjust for faster/slower scrolling
+  const SCROLL_SPEED = 30; // pixels per frame - scroll down and up at same speed
   const PAUSE_DURATION = 3000; // milliseconds to wait before resuming after user interaction
   const SCROLL_CONTAINER_ID = 'events-scroll-container';
 
