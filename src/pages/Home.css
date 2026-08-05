@@ -280,9 +280,8 @@
 }
 
 .about-preview .section-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 80px;
+  display: flex;
+  justify-content: center;
   align-items: center;
 }
 
@@ -302,7 +301,9 @@
 }
 
 .about-content {
-  padding-right: 20px;
+  max-width: 800px;
+  text-align: center;
+  padding-right: 0;
 }
 
 .section-label {
@@ -838,10 +839,6 @@
 
 /* Responsive Design */
 @media screen and (max-width: 1024px) {
-  .about-preview .section-container {
-    gap: 50px;
-  }
-
   /* Tablet: slightly reduce text size, keep left-aligned */
   .hero-container {
     padding: 0 50px;
@@ -936,20 +933,6 @@
   .hero-buttons .btn {
     width: 100%;
     justify-content: center;
-  }
-
-  .about-preview .section-container {
-    grid-template-columns: 1fr;
-    gap: 40px;
-  }
-
-  .about-content {
-    padding-right: 0;
-    order: 2;
-  }
-
-  .about-image {
-    order: 1;
   }
 
   .about-content h2 {

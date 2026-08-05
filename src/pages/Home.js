@@ -66,7 +66,6 @@ const Home = () => {
         <div className="hero-bg">
           <img src={henryImage} alt="Sir Jean-Henri Dunant - Founder of the Red Cross" />
           <div className="hero-bg-overlay"></div>
-          <div className="hero-bg-left-overlay"></div>
         </div>
         <div className="hero-container">
           <div className="hero-content">
@@ -104,12 +103,6 @@ const Home = () => {
             <Link to="/about" className="btn btn-outline">
               Read More About Us
             </Link>
-          </div>
-          <div className="about-image">
-            <img 
-              src="https://images.unsplash.com/photo-1593113630166-c5e7dfc0e4d9?w=600&h=400&fit=crop" 
-              alt="Red Cross Volunteers" 
-            />
           </div>
         </div>
       </section>
