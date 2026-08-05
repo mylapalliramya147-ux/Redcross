@@ -50,7 +50,7 @@ const Gallery = ({ images = [], title = 'Our Gallery', subtitle = 'Moments of co
           {images.map((image, index) => (
             <div
               key={index}
-              className="gallery-item"
+              className={`gallery-item ${images.length === 5 && index >= 3 ? 'gallery-item-last-row' : ''}`}
               onClick={() => openLightbox(index)}
               role="button"
               tabIndex={0}

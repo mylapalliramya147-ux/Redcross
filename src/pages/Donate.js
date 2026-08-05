@@ -85,13 +85,6 @@ const Donate = () => {
               </form>
             </div>
           </div>
-
-          <div className="donation-image">
-            <img 
-              src="https://images.unsplash.com/photo-1532996120284-825baf810c74?w=600&h=400&fit=crop" 
-              alt="Donate Blood" 
-            />
-          </div>
         </div>
       </section>
 

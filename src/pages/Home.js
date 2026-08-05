@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import henryImage from '../assets/Events/henrii.png';
 import Gallery from '../components/Gallery';
+import { getUpcomingEvents, formatDate } from '../data/eventsData';
 import './Home.css';
 
 const Home = () => {
@@ -56,6 +57,10 @@ const Home = () => {
     { src: 'https://images.unsplash.com/photo-1463173223085-5b9357f29649?w=800&h=600&fit=crop', title: 'Training Session', alt: 'First aid training session' },
     { src: 'https://images.unsplash.com/photo-1517048676719-4e9c4e3c4b1b?w=800&h=600&fit=crop', title: 'Community Support', alt: 'Community support program' },
   ];
+
+  const upcomingEvents = getUpcomingEvents(3);
+
+  const limitedGalleryImages = galleryImages.slice(0, 5);
 
   return (
     <div className="home">
@@ -133,6 +138,37 @@ const Home = () => {
         </div>e
       </section>
 
+      {/* Upcoming Events Section */}
+      <section className="upcoming-events-section">
+        <div className="section-container">
+          <h2 className="section-title">Upcoming Events</h2>
+          <p className="upcoming-events-subtitle">
+            Join us in our upcoming awareness days and community events.
+          </p>
+          <div className="upcoming-events-grid">
+            {upcomingEvents.map((event) => (
+              <div key={event.id} className="upcoming-event-card">
+                <div className="upcoming-event-date">
+                  <span className="upcoming-event-day">{formatDate(event.date)}</span>
+                </div>
+                <div className="upcoming-event-content">
+                  <h3>{event.title}</h3>
+                  <p>{event.description}</p>
+                  <span className="upcoming-event-location">
+                    <i className="fas fa-map-marker-alt"></i> {event.location}
+                  </span>
+                </div>
+              </div>
+            ))}
+          </div>
+          <div className="upcoming-events-cta">
+            <Link to="/events" className="btn btn-primary">
+              View All Events <i className="fas fa-calendar-alt"></i>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* Leadership Team Section */}
       <section className="leadership-section">
         <div className="section-container">
@@ -155,7 +191,7 @@ const Home = () => {
       </section>
 
       {/* Gallery Section */}
-      <Gallery images={galleryImages} />
+      <Gallery images={limitedGalleryImages} />
 
       {/* Call to Action Section */}
       <section className="cta-section">
