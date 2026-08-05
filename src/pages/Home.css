@@ -319,14 +319,14 @@
 
 .about-content h2 {
   font-family: 'Playfair Display', serif;
-  font-size: 2.75rem;
+  font-size: 4rem;
   color: var(--text);
   margin-bottom: 24px;
   line-height: 1.2;
 }
 
 .about-content p {
-  font-size: 1.125rem;
+  font-size: 1.5rem;
   line-height: 1.8;
   color: var(--text-light);
   margin-bottom: 32px;
@@ -936,7 +936,7 @@
   }
 
   .about-content h2 {
-    font-size: 2rem;
+    font-size: 2.75rem;
   }
 
   .section-title {
