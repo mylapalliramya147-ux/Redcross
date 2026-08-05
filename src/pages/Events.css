@@ -80,6 +80,11 @@
   overflow-y: auto;
   scroll-behavior: auto;
   padding-right: 10px;
+  /* GPU acceleration for smooth scrolling */
+  will-change: transform;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000px;
 }
 
 /* Custom scrollbar for better UX */
