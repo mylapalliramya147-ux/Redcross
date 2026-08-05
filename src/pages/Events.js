@@ -2,7 +2,6 @@ import React, { useState, useRef, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import './Events.css';
 import DayCard from '../components/DayCard';
-<<<<<<< HEAD
 import { events, formatDate } from '../data/eventsData';
 import januaryImage from '../assets/Events/january.jpeg';
 import februaryImage from '../assets/Events/february.jpeg';
@@ -16,20 +15,6 @@ import septemberImage from '../assets/Events/september.jpeg';
 import octoberImage from '../assets/Events/october.jpeg';
 import novemberImage from '../assets/Events/november.jpeg';
 import decemberImage from '../assets/Events/december.jpeg';
-=======
-import januaryImage from '../assets/events/january.jpeg';
-import februaryImage from '../assets/events/february.jpeg';
-import marchImage from '../assets/events/march.jpeg';
-import aprilImage from '../assets/events/april.jpeg';
-import mayImage from '../assets/events/may.jpeg';
-import juneImage from '../assets/events/june.jpeg';
-import julyImage from '../assets/events/july.jpeg';
-import augustImage from '../assets/events/august.jpeg';
-import septemberImage from '../assets/events/september.jpeg';
-import octoberImage from '../assets/events/october.jpeg';
-import novemberImage from '../assets/events/november.jpeg';
-import decemberImage from '../assets/events/december.jpeg';
->>>>>>> 0980f9c2515fcee6b0abf3bd7111237b5482fcf6
 
 const Events = () => {
   const eventsData = events;
