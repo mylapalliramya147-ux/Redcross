@@ -149,42 +149,7 @@ const Donate = () => {
          </div>
        </section>
 
-       {/* Blood Donation Requirements Section */}
-       <section className="blood-requirements-section">
-         <div className="section-container">
-           <h2>Blood Donation Requirements</h2>
-           <p className="requirements-intro">
-             Before donating blood, please ensure you meet the following basic requirements:
-           </p>
-           <div className="requirements-grid">
-             <div className="requirement-item">
-               <i className="fas fa-birthday-cake"></i>
-               <span>Age: You must be between 18 to 65 years old</span>
-             </div>
-             <div className="requirement-item">
-               <i className="fas fa-weight"></i>
-               <span>Weight: You must weigh at least 45 kgs</span>
-             </div>
-             <div className="requirement-item">
-               <i className="fas fa-heartbeat"></i>
-               <span>Health: On the day of donation your health condition should be good</span>
-             </div>
-             <div className="requirement-item">
-               <i className="fas fa-virus"></i>
-               <span>Medical History: No history of exposure to hepatitis or AIDS</span>
-             </div>
-             <div className="requirement-item">
-               <i className="fas fa-calendar-alt"></i>
-               <span>Frequency: Your last blood donation was at least 90 days (12 weeks) ago</span>
-             </div>
-             <div className="requirement-item">
-               <i className="fas fa-tachometer-alt"></i>
-               <span>Blood Pressure: Have normal BP at the time of donation</span>
-             </div>
-           </div>
-         </div>
-       </section>
-     </div>
+      </div>
    );
  };
 

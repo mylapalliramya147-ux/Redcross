@@ -1,0 +1,509 @@
+/* Become Volunteer Page Styles */
+
+.become-volunteer {
+  min-height: 100vh;
+}
+
+/* Hero Section */
+.volunteer-hero {
+  position: relative;
+  height: 400px;
+  background: linear-gradient(135deg, rgba(193, 18, 31, 0.85), rgba(139, 0, 0, 0.85)),
+              url('https://images.unsplash.com/photo-1559027615-c462acaa37d7?w=1600&h=600&fit=crop') center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+}
+
+.volunteer-hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(193, 18, 31, 0.85), rgba(139, 0, 0, 0.85));
+}
+
+.volunteer-hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  padding: 0 20px;
+}
+
+.volunteer-hero-content h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  font-family: "Algerian", serif;
+}
+
+.volunteer-hero-content p {
+  font-size: 1.2rem;
+  opacity: 0.95;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Why Volunteer Section */
+.why-volunteer-section {
+  padding: 80px 20px;
+  background: var(--surface);
+}
+
+.why-volunteer-section h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: var(--primary);
+  margin-bottom: 3rem;
+  font-family: "Algerian", serif;
+}
+
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.why-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.why-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 30px rgba(193, 18, 31, 0.15);
+}
+
+.why-card i {
+  font-size: 3rem;
+  color: var(--primary);
+  margin-bottom: 1rem;
+}
+
+.why-card h3 {
+  font-size: 1.3rem;
+  color: var(--text);
+  margin-bottom: 0.8rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+}
+
+.why-card p {
+  color: #666;
+  line-height: 1.6;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Roles Section */
+.roles-section {
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #f5f5f5, #e8e8e8);
+}
+
+.roles-section h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: var(--primary);
+  margin-bottom: 3rem;
+  font-family: "Algerian", serif;
+}
+
+.roles-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.role-card {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.role-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 30px rgba(193, 18, 31, 0.15);
+}
+
+.role-card i {
+  font-size: 3rem;
+  color: var(--primary);
+  margin-bottom: 1rem;
+}
+
+.role-card h3 {
+  font-size: 1.3rem;
+  color: var(--text);
+  margin-bottom: 1rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+}
+
+.role-card p {
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  font-family: 'Poppins', sans-serif;
+  flex-grow: 1;
+}
+
+.commitment {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background: rgba(193, 18, 31, 0.08);
+  color: var(--primary);
+  border-radius: 50px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+}
+
+/* Training Section */
+.training-section {
+  padding: 80px 20px;
+  background: var(--surface);
+}
+
+.training-section h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: var(--primary);
+  margin-bottom: 3rem;
+  font-family: "Algerian", serif;
+}
+
+.training-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.training-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.training-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 30px rgba(193, 18, 31, 0.15);
+}
+
+.training-card i {
+  font-size: 3rem;
+  color: var(--primary);
+  margin-bottom: 1rem;
+}
+
+.training-card h3 {
+  font-size: 1.3rem;
+  color: var(--text);
+  margin-bottom: 0.8rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+}
+
+.training-card p {
+  color: #666;
+  line-height: 1.6;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Requirements Section */
+.requirements-section {
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #f5f5f5, #e8e8e8);
+}
+
+.requirements-section h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: var(--primary);
+  margin-bottom: 3rem;
+  font-family: "Algerian", serif;
+}
+
+.requirements-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.requirement-card {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.requirement-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--primary);
+  font-family: 'Poppins', sans-serif;
+}
+
+.requirement-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.requirement-card li {
+  padding: 0.8rem 0;
+  padding-left: 2rem;
+  position: relative;
+  color: #444;
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+}
+
+.requirement-card li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--primary);
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+/* Registration Section */
+.registration-section {
+  padding: 80px 20px;
+  background: var(--surface);
+}
+
+.registration-section h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: var(--primary);
+  margin-bottom: 1rem;
+  font-family: "Algerian", serif;
+}
+
+.registration-card {
+  max-width: 800px;
+  margin: 0 auto;
+  background: white;
+  padding: 3rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.registration-card > p {
+  text-align: center;
+  color: #666;
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  font-family: 'Poppins', sans-serif;
+}
+
+.registration-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.form-row.full-width {
+  grid-template-columns: 1fr;
+}
+
+.registration-form input,
+.registration-form select,
+.registration-form textarea {
+  width: 100%;
+  padding: 14px 18px;
+  border: 2px solid var(--border);
+  border-radius: 12px;
+  font-size: 1rem;
+  font-family: 'Poppins', sans-serif;
+  transition: all 0.3s ease;
+}
+
+.registration-form input:focus,
+.registration-form select:focus,
+.registration-form textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(193, 18, 31, 0.1);
+}
+
+.registration-form textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.registration-form button {
+  width: 100%;
+  padding: 16px 24px;
+  background: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.registration-form button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(193, 18, 31, 0.3);
+  background: var(--primary-dark);
+}
+
+/* Testimonials Section */
+.testimonials-section {
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #f5f5f5, #e8e8e8);
+}
+
+.testimonials-section h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: var(--primary);
+  margin-bottom: 3rem;
+  font-family: "Algerian", serif;
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.testimonial-card {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.testimonial-content {
+  flex-grow: 1;
+  margin-bottom: 1.5rem;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 30px rgba(193, 18, 31, 0.15);
+}
+
+.testimonial-content p {
+  color: #444;
+  line-height: 1.8;
+  font-style: italic;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.05rem;
+}
+
+.testimonial-author {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.author-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: var(--primary);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+}
+
+.author-info h4 {
+  color: var(--text);
+  font-size: 1.1rem;
+  margin-bottom: 0.2rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+}
+
+.author-info p {
+  color: #666;
+  font-size: 0.9rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Responsive Design */
+@media(max-width: 768px) {
+  .volunteer-hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .volunteer-hero-content p {
+    font-size: 1rem;
+  }
+
+  .why-volunteer-section h2,
+  .roles-section h2,
+  .training-section h2,
+  .requirements-section h2,
+  .registration-section h2,
+  .testimonials-section h2 {
+    font-size: 2rem;
+  }
+
+  .why-volunteer-section,
+  .roles-section,
+  .training-section,
+  .requirements-section,
+  .registration-section,
+  .testimonials-section {
+    padding: 60px 20px;
+  }
+
+  .registration-card {
+    padding: 2rem 1.5rem;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}

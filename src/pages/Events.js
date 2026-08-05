@@ -600,7 +600,7 @@ const Events = () => {
   const location = useLocation();
   
   // Auto-scroll configuration
-  const SCROLL_SPEED = 8.0; // pixels per frame - adjust for faster/slower scrolling
+  const SCROLL_SPEED = 4; // pixels per frame for smooth continuous scroll
   const PAUSE_DURATION = 3000; // milliseconds to wait before resuming after user interaction
   const SCROLL_CONTAINER_ID = 'events-scroll-container';
 
@@ -613,43 +613,43 @@ const Events = () => {
     let animationFrameId;
     let pauseTimeoutId;
     let isPaused = false;
-    let isReturningToTop = false;
-    let returnScrollPos = 0;
-    let lastScrollTop = container.scrollTop;
+    let cancelled = false;
+    let scrollDirection = 1; // 1 = scrolling down, -1 = scrolling up
 
-    const smoothScrollToTop = () => {
-      if (!isReturningToTop || !container) return;
-      
-      const speed = SCROLL_SPEED; // same speed as scrolling down
-      returnScrollPos -= speed;
-      
-      if (returnScrollPos <= 0) {
-        container.scrollTop = 0;
-        isReturningToTop = false;
-        returnScrollPos = 0;
-      } else {
-        container.scrollTop = returnScrollPos;
-      }
+    // Wait for all images inside the container to load before starting auto-scroll
+    const waitForImages = () => {
+      const images = container.querySelectorAll('img');
+      const imagePromises = Array.from(images).map((img) => {
+        if (img.complete) return Promise.resolve();
+        return new Promise((resolve) => {
+          img.addEventListener('load', resolve, { once: true });
+          img.addEventListener('error', resolve, { once: true });
+        });
+      });
+      return Promise.all(imagePromises);
     };
 
     const scrollStep = () => {
       if (!isPaused && container) {
-        // If we're returning to top, use smooth scroll
-        if (isReturningToTop) {
-          smoothScrollToTop();
+        const maxScroll = container.scrollHeight - container.clientHeight;
+        
+        if (maxScroll <= 0) {
           animationFrameId = requestAnimationFrame(scrollStep);
           return;
         }
 
-        // Auto-scroll down
-        container.scrollTop += SCROLL_SPEED;
+        // Scroll in current direction
+        container.scrollTop += SCROLL_SPEED * scrollDirection;
 
-        // Check if we've reached the bottom
-        const maxScroll = container.scrollHeight - container.clientHeight;
-        if (container.scrollTop >= maxScroll && maxScroll > 0) {
-          // Start smooth return to top
-          isReturningToTop = true;
-          returnScrollPos = maxScroll;
+        // Check boundaries and reverse direction
+        if (scrollDirection === 1 && container.scrollTop >= maxScroll) {
+          // Reached bottom, reverse to scroll up
+          container.scrollTop = maxScroll;
+          scrollDirection = -1;
+        } else if (scrollDirection === -1 && container.scrollTop <= 0) {
+          // Reached top, reverse to scroll down
+          container.scrollTop = 0;
+          scrollDirection = 1;
         }
       }
       animationFrameId = requestAnimationFrame(scrollStep);
@@ -658,7 +658,7 @@ const Events = () => {
     // Detect user interaction
     const handleUserInteraction = () => {
       isPaused = true;
-      
+
       // Clear any existing pause timeout
       if (pauseTimeoutId) {
         clearTimeout(pauseTimeoutId);
@@ -676,11 +676,15 @@ const Events = () => {
     container.addEventListener('touchstart', handleUserInteraction, { passive: true });
     container.addEventListener('mousedown', handleUserInteraction);
 
-    // Start auto-scroll
-    animationFrameId = requestAnimationFrame(scrollStep);
+    // Start auto-scroll after images have loaded so scrollHeight is accurate
+    waitForImages().then(() => {
+      if (cancelled) return;
+      animationFrameId = requestAnimationFrame(scrollStep);
+    });
 
     // Cleanup
     return () => {
+      cancelled = true;
       cancelAnimationFrame(animationFrameId);
       if (pauseTimeoutId) {
         clearTimeout(pauseTimeoutId);
