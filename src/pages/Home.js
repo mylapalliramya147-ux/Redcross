@@ -38,19 +38,11 @@ const Home = () => {
 
   const teamMembers = [
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
+
       name: 'Sri. Shan Mohan Sagili, IAS',
-=======
-<<<<<<< HEAD
+
       name: 'Sri Shan Mohan Sagili IAS',
-=======
-      name: 'Sri. M.N Harendra Prasad, IAS',
->>>>>>> 6887a987ba025430c8310c2fee8b8d2142bd8cc2
->>>>>>> a8df370b95c3b663c919398213f568f7b8b1126b
-=======
-      name: 'Sri. M.N Harendra Prasad, IAS',
->>>>>>> ebc8f1ad673fc2e544c46f2bf4016230fcc1bf91
+
       position: 'President',
       location: 'Kakinada',
       image: shanMohanImage,
@@ -67,17 +59,9 @@ const Home = () => {
       name: 'Dr. N. Suguna',
       position: 'Vice Chairman',
       location: 'Kakinada',
-<<<<<<< HEAD
-<<<<<<< HEAD
-      color: 'linear-gradient(135deg, #DC2626 0%, #B91C1C 100%)',
-=======
->>>>>>> 6887a987ba025430c8310c2fee8b8d2142bd8cc2
-=======
->>>>>>> ebc8f1ad673fc2e544c46f2bf4016230fcc1bf91
-      image: 'https://images.unsplash.com/photo-1494790108377-be9c2f2f5c83?w=300&h=300&fit=crop',
-      color: 'linear-gradient(135deg, #FF6B35 0%, #E85D04 100%)',
->>>>>>> a8df370b95c3b663c919398213f568f7b8b1126b
-    },
+
+      color: 'linear-gradient(135deg, #DC2626 0%, #B91C1C 100%)',      image: 'https://images.unsplash.com/photo-1494790108377-be9c2f2f5c83?w=300&h=300&fit=crop',
+      color: 'linear-gradient(135deg, #FF6B35 0%, #E85D04 100%)',    },
     {
       name: 'Sri. N. V. V. R. K. Prasad Babu',
       position: 'Treasurer',
