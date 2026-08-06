@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import henryImage from '../assets/events/henrii.png';
+<<<<<<< HEAD
+=======
 import volunteerImage from '../assets/events/volunteer.jpeg';
 import medicalCampImage from '../assets/events/medical camp.jpg';
 import disasterImage from '../assets/events/disaster.webp';
@@ -8,6 +10,7 @@ import healthCareImage from '../assets/events/health care.webp';
 import communityOutreachImage from '../assets/events/community outreach.jpeg';
 import shanMohanImage from '../assets/events/ShanMohan.webp';
 import ramaraoImage from '../assets/events/ramarao.jpeg';
+>>>>>>> 6887a987ba025430c8310c2fee8b8d2142bd8cc2
 import Gallery from '../components/Gallery';
 import { getUpcomingEvents, formatDate } from '../data/eventsData';
 import './Home.css';
@@ -38,13 +41,25 @@ const Home = () => {
 
   const teamMembers = [
     {
+<<<<<<< HEAD
       name: 'Sri. Shan Mohan Sagili, IAS',
+=======
+<<<<<<< HEAD
+      name: 'Sri Shan Mohan Sagili IAS',
+=======
+      name: 'Sri. M.N Harendra Prasad, IAS',
+>>>>>>> 6887a987ba025430c8310c2fee8b8d2142bd8cc2
+>>>>>>> a8df370b95c3b663c919398213f568f7b8b1126b
       position: 'President',
       location: 'Kakinada',
       image: shanMohanImage,
       color: 'linear-gradient(135deg, #DC2626 0%, #B91C1C 100%)',
     },
     {
+<<<<<<< HEAD
+      name: 'Sri Y. D. Rama Rao',
+      position: 'Chairman',
+=======
       name: 'Sri. Y. D. Rama Rao',
       position: 'Chairman',
       location: 'Kakinada',
@@ -55,10 +70,20 @@ const Home = () => {
       name: 'Dr. N. Suguna',
       position: 'Vice Chairman',
       location: 'Kakinada',
+<<<<<<< HEAD
       color: 'linear-gradient(135deg, #DC2626 0%, #B91C1C 100%)',
+=======
+>>>>>>> 6887a987ba025430c8310c2fee8b8d2142bd8cc2
+      image: 'https://images.unsplash.com/photo-1494790108377-be9c2f2f5c83?w=300&h=300&fit=crop',
+      color: 'linear-gradient(135deg, #FF6B35 0%, #E85D04 100%)',
+>>>>>>> a8df370b95c3b663c919398213f568f7b8b1126b
     },
     {
+<<<<<<< HEAD
+      name: 'Sri N. V. V. R. K. Prasad Babu',
+=======
       name: 'Sri. N. V. V. R. K. Prasad Babu',
+>>>>>>> 6887a987ba025430c8310c2fee8b8d2142bd8cc2
       position: 'Treasurer',
       location: 'Kakinada',
       color: 'linear-gradient(135deg, #DC2626 0%, #B91C1C 100%)',
