@@ -38,31 +38,29 @@ const Home = () => {
 
   const teamMembers = [
     {
-      name: 'Sri. M.N Harendra Prasad, IAS',
+      name: 'Sri. Shan Mohan Sagili, IAS',
       position: 'President',
       location: 'Kakinada',
       image: shanMohanImage,
-      color: 'linear-gradient(135deg, #FF6B35 0%, #F7931E 100%)',
+      color: 'linear-gradient(135deg, #DC2626 0%, #B91C1C 100%)',
     },
     {
       name: 'Sri. Y. D. Rama Rao',
       position: 'Chairman',
       location: 'Kakinada',
       image: ramaraoImage,
-      color: 'linear-gradient(135deg, #FF8C42 0%, #FF6B35 100%)',
+      color: 'linear-gradient(135deg, #DC2626 0%, #B91C1C 100%)',
     },
     {
       name: 'Dr. N. Suguna',
       position: 'Vice Chairman',
       location: 'Kakinada',
-      image: 'https://images.unsplash.com/photo-1494790108377-be9c2f2f5c83?w=300&h=300&fit=crop',
-      color: 'linear-gradient(135deg, #FF6B35 0%, #E85D04 100%)',
+      color: 'linear-gradient(135deg, #DC2626 0%, #B91C1C 100%)',
     },
     {
       name: 'Sri. N. V. V. R. K. Prasad Babu',
       position: 'Treasurer',
       location: 'Kakinada',
-      image: 'https://images.unsplash.com/photo-1557862433-33c1b0c7e6d3?w=300&h=300&fit=crop',
       color: 'linear-gradient(135deg, #DC2626 0%, #B91C1C 100%)',
     },
   ];
