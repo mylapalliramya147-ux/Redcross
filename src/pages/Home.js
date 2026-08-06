@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import henryImage from '../assets/Events/henrii.png';
+import henryImage from '../assets/events/henrii.png';
 import Gallery from '../components/Gallery';
 import { getUpcomingEvents, formatDate } from '../data/eventsData';
 import './Home.css';
@@ -31,17 +31,17 @@ const Home = () => {
 
   const teamMembers = [
     {
-      name: 'Dr. Rajesh Kumar',
+      name: 'Sri Shan Mohan Sagili IAS',
       position: 'President',
       image: 'https://images.unsplash.com/photo-1567468255534-9d441a1b6e3b?w=300&h=300&fit=crop',
     },
     {
-      name: 'Sneha Reddy',
-      position: 'Vice President',
+      name: 'Sri Y. D. Rama Rao',
+      position: 'Chairman',
       image: 'https://images.unsplash.com/photo-1494790108377-be9c2f2f5c83?w=300&h=300&fit=crop',
     },
     {
-      name: 'Amit Sharma',
+      name: 'Sri N. V. V. R. K. Prasad Babu',
       position: 'Treasurer',
       image: 'https://images.unsplash.com/photo-1557862433-33c1b0c7e6d3?w=300&h=300&fit=crop',
     },
