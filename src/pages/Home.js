@@ -1,6 +1,16 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import henryImage from '../assets/events/henrii.png';
+<<<<<<< HEAD
+=======
+import volunteerImage from '../assets/events/volunteer.jpeg';
+import medicalCampImage from '../assets/events/medical camp.jpg';
+import disasterImage from '../assets/events/disaster.webp';
+import healthCareImage from '../assets/events/health care.webp';
+import communityOutreachImage from '../assets/events/community outreach.jpeg';
+import shanMohanImage from '../assets/events/ShanMohan.webp';
+import ramaraoImage from '../assets/events/ramarao.jpeg';
+>>>>>>> 6887a987ba025430c8310c2fee8b8d2142bd8cc2
 import Gallery from '../components/Gallery';
 import { getUpcomingEvents, formatDate } from '../data/eventsData';
 import './Home.css';
@@ -31,28 +41,54 @@ const Home = () => {
 
   const teamMembers = [
     {
+<<<<<<< HEAD
       name: 'Sri Shan Mohan Sagili IAS',
+=======
+      name: 'Sri. M.N Harendra Prasad, IAS',
+>>>>>>> 6887a987ba025430c8310c2fee8b8d2142bd8cc2
       position: 'President',
-      image: 'https://images.unsplash.com/photo-1567468255534-9d441a1b6e3b?w=300&h=300&fit=crop',
+      location: 'Kakinada',
+      image: shanMohanImage,
+      color: 'linear-gradient(135deg, #FF6B35 0%, #F7931E 100%)',
     },
     {
+<<<<<<< HEAD
       name: 'Sri Y. D. Rama Rao',
       position: 'Chairman',
-      image: 'https://images.unsplash.com/photo-1494790108377-be9c2f2f5c83?w=300&h=300&fit=crop',
+=======
+      name: 'Sri. Y. D. Rama Rao',
+      position: 'Chairman',
+      location: 'Kakinada',
+      image: ramaraoImage,
+      color: 'linear-gradient(135deg, #FF8C42 0%, #FF6B35 100%)',
     },
     {
+      name: 'Dr. N. Suguna',
+      position: 'Vice Chairman',
+      location: 'Kakinada',
+>>>>>>> 6887a987ba025430c8310c2fee8b8d2142bd8cc2
+      image: 'https://images.unsplash.com/photo-1494790108377-be9c2f2f5c83?w=300&h=300&fit=crop',
+      color: 'linear-gradient(135deg, #FF6B35 0%, #E85D04 100%)',
+    },
+    {
+<<<<<<< HEAD
       name: 'Sri N. V. V. R. K. Prasad Babu',
+=======
+      name: 'Sri. N. V. V. R. K. Prasad Babu',
+>>>>>>> 6887a987ba025430c8310c2fee8b8d2142bd8cc2
       position: 'Treasurer',
+      location: 'Kakinada',
       image: 'https://images.unsplash.com/photo-1557862433-33c1b0c7e6d3?w=300&h=300&fit=crop',
+      color: 'linear-gradient(135deg, #DC2626 0%, #B91C1C 100%)',
     },
   ];
 
   const galleryImages = [
-    { src: 'https://images.unsplash.com/photo-1559025343-2835493b9b8d?w=800&h=600&fit=crop', title: 'Volunteer Team', alt: 'Red Cross volunteer team' },
-    { src: 'https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?w=800&h=600&fit=crop', title: 'Community Outreach', alt: 'Community outreach program' },
-    { src: 'https://images.unsplash.com/photo-1576091160550-2173dba1696c?w=800&h=600&fit=crop', title: 'Medical Camp', alt: 'Medical camp for community' },
-    { src: 'https://images.unsplash.com/photo-1597311962786-9939a57b3c70?w=800&h=600&fit=crop', title: 'Disaster Relief', alt: 'Disaster relief efforts' },
-    { src: 'https://images.unsplash.com/photo-1505496875-8d4b5b9f5e1b?w=800&h=600&fit=crop', title: 'Healthcare Services', alt: 'Healthcare services' },
+    { src: volunteerImage, title: 'Volunteer Team', alt: 'Red Cross volunteer team' },
+    { src: medicalCampImage, title: 'Medical Camp', alt: 'Medical camp for community' },
+    { src: disasterImage, title: 'Disaster Relief', alt: 'Disaster relief efforts' },
+    { src: healthCareImage, title: 'Healthcare Services', alt: 'Healthcare services' },
+    { src: communityOutreachImage, title: 'Community Outreach', alt: 'Community outreach program' },
   ];
 
   const upcomingEvents = getUpcomingEvents(3);
@@ -170,10 +206,17 @@ const Home = () => {
             {teamMembers.map((member, index) => (
               <div key={index} className="leadership-card">
                 <div className="leadership-image">
-                  <img src={member.image} alt={member.name} />
+                  <img 
+                    src={member.image} 
+                    alt={member.name}
+                    style={member.name === 'Sri. Y. D. Rama Rao' ? { objectPosition: 'center 35%', transform: 'scale(1.1)' } : {}}
+                  />
                 </div>
-                <h3>{member.name}</h3>
-                <p>{member.position}</p>
+                <div className="leadership-info" style={{ background: member.color }}>
+                  <h3>{member.name}</h3>
+                  <p className="leadership-position">{member.position}</p>
+                  <p className="leadership-location">{member.location}</p>
+                </div>
               </div>
             ))}
           </div>

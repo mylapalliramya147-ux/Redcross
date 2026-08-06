@@ -51,25 +51,27 @@ const Gallery = ({ images = [], title = 'Our Gallery', subtitle = 'Moments of co
             <div
               key={index}
               className={`gallery-item ${images.length === 5 && index >= 3 ? 'gallery-item-last-row' : ''}`}
-              onClick={() => openLightbox(index)}
-              role="button"
-              tabIndex={0}
+              onClick={() => image.src && openLightbox(index)}
+              role={image.src ? "button" : "article"}
+              tabIndex={image.src ? 0 : -1}
               onKeyDown={(e) => {
-                if (e.key === 'Enter' || e.key === ' ') {
+                if ((e.key === 'Enter' || e.key === ' ') && image.src) {
                   e.preventDefault();
                   openLightbox(index);
                 }
               }}
-              aria-label={`View ${image.title || 'image'} in full size`}
+              aria-label={`${image.title || 'Gallery item'}${image.src ? '' : ' (no image available)'}`}
             >
-              <img
-                src={image.src}
-                alt={image.alt || image.title || `Gallery image ${index + 1}`}
-                loading="lazy"
-              />
+              {image.src && (
+                <img
+                  src={image.src}
+                  alt={image.alt || image.title || `Gallery image ${index + 1}`}
+                  loading="lazy"
+                />
+              )}
               <div className="gallery-overlay">
                 <div className="gallery-overlay-content">
-                  <i className="fas fa-search-plus"></i>
+                  {image.src && <i className="fas fa-search-plus"></i>}
                   {image.title && <p className="gallery-item-title">{image.title}</p>}
                 </div>
               </div>
