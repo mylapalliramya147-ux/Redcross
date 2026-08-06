@@ -1,8 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import henryImage from '../assets/events/henrii.png';
-<<<<<<< HEAD
-=======
 import volunteerImage from '../assets/events/volunteer.jpeg';
 import medicalCampImage from '../assets/events/medical camp.jpg';
 import disasterImage from '../assets/events/disaster.webp';
@@ -10,7 +8,6 @@ import healthCareImage from '../assets/events/health care.webp';
 import communityOutreachImage from '../assets/events/community outreach.jpeg';
 import shanMohanImage from '../assets/events/ShanMohan.webp';
 import ramaraoImage from '../assets/events/ramarao.jpeg';
->>>>>>> 6887a987ba025430c8310c2fee8b8d2142bd8cc2
 import Gallery from '../components/Gallery';
 import { getUpcomingEvents, formatDate } from '../data/eventsData';
 import './Home.css';
@@ -41,21 +38,13 @@ const Home = () => {
 
   const teamMembers = [
     {
-<<<<<<< HEAD
-      name: 'Sri Shan Mohan Sagili IAS',
-=======
       name: 'Sri. M.N Harendra Prasad, IAS',
->>>>>>> 6887a987ba025430c8310c2fee8b8d2142bd8cc2
       position: 'President',
       location: 'Kakinada',
       image: shanMohanImage,
       color: 'linear-gradient(135deg, #FF6B35 0%, #F7931E 100%)',
     },
     {
-<<<<<<< HEAD
-      name: 'Sri Y. D. Rama Rao',
-      position: 'Chairman',
-=======
       name: 'Sri. Y. D. Rama Rao',
       position: 'Chairman',
       location: 'Kakinada',
@@ -66,16 +55,11 @@ const Home = () => {
       name: 'Dr. N. Suguna',
       position: 'Vice Chairman',
       location: 'Kakinada',
->>>>>>> 6887a987ba025430c8310c2fee8b8d2142bd8cc2
       image: 'https://images.unsplash.com/photo-1494790108377-be9c2f2f5c83?w=300&h=300&fit=crop',
       color: 'linear-gradient(135deg, #FF6B35 0%, #E85D04 100%)',
     },
     {
-<<<<<<< HEAD
-      name: 'Sri N. V. V. R. K. Prasad Babu',
-=======
       name: 'Sri. N. V. V. R. K. Prasad Babu',
->>>>>>> 6887a987ba025430c8310c2fee8b8d2142bd8cc2
       position: 'Treasurer',
       location: 'Kakinada',
       image: 'https://images.unsplash.com/photo-1557862433-33c1b0c7e6d3?w=300&h=300&fit=crop',
@@ -89,6 +73,30 @@ const Home = () => {
     { src: disasterImage, title: 'Disaster Relief', alt: 'Disaster relief efforts' },
     { src: healthCareImage, title: 'Healthcare Services', alt: 'Healthcare services' },
     { src: communityOutreachImage, title: 'Community Outreach', alt: 'Community outreach program' },
+  ];
+
+  const newsItems = [
+    {
+      id: 1,
+      title: 'Blood Donation Camp Successfully Conducted',
+      description: 'More than 250 voluntary blood donors participated in the district-level blood donation drive.',
+      date: 'June 15, 2025',
+      image: volunteerImage,
+    },
+    {
+      id: 2,
+      title: 'Free Medical Health Camp',
+      description: 'Medical specialists provided free health check-ups and medicines to rural communities.',
+      date: 'May 28, 2025',
+      image: medicalCampImage,
+    },
+    {
+      id: 3,
+      title: 'Youth Red Cross Volunteer Training',
+      description: 'Students participated in first aid and disaster preparedness training programmes.',
+      date: 'April 10, 2025',
+      image: communityOutreachImage,
+    },
   ];
 
   const upcomingEvents = getUpcomingEvents(3);
@@ -225,6 +233,30 @@ const Home = () => {
 
       {/* Gallery Section */}
       <Gallery images={limitedGalleryImages} />
+
+      {/* News & Updates Section */}
+      <section className="news-updates-section">
+        <div className="section-container">
+          <h2 className="section-title">News & Updates</h2>
+          <p className="news-updates-subtitle">
+            Stay informed with the latest activities, humanitarian initiatives, achievements, and important announcements from the Kakinada District Red Cross.
+          </p>
+          <div className="news-grid">
+            {newsItems.map((news) => (
+              <article key={news.id} className="news-card">
+                <div className="news-image">
+                  <img src={news.image} alt={news.title} loading="lazy" />
+                </div>
+                <div className="news-content">
+                  <span className="news-date">{news.date}</span>
+                  <h3>{news.title}</h3>
+                  <p>{news.description}</p>
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* Call to Action Section */}
       <section className="cta-section">
