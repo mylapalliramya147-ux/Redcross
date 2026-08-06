@@ -1,7 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import henryImage from '../assets/events/henrii.png';
+import henryImage from '../assets/Events/henrii.png';
 import Gallery from '../components/Gallery';
+import { getUpcomingEvents, formatDate } from '../data/eventsData';
 import './Home.css';
 
 const Home = () => {
@@ -47,15 +48,16 @@ const Home = () => {
   ];
 
   const galleryImages = [
-    { src: 'https://images.unsplash.com/photo-1573497620053-ea5300f5f4cb?w=800&h=600&fit=crop', title: 'Volunteer Team', alt: 'Red Cross volunteer team' },
+    { src: 'https://images.unsplash.com/photo-1559025343-2835493b9b8d?w=800&h=600&fit=crop', title: 'Volunteer Team', alt: 'Red Cross volunteer team' },
     { src: 'https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?w=800&h=600&fit=crop', title: 'Community Outreach', alt: 'Community outreach program' },
-    { src: 'https://images.unsplash.com/photo-1559429216-99f1f9184a9c?w=800&h=600&fit=crop', title: 'Medical Camp', alt: 'Medical camp for community' },
-    { src: 'https://images.unsplash.com/photo-1582750675730-23b5f5b5e1b5?w=800&h=600&fit=crop', title: 'Disaster Relief', alt: 'Disaster relief efforts' },
-    { src: 'https://images.unsplash.com/photo-1593113630166-c5e7dfc0e4d9?w=800&h=600&fit=crop', title: 'Healthcare Services', alt: 'Healthcare services' },
-    { src: 'https://images.unsplash.com/photo-1532629555105-1cbb2f6839f5?w=800&h=600&fit=crop', title: 'Emergency Response', alt: 'Emergency response team' },
-    { src: 'https://images.unsplash.com/photo-1463173223085-5b9357f29649?w=800&h=600&fit=crop', title: 'Training Session', alt: 'First aid training session' },
-    { src: 'https://images.unsplash.com/photo-1517048676719-4e9c4e3c4b1b?w=800&h=600&fit=crop', title: 'Community Support', alt: 'Community support program' },
+    { src: 'https://images.unsplash.com/photo-1576091160550-2173dba1696c?w=800&h=600&fit=crop', title: 'Medical Camp', alt: 'Medical camp for community' },
+    { src: 'https://images.unsplash.com/photo-1597311962786-9939a57b3c70?w=800&h=600&fit=crop', title: 'Disaster Relief', alt: 'Disaster relief efforts' },
+    { src: 'https://images.unsplash.com/photo-1505496875-8d4b5b9f5e1b?w=800&h=600&fit=crop', title: 'Healthcare Services', alt: 'Healthcare services' },
   ];
+
+  const upcomingEvents = getUpcomingEvents(3);
+
+  const limitedGalleryImages = galleryImages.slice(0, 5);
 
   return (
     <div className="home">
@@ -64,7 +66,6 @@ const Home = () => {
         <div className="hero-bg">
           <img src={henryImage} alt="Sir Jean-Henri Dunant - Founder of the Red Cross" />
           <div className="hero-bg-overlay"></div>
-          <div className="hero-bg-left-overlay"></div>
         </div>
         <div className="hero-container">
           <div className="hero-content">
@@ -103,12 +104,6 @@ const Home = () => {
               Read More About Us
             </Link>
           </div>
-          <div className="about-image">
-            <img 
-              src="https://images.unsplash.com/photo-1593113630166-c5e7dfc0e4d9?w=600&h=400&fit=crop" 
-              alt="Red Cross Volunteers" 
-            />
-          </div>
         </div>
       </section>
 
@@ -130,7 +125,38 @@ const Home = () => {
               </div>
             ))}
           </div>
-        </div>e
+        </div>
+      </section>
+
+      {/* Upcoming Events Section */}
+      <section className="upcoming-events-section">
+        <div className="section-container">
+          <h2 className="section-title">Upcoming Events</h2>
+          <p className="upcoming-events-subtitle">
+            Join us in our upcoming awareness days and community events.
+          </p>
+          <div className="upcoming-events-grid">
+            {upcomingEvents.map((event) => (
+              <div key={event.id} className="upcoming-event-card">
+                <div className="upcoming-event-date">
+                  <span className="upcoming-event-day">{formatDate(event.date)}</span>
+                </div>
+                <div className="upcoming-event-content">
+                  <h3>{event.title}</h3>
+                  <p>{event.description}</p>
+                  <span className="upcoming-event-location">
+                    <i className="fas fa-map-marker-alt"></i> {event.location}
+                  </span>
+                </div>
+              </div>
+            ))}
+          </div>
+          <div className="upcoming-events-cta">
+            <Link to="/events" className="btn btn-primary">
+              View All Events <i className="fas fa-calendar-alt"></i>
+            </Link>
+          </div>
+        </div>
       </section>
 
       {/* Leadership Team Section */}
@@ -155,7 +181,7 @@ const Home = () => {
       </section>
 
       {/* Gallery Section */}
-      <Gallery images={galleryImages} />
+      <Gallery images={limitedGalleryImages} />
 
       {/* Call to Action Section */}
       <section className="cta-section">

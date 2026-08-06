@@ -96,10 +96,13 @@
   max-width: 1400px;
   margin: 0 auto;
   padding: 0 40px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 80px;
-  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.donation-content {
+  max-width: 600px;
+  width: 100%;
 }
 
 .donation-content h2 {
@@ -388,8 +391,7 @@
   }
 
   .donation-section .section-container {
-    grid-template-columns: 1fr;
-    gap: 50px;
+    justify-content: center;
   }
 
   .amount-options {
