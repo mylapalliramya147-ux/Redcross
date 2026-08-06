@@ -1,23 +1,37 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import shanMohanImage from '../assets/events/ShanMohan.webp';
+import ramaraoImage from '../assets/events/ramarao.jpeg';
 import './About.css';
 
 const About = () => {
   const teamMembers = [
     {
-      name: 'Dr. Rajesh Kumar',
+      name: 'Sri. Shan Mohan Sagili, IAS',
       position: 'President',
-      image: 'https://images.unsplash.com/photo-1567468255534-9d441a1b6e3b?w=300&h=300&fit=crop',
+      location: 'Kakinada',
+      image: shanMohanImage,
+      color: 'linear-gradient(135deg, #DC2626 0%, #B91C1C 100%)',
     },
     {
-      name: 'Sneha Reddy',
-      position: 'Vice President',
+      name: 'Sri. Y. D. Rama Rao',
+      position: 'Chairman',
+      location: 'Kakinada',
+      image: ramaraoImage,
+      color: 'linear-gradient(135deg, #DC2626 0%, #B91C1C 100%)',
+    },
+    {
+      name: 'Dr. N. Suguna',
+      position: 'Vice Chairman',
+      location: 'Kakinada',
       image: 'https://images.unsplash.com/photo-1494790108377-be9c2f2f5c83?w=300&h=300&fit=crop',
+      color: 'linear-gradient(135deg, #FF6B35 0%, #E85D04 100%)',
     },
     {
-      name: 'Amit Sharma',
+      name: 'Sri. N. V. V. R. K. Prasad Babu',
       position: 'Treasurer',
-      image: 'https://images.unsplash.com/photo-1557862433-33c1b0c7e6d3?w=300&h=300&fit=crop',
+      location: 'Kakinada',
+      color: 'linear-gradient(135deg, #DC2626 0%, #B91C1C 100%)',
     },
   ];
 
@@ -141,14 +155,35 @@ const About = () => {
       <section className="team-section">
         <div className="section-container">
           <h2>Our Leadership Team</h2>
+          <p className="leadership-subtitle">
+            Meet the dedicated individuals who guide our mission and lead our humanitarian efforts.
+          </p>
           <div className="team-grid">
             {teamMembers.map((member, index) => (
               <div key={index} className="team-card">
-                <div className="team-image">
-                  <img src={member.image} alt={member.name} />
-                </div>
-                <h3>{member.name}</h3>
-                <p>{member.position}</p>
+                {member.image && (
+                  <div className="team-image">
+                    <img 
+                      src={member.image} 
+                      alt={member.name}
+                      style={member.name === 'Sri. Y. D. Rama Rao' ? { objectPosition: 'center 35%', transform: 'scale(1.1)' } : {}}
+                    />
+                  </div>
+                )}
+                {member.color && (
+                  <div className="team-info" style={{ background: member.color }}>
+                    <h3>{member.name}</h3>
+                    <p className="team-position">{member.position}</p>
+                    <p className="team-location">{member.location}</p>
+                  </div>
+                )}
+                {!member.color && (
+                  <div className="team-info">
+                    <h3>{member.name}</h3>
+                    <p className="team-position">{member.position}</p>
+                    <p className="team-location">{member.location}</p>
+                  </div>
+                )}
               </div>
             ))}
           </div>
