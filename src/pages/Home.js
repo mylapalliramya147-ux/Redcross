@@ -38,6 +38,10 @@ const Home = () => {
 
   const teamMembers = [
     {
+<<<<<<< HEAD
+=======
+
+>>>>>>> 039d825d6ff94efc8c36f44309f2c9e3fa1daf42
       name: 'Sri. Shan Mohan Sagili, IAS',
       position: 'President',
       location: 'Kakinada',
@@ -56,12 +60,17 @@ const Home = () => {
       position: 'Vice Chairman',
       location: 'Kakinada',
 
+<<<<<<< HEAD
 
       color: 'linear-gradient(135deg, #DC2626 0%, #B91C1C 100%)',
 
 
       image: 'https://images.unsplash.com/photo-1494790108377-be9c2f2f5c83?w=300&h=300&fit=crop',
       color: 'linear-gradient(135deg, #DC2626 0%, #B91C1C 100%)',
+=======
+      color: 'linear-gradient(135deg, #DC2626 0%, #B91C1C 100%)',   
+         image: 'https://images.unsplash.com/photo-1494790108377-be9c2f2f5c83?w=300&h=300&fit=crop',
+>>>>>>> 039d825d6ff94efc8c36f44309f2c9e3fa1daf42
     },
     {
       name: 'Sri. N. V. V. R. K. Prasad Babu',
