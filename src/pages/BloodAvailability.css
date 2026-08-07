@@ -1,0 +1,987 @@
+ /* Blood Availability Page Styles */
+
+/* Hero Section */
+.blood-hero {
+  position: relative;
+  min-height: 40vh;
+  height: 40vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #111111;
+  overflow: hidden;
+}
+
+.blood-hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(139, 0, 0, 0.85) 0%,
+    rgba(193, 18, 31, 0.75) 50%,
+    rgba(80, 8, 12, 0.8) 100%
+  );
+}
+
+.blood-hero-container {
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 40px;
+  text-align: center;
+}
+
+.blood-hero-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.blood-hero-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: #FFFFFF;
+  margin-bottom: 24px;
+  line-height: 1.2;
+  animation: fadeUp 0.8s ease-out;
+}
+
+.blood-hero-subtitle {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.25rem;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 16px;
+  font-weight: 300;
+  line-height: 1.7;
+  animation: fadeUp 0.8s ease-out 0.2s both;
+}
+
+.blood-hero-note {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.75);
+  font-weight: 400;
+  line-height: 1.6;
+  animation: fadeUp 0.8s ease-out 0.4s both;
+}
+
+/* Blood Grid Section */
+.blood-grid-section {
+  background-color: var(--background);
+  padding: 80px 0;
+}
+
+.blood-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Blood Card */
+.blood-card {
+  background: var(--surface);
+  padding: 40px 32px;
+  border-radius: 18px;
+  text-align: center;
+  box-shadow: var(--shadow);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  border: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  cursor: pointer;
+}
+
+.blood-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-hover);
+}
+
+.blood-card:hover .blood-card-icon svg {
+  transform: scale(1.15);
+}
+
+.blood-card-icon {
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--background);
+  border-radius: 50%;
+  transition: transform 0.35s ease;
+}
+
+.blood-card-icon svg {
+  transition: transform 0.35s ease;
+}
+
+.blood-group-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  color: var(--text);
+  font-weight: 700;
+  margin: 0;
+}
+
+.blood-status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+  padding: 8px 20px;
+  border-radius: 50px;
+  background: var(--background);
+}
+
+.blood-status-icon {
+  font-size: 1.25rem;
+}
+
+.blood-status-text {
+  letter-spacing: 0.3px;
+}
+
+.blood-last-updated {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 0.875rem;
+  color: var(--text-light);
+  padding-top: 12px;
+  border-top: 1px solid var(--border);
+  width: 100%;
+}
+
+.blood-updated-label {
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-size: 0.75rem;
+}
+
+.blood-updated-date {
+  font-weight: 600;
+  color: var(--text);
+  font-size: 0.9rem;
+}
+
+/* Legend Section */
+.blood-legend-section {
+  background: var(--surface);
+  padding: 80px 0;
+}
+
+.blood-legend-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  color: var(--text);
+  text-align: center;
+  margin-bottom: 60px;
+  font-weight: 700;
+}
+
+.blood-legend-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.blood-legend-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 24px;
+  background: var(--background);
+  border-radius: 16px;
+  border: 1px solid var(--border);
+  transition: all 0.35s ease;
+}
+
+.blood-legend-item:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover);
+}
+
+.blood-legend-icon {
+  font-size: 2rem;
+  flex-shrink: 0;
+}
+
+.blood-legend-content h4 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 8px;
+}
+
+.blood-legend-content p {
+  font-size: 0.95rem;
+  color: var(--text-light);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Important Notice Section */
+.blood-notice-section {
+  background-color: var(--background);
+  padding: 80px 0;
+}
+
+.blood-notice-box {
+  max-width: 1000px;
+  margin: 0 auto;
+  background: var(--surface);
+  padding: 48px;
+  border-radius: 18px;
+  border-left: 5px solid var(--primary);
+  box-shadow: var(--shadow);
+}
+
+.blood-notice-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  color: var(--text);
+  margin-bottom: 24px;
+  font-weight: 700;
+}
+
+.blood-notice-content {
+  font-family: 'Poppins', sans-serif;
+}
+
+.blood-notice-content p {
+  font-size: 1.05rem;
+  color: var(--text-light);
+  line-height: 1.8;
+  margin-bottom: 16px;
+}
+
+.blood-notice-content p:last-child {
+  margin-bottom: 0;
+}
+
+/* Section 3: Request Blood */
+.blood-request-section {
+  background: var(--surface);
+  padding: 80px 0;
+}
+
+.section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.75rem;
+  color: var(--text);
+  text-align: center;
+  margin-bottom: 16px;
+  font-weight: 700;
+}
+
+.section-subtitle {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.125rem;
+  color: var(--text-light);
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 48px;
+  line-height: 1.7;
+}
+
+.success-message {
+  background: #DCFCE7;
+  border: 1px solid #16A34A;
+  color: #16A34A;
+  padding: 20px 24px;
+  border-radius: 12px;
+  margin-bottom: 32px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  animation: fadeUp 0.5s ease-out;
+}
+
+.success-message i {
+  font-size: 1.5rem;
+}
+
+.blood-request-form {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  padding: 14px 18px;
+  border: 2px solid var(--border);
+  border-radius: 12px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  color: var(--text);
+  background: var(--background);
+  transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 4px rgba(193, 18, 31, 0.1);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.form-buttons {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  margin-top: 32px;
+  flex-wrap: wrap;
+}
+
+/* Section 4: Blood Donation Eligibility */
+.blood-eligibility-section {
+  background-color: var(--background);
+  padding: 80px 0;
+}
+
+.eligibility-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 28px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.eligibility-card {
+  background: var(--surface);
+  padding: 32px 28px;
+  border-radius: 18px;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border);
+  transition: all 0.35s ease;
+  text-align: center;
+}
+
+.eligibility-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-hover);
+}
+
+.eligibility-icon {
+  width: 72px;
+  height: 72px;
+  background: linear-gradient(135deg, #C8102E 0%, #8B0000 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  transition: transform 0.35s ease;
+}
+
+.eligibility-card:hover .eligibility-icon {
+  transform: scale(1.1) rotate(5deg);
+}
+
+.eligibility-icon i {
+  font-size: 1.75rem;
+  color: #FFFFFF;
+}
+
+.eligibility-card h4 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 12px;
+}
+
+.eligibility-card p {
+  font-size: 0.95rem;
+  color: var(--text-light);
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* Section 5: Blood Donation Process */
+.blood-process-section {
+  background: var(--surface);
+  padding: 80px 0;
+}
+
+.process-timeline {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  gap: 16px;
+  max-width: 1400px;
+  margin: 0 auto;
+  flex-wrap: nowrap;
+}
+
+.process-step {
+  flex: 1;
+  min-width: 200px;
+  background: var(--background);
+  padding: 32px 24px;
+  border-radius: 18px;
+  border: 1px solid var(--border);
+  text-align: center;
+  transition: all 0.35s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.process-step:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-hover);
+}
+
+.process-icon {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, #C8102E 0%, #8B0000 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  transition: transform 0.35s ease;
+}
+
+.process-step:hover .process-icon {
+  transform: scale(1.1) rotate(5deg);
+}
+
+.process-icon i {
+  font-size: 2rem;
+  color: #FFFFFF;
+}
+
+.process-step h4 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--primary);
+  margin-bottom: 8px;
+}
+
+.process-step h5 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 12px;
+}
+
+.process-step p {
+  font-size: 0.95rem;
+  color: var(--text-light);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.process-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 60px;
+  color: var(--primary);
+  font-size: 1.5rem;
+}
+
+.process-arrow i {
+  animation: bounceDown 2s ease-in-out infinite;
+}
+
+/* Section 6: Blood Bank Contact Information */
+.blood-contact-section {
+  background-color: var(--background);
+  padding: 80px 0;
+}
+
+.blood-contact-card {
+  max-width: 1200px;
+  margin: 0 auto;
+  background: linear-gradient(135deg, #8B0000 0%, #c1121e 100%);
+  padding: 60px 48px;
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(193, 18, 31, 0.3);
+  color: #FFFFFF;
+}
+
+.contact-info-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.contact-info-item {
+  width: 320px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 24px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.contact-icon {
+  width: 48px;
+  height: 48px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.contact-icon i {
+  font-size: 1.25rem;
+  color: #FFFFFF;
+}
+
+.contact-details h4 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #FFFFFF;
+}
+
+.contact-details p {
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.85);
+  margin: 0;
+  line-height: 1.5;
+}
+
+.contact-buttons {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.contact-buttons .btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 16px 36px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
+  border: 2px solid transparent;
+  letter-spacing: 0.3px;
+}
+
+.contact-buttons .btn-primary {
+  background: #FFFFFF;
+  color: #C1121F;
+  border: 2px solid #FFFFFF;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+.contact-buttons .btn-primary:hover {
+  background: #F8FAFC;
+  border-color: #F8FAFC;
+  color: #8B0000;
+  transform: translateY(-3px);
+  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.3);
+}
+
+.contact-buttons .btn-outline-light {
+  background: transparent;
+  color: #FFFFFF;
+  border: 2px solid #FFFFFF;
+}
+
+.contact-buttons .btn-outline-light:hover {
+  background: #FFFFFF;
+  border-color: #FFFFFF;
+  color: #C1121F;
+  transform: translateY(-3px);
+  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.3);
+}
+
+/* Call to Action Section */
+.blood-cta-section {
+  background: linear-gradient(135deg, #8B0000 0%, #c1121ea7 100%);
+  padding: 100px 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.blood-cta-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('https://images.unsplash.com/photo-1582750675730-23b5f5b5e1b5?w=1920&h=1080&fit=crop');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.08;
+}
+
+.blood-cta-content {
+  position: relative;
+  z-index: 1;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.blood-cta-content h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.75rem;
+  color: #fff;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.blood-cta-content p {
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.9);
+  max-width: 600px;
+  margin: 0 auto 32px;
+  line-height: 1.7;
+}
+
+.blood-cta-buttons {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Last Updated Banner */
+.blood-updated-banner {
+  background: var(--surface);
+  padding: 20px 0;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.blood-updated-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.95rem;
+  color: var(--text-light);
+}
+
+.blood-updated-content i {
+  color: var(--primary);
+  font-size: 1.1rem;
+}
+
+.blood-updated-content span {
+  font-weight: 500;
+}
+
+/* Responsive Design - Tablet */
+@media screen and (max-width: 1024px) {
+  .blood-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  .blood-legend-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .process-timeline {
+    flex-wrap: wrap;
+  }
+
+  .process-arrow {
+    display: none;
+  }
+
+  .process-step {
+    min-width: 100%;
+  }
+
+  .blood-hero-title {
+    font-size: 3rem;
+  }
+
+  .blood-hero-subtitle {
+    font-size: 1.15rem;
+  }
+}
+
+/* Responsive Design - Mobile */
+@media screen and (max-width: 768px) {
+  .blood-hero {
+    min-height: 35vh;
+    height: 35vh;
+  }
+
+  .blood-hero-container {
+    padding: 0 24px;
+  }
+
+  .blood-hero-title {
+    font-size: 2.5rem;
+  }
+
+  .blood-hero-subtitle {
+    font-size: 1.05rem;
+  }
+
+  .blood-hero-note {
+    font-size: 0.95rem;
+  }
+
+  .blood-grid-section {
+    padding: 60px 0;
+  }
+
+  .blood-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .blood-card {
+    padding: 32px 24px;
+  }
+
+  .blood-legend-section {
+    padding: 60px 0;
+  }
+
+  .blood-legend-title {
+    font-size: 2rem;
+    margin-bottom: 40px;
+  }
+
+  .blood-legend-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .blood-notice-section {
+    padding: 60px 0;
+  }
+
+  .blood-notice-box {
+    padding: 32px 24px;
+  }
+
+  .blood-notice-title {
+    font-size: 1.75rem;
+    margin-bottom: 20px;
+  }
+
+  .blood-notice-content p {
+    font-size: 1rem;
+  }
+
+  .section-title {
+    font-size: 2.25rem;
+  }
+
+  .section-subtitle {
+    font-size: 1rem;
+    margin-bottom: 40px;
+  }
+
+  .blood-request-section,
+  .blood-eligibility-section,
+  .blood-process-section,
+  .blood-contact-section {
+    padding: 60px 0;
+  }
+
+  .form-buttons {
+    flex-direction: column;
+  }
+
+  .form-buttons .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .contact-info-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-buttons {
+    flex-direction: column;
+  }
+
+  .contact-buttons .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .blood-cta-content h2 {
+    font-size: 2.25rem;
+  }
+
+  .blood-cta-buttons {
+    flex-direction: column;
+  }
+
+  .blood-cta-buttons .btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* Responsive Design - Small Mobile */
+@media screen and (max-width: 480px) {
+  .blood-hero {
+    min-height: 30vh;
+    height: 30vh;
+  }
+
+  .blood-hero-title {
+    font-size: 2rem;
+  }
+
+  .blood-hero-subtitle {
+    font-size: 1rem;
+  }
+
+  .blood-hero-note {
+    font-size: 0.875rem;
+  }
+
+  .blood-card {
+    padding: 28px 20px;
+  }
+
+  .blood-group-name {
+    font-size: 1.75rem;
+  }
+
+  .blood-contact-card {
+    padding: 32px 20px;
+  }
+
+  .section-title {
+    font-size: 1.875rem;
+  }
+}
+
+/* Animations */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounceDown {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(8px);
+  }
+}
+
+/* Accessibility */
+.blood-card:focus-visible {
+  outline: 3px solid var(--primary);
+  outline-offset: 4px;
+}
+
+.blood-contact-buttons .btn:focus-visible,
+.contact-buttons .btn:focus-visible {
+  outline: 3px solid #FFFFFF;
+  outline-offset: 4px;
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  .blood-card,
+  .blood-card-icon svg,
+  .blood-legend-item,
+  .eligibility-card,
+  .process-step,
+  .blood-contact-buttons .btn,
+  .contact-buttons .btn {
+    transition: none;
+  }
+
+  .blood-hero-content,
+  .blood-hero-title,
+  .blood-hero-subtitle,
+  .blood-hero-note,
+  .success-message {
+    animation: none;
+  }
+
+  .process-arrow i {
+    animation: none;
+  }
+}

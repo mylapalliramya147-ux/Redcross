@@ -1,7 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import henryImage from '../assets/Events/henrii.png';
+import henryImage from '../assets/events/henrii.png';
+import volunteerImage from '../assets/events/volunteer.jpeg';
+import medicalCampImage from '../assets/events/medical camp.jpg';
+import disasterImage from '../assets/events/disaster.webp';
+import healthCareImage from '../assets/events/health care.webp';
+import communityOutreachImage from '../assets/events/community outreach.jpeg';
+import shanMohanImage from '../assets/events/ShanMohan.webp';
+import ramaraoImage from '../assets/events/ramarao.jpeg';
 import Gallery from '../components/Gallery';
+import { getUpcomingEvents, formatDate } from '../data/eventsData';
 import './Home.css';
 
 const Home = () => {
@@ -30,32 +38,74 @@ const Home = () => {
 
   const teamMembers = [
     {
-      name: 'Dr. Rajesh Kumar',
+      name: 'Sri. Shan Mohan Sagili, IAS',
       position: 'President',
-      image: 'https://images.unsplash.com/photo-1567468255534-9d441a1b6e3b?w=300&h=300&fit=crop',
+      location: 'Kakinada',
+      image: shanMohanImage,
+      color: 'linear-gradient(135deg, #DC2626 0%, #B91C1C 100%)',
     },
     {
-      name: 'Sneha Reddy',
-      position: 'Vice President',
+      name: 'Sri. Y. D. Rama Rao',
+      position: 'Chairman',
+      location: 'Kakinada',
+      image: ramaraoImage,
+      color: 'linear-gradient(135deg, #DC2626 0%, #B91C1C 100%)',
+    },
+    {
+      name: 'Dr. N. Suguna',
+      position: 'Vice Chairman',
+      location: 'Kakinada',
+
+
+      color: 'linear-gradient(135deg, #DC2626 0%, #B91C1C 100%)',
+
+
       image: 'https://images.unsplash.com/photo-1494790108377-be9c2f2f5c83?w=300&h=300&fit=crop',
+      color: 'linear-gradient(135deg, #DC2626 0%, #B91C1C 100%)',
     },
     {
-      name: 'Amit Sharma',
+      name: 'Sri. N. V. V. R. K. Prasad Babu',
       position: 'Treasurer',
-      image: 'https://images.unsplash.com/photo-1557862433-33c1b0c7e6d3?w=300&h=300&fit=crop',
+      location: 'Kakinada',
+      color: 'linear-gradient(135deg, #DC2626 0%, #B91C1C 100%)',
     },
   ];
 
   const galleryImages = [
-    { src: 'https://images.unsplash.com/photo-1573497620053-ea5300f5f4cb?w=800&h=600&fit=crop', title: 'Volunteer Team', alt: 'Red Cross volunteer team' },
-    { src: 'https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?w=800&h=600&fit=crop', title: 'Community Outreach', alt: 'Community outreach program' },
-    { src: 'https://images.unsplash.com/photo-1559429216-99f1f9184a9c?w=800&h=600&fit=crop', title: 'Medical Camp', alt: 'Medical camp for community' },
-    { src: 'https://images.unsplash.com/photo-1582750675730-23b5f5b5e1b5?w=800&h=600&fit=crop', title: 'Disaster Relief', alt: 'Disaster relief efforts' },
-    { src: 'https://images.unsplash.com/photo-1593113630166-c5e7dfc0e4d9?w=800&h=600&fit=crop', title: 'Healthcare Services', alt: 'Healthcare services' },
-    { src: 'https://images.unsplash.com/photo-1532629555105-1cbb2f6839f5?w=800&h=600&fit=crop', title: 'Emergency Response', alt: 'Emergency response team' },
-    { src: 'https://images.unsplash.com/photo-1463173223085-5b9357f29649?w=800&h=600&fit=crop', title: 'Training Session', alt: 'First aid training session' },
-    { src: 'https://images.unsplash.com/photo-1517048676719-4e9c4e3c4b1b?w=800&h=600&fit=crop', title: 'Community Support', alt: 'Community support program' },
+    { src: volunteerImage, title: 'Volunteer Team', alt: 'Red Cross volunteer team' },
+    { src: medicalCampImage, title: 'Medical Camp', alt: 'Medical camp for community' },
+    { src: disasterImage, title: 'Disaster Relief', alt: 'Disaster relief efforts' },
+    { src: healthCareImage, title: 'Healthcare Services', alt: 'Healthcare services' },
+    { src: communityOutreachImage, title: 'Community Outreach', alt: 'Community outreach program' },
   ];
+
+  const newsItems = [
+    {
+      id: 1,
+      title: 'Blood Donation Camp Successfully Conducted',
+      description: 'More than 250 voluntary blood donors participated in the district-level blood donation drive.',
+      date: 'June 15, 2025',
+      image: volunteerImage,
+    },
+    {
+      id: 2,
+      title: 'Free Medical Health Camp',
+      description: 'Medical specialists provided free health check-ups and medicines to rural communities.',
+      date: 'May 28, 2025',
+      image: medicalCampImage,
+    },
+    {
+      id: 3,
+      title: 'Youth Red Cross Volunteer Training',
+      description: 'Students participated in first aid and disaster preparedness training programmes.',
+      date: 'April 10, 2025',
+      image: communityOutreachImage,
+    },
+  ];
+
+  const upcomingEvents = getUpcomingEvents(3);
+
+  const limitedGalleryImages = galleryImages.slice(0, 5);
 
   return (
     <div className="home">
@@ -64,7 +114,6 @@ const Home = () => {
         <div className="hero-bg">
           <img src={henryImage} alt="Sir Jean-Henri Dunant - Founder of the Red Cross" />
           <div className="hero-bg-overlay"></div>
-          <div className="hero-bg-left-overlay"></div>
         </div>
         <div className="hero-container">
           <div className="hero-content">
@@ -103,12 +152,6 @@ const Home = () => {
               Read More About Us
             </Link>
           </div>
-          <div className="about-image">
-            <img 
-              src="https://images.unsplash.com/photo-1593113630166-c5e7dfc0e4d9?w=600&h=400&fit=crop" 
-              alt="Red Cross Volunteers" 
-            />
-          </div>
         </div>
       </section>
 
@@ -130,7 +173,38 @@ const Home = () => {
               </div>
             ))}
           </div>
-        </div>e
+        </div>
+      </section>
+
+      {/* Upcoming Events Section */}
+      <section className="upcoming-events-section">
+        <div className="section-container">
+          <h2 className="section-title">Upcoming Events</h2>
+          <p className="upcoming-events-subtitle">
+            Join us in our upcoming awareness days and community events.
+          </p>
+          <div className="upcoming-events-grid">
+            {upcomingEvents.map((event) => (
+              <div key={event.id} className="upcoming-event-card">
+                <div className="upcoming-event-date">
+                  <span className="upcoming-event-day">{formatDate(event.date)}</span>
+                </div>
+                <div className="upcoming-event-content">
+                  <h3>{event.title}</h3>
+                  <p>{event.description}</p>
+                  <span className="upcoming-event-location">
+                    <i className="fas fa-map-marker-alt"></i> {event.location}
+                  </span>
+                </div>
+              </div>
+            ))}
+          </div>
+          <div className="upcoming-events-cta">
+            <Link to="/events" className="btn btn-primary">
+              View All Events <i className="fas fa-calendar-alt"></i>
+            </Link>
+          </div>
+        </div>
       </section>
 
       {/* Leadership Team Section */}
@@ -144,10 +218,17 @@ const Home = () => {
             {teamMembers.map((member, index) => (
               <div key={index} className="leadership-card">
                 <div className="leadership-image">
-                  <img src={member.image} alt={member.name} />
+                  <img 
+                    src={member.image} 
+                    alt={member.name}
+                    style={member.name === 'Sri. Y. D. Rama Rao' ? { objectPosition: 'center 35%', transform: 'scale(1.1)' } : {}}
+                  />
                 </div>
-                <h3>{member.name}</h3>
-                <p>{member.position}</p>
+                <div className="leadership-info" style={{ background: member.color }}>
+                  <h3>{member.name}</h3>
+                  <p className="leadership-position">{member.position}</p>
+                  <p className="leadership-location">{member.location}</p>
+                </div>
               </div>
             ))}
           </div>
@@ -155,7 +236,31 @@ const Home = () => {
       </section>
 
       {/* Gallery Section */}
-      <Gallery images={galleryImages} />
+      <Gallery images={limitedGalleryImages} />
+
+      {/* News & Updates Section */}
+      <section className="news-updates-section">
+        <div className="section-container">
+          <h2 className="section-title">News & Updates</h2>
+          <p className="news-updates-subtitle">
+            Stay informed with the latest activities, humanitarian initiatives, achievements, and important announcements from the Kakinada District Red Cross.
+          </p>
+          <div className="news-grid">
+            {newsItems.map((news) => (
+              <article key={news.id} className="news-card">
+                <div className="news-image">
+                  <img src={news.image} alt={news.title} loading="lazy" />
+                </div>
+                <div className="news-content">
+                  <span className="news-date">{news.date}</span>
+                  <h3>{news.title}</h3>
+                  <p>{news.description}</p>
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* Call to Action Section */}
       <section className="cta-section">

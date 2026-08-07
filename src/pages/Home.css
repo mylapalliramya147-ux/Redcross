@@ -280,9 +280,8 @@
 }
 
 .about-preview .section-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 80px;
+  display: flex;
+  justify-content: center;
   align-items: center;
 }
 
@@ -302,7 +301,9 @@
 }
 
 .about-content {
-  padding-right: 20px;
+  max-width: 800px;
+  text-align: center;
+  padding-right: 0;
 }
 
 .section-label {
@@ -318,14 +319,14 @@
 
 .about-content h2 {
   font-family: 'Playfair Display', serif;
-  font-size: 2.75rem;
+  font-size: 4rem;
   color: var(--text);
   margin-bottom: 24px;
   line-height: 1.2;
 }
 
 .about-content p {
-  font-size: 1.125rem;
+  font-size: 1.5rem;
   line-height: 1.8;
   color: var(--text-light);
   margin-bottom: 32px;
@@ -526,9 +527,8 @@
 
 .leadership-card {
   text-align: center;
-  padding: 36px 24px;
-  background: var(--surface);
   border-radius: 18px;
+  overflow: hidden;
   box-shadow: var(--shadow);
   transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
   border: 1px solid var(--border);
@@ -540,37 +540,159 @@
 }
 
 .leadership-image {
-  width: 140px;
-  height: 140px;
-  margin: 0 auto 20px;
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+  background: #f5f5f5;
+  position: relative;
 }
 
 .leadership-image img {
   width: 100%;
   height: 100%;
-  border-radius: 50%;
   object-fit: cover;
-  border: 4px solid var(--primary);
+  object-position: center 20%;
   transition: transform 0.4s ease;
+  display: block;
 }
 
 .leadership-card:hover .leadership-image img {
   transform: scale(1.05);
 }
 
-.leadership-card h3 {
-  font-family: 'Playfair Display', serif;
-  color: var(--text);
-  margin-bottom: 6px;
-  font-size: 1.2rem;
-  font-weight: 600;
+.leadership-info {
+  padding: 24px 20px;
+  text-align: center;
 }
 
-.leadership-card p {
+.leadership-info h3 {
+  font-family: 'Poppins', sans-serif;
+  color: #f5edee;
+  margin-bottom: 8px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.leadership-position {
+  color: #FFFFFF;
+  font-weight: 600;
+  font-size: 1rem;
+  margin: 0 0 4px;
+}
+
+.leadership-location {
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 500;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+/* Upcoming Events Section */
+.upcoming-events-section {
+  background: var(--surface);
+  padding: 0;
+}
+
+.upcoming-events-subtitle {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.125rem;
+  color: var(--text-light);
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 60px;
+  line-height: 1.7;
+}
+
+.upcoming-events-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 32px;
+  margin-bottom: 60px;
+}
+
+.upcoming-event-card {
+  background: var(--background);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+  flex-direction: column;
+}
+
+.upcoming-event-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.15);
+}
+
+.upcoming-event-date {
+  background: linear-gradient(135deg, #C8102E 0%, #8B0000 100%);
+  padding: 24px 20px;
+  text-align: center;
+}
+
+.upcoming-event-day {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #FFFFFF;
+  letter-spacing: 0.5px;
+}
+
+.upcoming-event-content {
+  padding: 28px 24px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.upcoming-event-content h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.35rem;
+  color: var(--text);
+  margin-bottom: 16px;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.upcoming-event-content p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  color: var(--text-light);
+  line-height: 1.7;
+  margin-bottom: 20px;
+  flex-grow: 1;
+}
+
+.upcoming-event-location {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.9rem;
   color: var(--primary);
   font-weight: 600;
+  margin-top: auto;
+}
+
+.upcoming-event-location i {
   font-size: 0.95rem;
-  margin: 0;
+}
+
+.upcoming-events-cta {
+  text-align: center;
+}
+
+.upcoming-events-cta .btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.upcoming-events-cta .btn i {
+  font-size: 1.1rem;
 }
 
 /* CTA Section */
@@ -617,6 +739,56 @@
   max-width: 600px;
   margin: 0 auto 32px;
   line-height: 1.7;
+}
+
+/* Responsive Design - Upcoming Events */
+@media screen and (max-width: 1024px) {
+  .upcoming-events-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 28px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .upcoming-events-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .upcoming-events-subtitle {
+    font-size: 1rem;
+    margin-bottom: 40px;
+  }
+
+  .upcoming-event-content {
+    padding: 24px 20px;
+  }
+
+  .upcoming-event-content h3 {
+    font-size: 1.25rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .upcoming-event-date {
+    padding: 20px 16px;
+  }
+
+  .upcoming-event-day {
+    font-size: 1rem;
+  }
+
+  .upcoming-event-content {
+    padding: 20px 16px;
+  }
+
+  .upcoming-event-content h3 {
+    font-size: 1.15rem;
+  }
+
+  .upcoming-event-content p {
+    font-size: 0.95rem;
+  }
 }
 
 /* Stats Section */
@@ -681,10 +853,6 @@
 
 /* Responsive Design */
 @media screen and (max-width: 1024px) {
-  .about-preview .section-container {
-    gap: 50px;
-  }
-
   /* Tablet: slightly reduce text size, keep left-aligned */
   .hero-container {
     padding: 0 50px;
@@ -781,22 +949,8 @@
     justify-content: center;
   }
 
-  .about-preview .section-container {
-    grid-template-columns: 1fr;
-    gap: 40px;
-  }
-
-  .about-content {
-    padding-right: 0;
-    order: 2;
-  }
-
-  .about-image {
-    order: 1;
-  }
-
   .about-content h2 {
-    font-size: 2rem;
+    font-size: 2.75rem;
   }
 
   .section-title {
@@ -830,6 +984,152 @@
 
   .stat-item h3 {
     font-size: 2.5rem;
+  }
+}
+
+/* News & Updates Section */
+.news-updates-section {
+  background: var(--surface);
+  padding: 0;
+}
+
+.news-updates-subtitle {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.125rem;
+  color: var(--text-light);
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 60px;
+  line-height: 1.7;
+}
+
+.news-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  margin-bottom: 60px;
+}
+
+.news-card {
+  background: var(--background);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.news-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
+}
+
+.news-image {
+  width: 100%;
+  height: 240px;
+  overflow: hidden;
+  background: #f5f5f5;
+}
+
+.news-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.5s ease;
+  display: block;
+}
+
+.news-card:hover .news-image img {
+  transform: scale(1.05);
+}
+
+.news-content {
+  padding: 28px 24px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.news-date {
+  display: inline-block;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--primary);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 12px;
+}
+
+.news-content h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.35rem;
+  color: var(--text);
+  margin-bottom: 12px;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.news-content p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  color: var(--text-light);
+  line-height: 1.7;
+  margin-bottom: 20px;
+  flex-grow: 1;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* News Card Responsive */
+@media screen and (max-width: 1024px) {
+  .news-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .news-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .news-updates-subtitle {
+    font-size: 1rem;
+    margin-bottom: 40px;
+  }
+
+  .news-content {
+    padding: 24px 20px;
+  }
+
+  .news-content h3 {
+    font-size: 1.25rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .news-image {
+    height: 200px;
+  }
+
+  .news-content {
+    padding: 20px 16px;
+  }
+
+  .news-content h3 {
+    font-size: 1.15rem;
+  }
+
+  .news-content p {
+    font-size: 0.95rem;
   }
 }
 

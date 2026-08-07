@@ -3,24 +3,6 @@ import { Link } from 'react-router-dom';
 import './About.css';
 
 const About = () => {
-  const teamMembers = [
-    {
-      name: 'Dr. Rajesh Kumar',
-      position: 'President',
-      image: 'https://images.unsplash.com/photo-1567468255534-9d441a1b6e3b?w=300&h=300&fit=crop',
-    },
-    {
-      name: 'Sneha Reddy',
-      position: 'Vice President',
-      image: 'https://images.unsplash.com/photo-1494790108377-be9c2f2f5c83?w=300&h=300&fit=crop',
-    },
-    {
-      name: 'Amit Sharma',
-      position: 'Treasurer',
-      image: 'https://images.unsplash.com/photo-1557862433-33c1b0c7e6d3?w=300&h=300&fit=crop',
-    },
-  ];
-
   return (
       <div className="about">
         {/* Hero Section */}
@@ -133,24 +115,6 @@ const About = () => {
                 <p>Launched digital platforms for better community engagement.</p>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Team Section */}
-      <section className="team-section">
-        <div className="section-container">
-          <h2>Our Leadership Team</h2>
-          <div className="team-grid">
-            {teamMembers.map((member, index) => (
-              <div key={index} className="team-card">
-                <div className="team-image">
-                  <img src={member.image} alt={member.name} />
-                </div>
-                <h3>{member.name}</h3>
-                <p>{member.position}</p>
-              </div>
-            ))}
           </div>
         </div>
       </section>
