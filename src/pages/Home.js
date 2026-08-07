@@ -38,15 +38,8 @@ const Home = () => {
 
   const teamMembers = [
     {
-<<<<<<< HEAD
 
       name: 'Sri. Shan Mohan Sagili, IAS',
-
-      name: 'Sri Shan Mohan Sagili IAS',
-
-=======
-      name: 'Sri. Shan Mohan Sagili, IAS',
->>>>>>> e4452c35e22e613b9981a171f7ca5af3658a12d8
       position: 'President',
       location: 'Kakinada',
       image: shanMohanImage,
@@ -64,18 +57,9 @@ const Home = () => {
       position: 'Vice Chairman',
       location: 'Kakinada',
 
-<<<<<<< HEAD
-      color: 'linear-gradient(135deg, #DC2626 0%, #B91C1C 100%)',      image: 'https://images.unsplash.com/photo-1494790108377-be9c2f2f5c83?w=300&h=300&fit=crop',
-      color: 'linear-gradient(135deg, #FF6B35 0%, #E85D04 100%)',    },
-=======
-
-      color: 'linear-gradient(135deg, #DC2626 0%, #B91C1C 100%)',
-
-
-      image: 'https://images.unsplash.com/photo-1494790108377-be9c2f2f5c83?w=300&h=300&fit=crop',
-      color: 'linear-gradient(135deg, #DC2626 0%, #B91C1C 100%)',
+      color: 'linear-gradient(135deg, #DC2626 0%, #B91C1C 100%)',   
+         image: 'https://images.unsplash.com/photo-1494790108377-be9c2f2f5c83?w=300&h=300&fit=crop',
     },
->>>>>>> e4452c35e22e613b9981a171f7ca5af3658a12d8
     {
       name: 'Sri. N. V. V. R. K. Prasad Babu',
       position: 'Treasurer',
