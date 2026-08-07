@@ -219,13 +219,13 @@ const Home = () => {
                   <img 
                     src={member.image} 
                     alt={member.name}
-                    style={member.name === 'Sri. Y. D. Rama Rao' ? { objectPosition: 'center 35%', transform: 'scale(1.1)' } : {}}
+                    style={member.name === 'Sri. Y. D. Rama Rao' ? { objectPosition: 'center 35%', transform: 'scale(1.15)' } : {}}
                   />
-                </div>
-                <div className="leadership-info" style={{ background: member.color }}>
-                  <h3>{member.name}</h3>
-                  <p className="leadership-position">{member.position}</p>
-                  <p className="leadership-location">{member.location}</p>
+                  <div className="leadership-image-overlay">
+                    <h3>{member.name}</h3>
+                    <p className="leadership-position">{member.position}</p>
+                    <p className="leadership-location">{member.location}</p>
+                  </div>
                 </div>
               </div>
             ))}

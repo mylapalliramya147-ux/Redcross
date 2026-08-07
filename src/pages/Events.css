@@ -142,6 +142,7 @@
   display: flex;
   width: 100%;
   align-items: stretch;
+  gap: 40px;
 }
 
 .events-column {
@@ -151,7 +152,6 @@
   flex-direction: column;
   
   gap: 16px;
-  margin-right: 20px;
   overflow: hidden;
 }
 
