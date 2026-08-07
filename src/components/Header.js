@@ -93,6 +93,18 @@ const Header = () => {
 
             <li className="nav-item">
               <NavLink
+                to="/blood-availability"
+                className={({ isActive }) =>
+                  isActive ? 'nav-link active' : 'nav-link'
+                }
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Blood Bank
+              </NavLink>
+            </li>
+
+            <li className="nav-item">
+              <NavLink
                 to="/contact"
                 className={({ isActive }) =>
                   isActive ? 'nav-link active' : 'nav-link'
