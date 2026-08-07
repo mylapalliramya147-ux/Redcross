@@ -12,6 +12,7 @@ import Login from './pages/Login';
 import AdminDashboard from './pages/AdminDashboard';
 import BecomeDonor from './pages/BecomeDonor';
 import BecomeVolunteer from './pages/BecomeVolunteer';
+import BloodAvailability from './pages/BloodAvailability';
 import ProtectedRoute from './components/ProtectedRoute';
 import { AuthProvider } from './contexts/AuthContext';
 import './App.css';
@@ -72,6 +73,15 @@ function App() {
                 <Header />
                 <main className="main-content">
                   <Events />
+                </main>
+                <Footer />
+              </>
+            } />
+            <Route path="/blood-availability" element={
+              <>
+                <Header />
+                <main className="main-content">
+                  <BloodAvailability />
                 </main>
                 <Footer />
               </>
