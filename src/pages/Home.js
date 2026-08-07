@@ -8,6 +8,8 @@ import healthCareImage from '../assets/events/health care.webp';
 import communityOutreachImage from '../assets/events/community outreach.jpeg';
 import shanMohanImage from '../assets/events/ShanMohan.webp';
 import ramaraoImage from '../assets/events/ramarao.jpeg';
+import sugunaImage from '../assets/events/suguna.png';
+import prasadBabuImage from '../assets/events/prasad babu.jpeg';
 import Gallery from '../components/Gallery';
 import { getUpcomingEvents, formatDate } from '../data/eventsData';
 import './Home.css';
@@ -55,18 +57,14 @@ const Home = () => {
       name: 'Dr. N. Suguna',
       position: 'Vice Chairman',
       location: 'Kakinada',
-
-
-      color: 'linear-gradient(135deg, #DC2626 0%, #B91C1C 100%)',
-
-
-      image: 'https://images.unsplash.com/photo-1494790108377-be9c2f2f5c83?w=300&h=300&fit=crop',
+      image: sugunaImage,
       color: 'linear-gradient(135deg, #DC2626 0%, #B91C1C 100%)',
     },
     {
       name: 'Sri. N. V. V. R. K. Prasad Babu',
       position: 'Treasurer',
       location: 'Kakinada',
+      image: prasadBabuImage,
       color: 'linear-gradient(135deg, #DC2626 0%, #B91C1C 100%)',
     },
   ];
