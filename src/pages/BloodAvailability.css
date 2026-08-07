@@ -1,4 +1,4 @@
-/* Blood Availability Page Styles */
+ /* Blood Availability Page Styles */
 
 /* Hero Section */
 .blood-hero {
@@ -551,13 +551,16 @@
 }
 
 .contact-info-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
   gap: 24px;
+  justify-content: center;
   margin-bottom: 40px;
 }
 
 .contact-info-item {
+  width: 320px;
+  flex-shrink: 0;
   display: flex;
   align-items: flex-start;
   gap: 16px;
@@ -862,7 +865,8 @@
   }
 
   .contact-info-grid {
-    grid-template-columns: 1fr;
+    flex-direction: column;
+    align-items: center;
   }
 
   .contact-buttons {
