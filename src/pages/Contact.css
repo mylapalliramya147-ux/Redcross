@@ -121,19 +121,20 @@
 .contact-icon {
   width: 56px;
   height: 56px;
-  background: var(--primary);
+  background: #C8102E;
   border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
   flex-shrink: 0;
   box-shadow: 0 8px 24px rgba(193, 18, 31, 0.2);
 }
 
-.contact-icon svg {
-  width: 24px;
-  height: 24px;
-  color: white;
+.contact-icon i {
+  color: white !important;
+  font-size: 24px !important;
+  display: block !important;
+  line-height: 1 !important;
 }
 
 .contact-item h3 {

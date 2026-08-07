@@ -219,7 +219,7 @@ const Home = () => {
                   <img 
                     src={member.image} 
                     alt={member.name}
-                    style={member.name === 'Sri. Y. D. Rama Rao' ? { objectPosition: 'center 35%', transform: 'scale(1.15)' } : {}}
+                    style={member.name === 'Sri. Y. D. Rama Rao' ? { objectPosition: 'center 25%' } : {}}
                   />
                   <div className="leadership-image-overlay">
                     <h3>{member.name}</h3>
