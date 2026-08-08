@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { FaMapMarkerAlt, FaPhone, FaEnvelope, FaClock, FaPaperPlane } from 'react-icons/fa';
 import './Contact.css';
 
 const Contact = () => {
@@ -57,7 +58,7 @@ const Contact = () => {
               <div className="contact-details">
                 <div className="contact-item">
                   <div className="contact-icon">
-                    <i className="fas fa-map-marker-alt"></i>
+                    <FaMapMarkerAlt size={24} color="white" />
                   </div>
                   <div>
                     <h3>Address</h3>
@@ -67,7 +68,7 @@ const Contact = () => {
 
                 <div className="contact-item">
                   <div className="contact-icon">
-                    <i className="fas fa-phone"></i>
+                    <FaPhone size={24} color="white" />
                   </div>
                   <div>
                     <h3>Phone</h3>
@@ -78,7 +79,7 @@ const Contact = () => {
 
                 <div className="contact-item">
                   <div className="contact-icon">
-                    <i className="fas fa-envelope"></i>
+                    <FaEnvelope size={24} color="white" />
                   </div>
                   <div>
                     <h3>Email</h3>
@@ -89,7 +90,7 @@ const Contact = () => {
 
                 <div className="contact-item">
                   <div className="contact-icon">
-                    <i className="fas fa-clock"></i>
+                    <FaClock size={24} color="white" />
                   </div>
                   <div>
                     <h3>Working Hours</h3>
@@ -161,7 +162,7 @@ const Contact = () => {
                 </div>
 
                 <button type="submit" className="btn btn-primary">
-                  <i className="fas fa-paper-plane"></i> Send Message
+                  <FaPaperPlane size={24} color="white" /> Send Message
                 </button>
               </form>
             </div>

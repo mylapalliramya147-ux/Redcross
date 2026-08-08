@@ -121,7 +121,7 @@
 .contact-icon {
   width: 56px;
   height: 56px;
-  background: #C8102E;
+  background: #8B0000;
   border-radius: 50%;
   display: flex !important;
   align-items: center !important;
@@ -130,22 +130,21 @@
   box-shadow: 0 8px 24px rgba(193, 18, 31, 0.2);
 }
 
-.contact-icon i {
-  color: white !important;
-  font-size: 24px !important;
-  display: block !important;
-  line-height: 1 !important;
+.contact-icon svg {
+  width: 24px !important;
+  height: 24px !important;
 }
 
 .contact-item h3 {
   font-family: 'Playfair Display', serif;
-  color: var(--text);
+  color: #000000 !important;
   margin-bottom: 6px;
   font-size: 1.15rem;
+  font-weight: 600;
 }
 
 .contact-item p {
-  color: var(--text-light);
+  color: #333333 !important;
   margin: 0;
   line-height: 1.6;
 }
