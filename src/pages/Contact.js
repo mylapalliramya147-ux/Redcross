@@ -58,7 +58,7 @@ const Contact = () => {
               <div className="contact-details">
                 <div className="contact-item">
                   <div className="contact-icon">
-                    <FaMapMarkerAlt size={24} color="white" />
+                    <FaMapMarkerAlt size={24} color="black" />
                   </div>
                   <div>
                     <h3>Address</h3>
@@ -68,7 +68,7 @@ const Contact = () => {
 
                 <div className="contact-item">
                   <div className="contact-icon">
-                    <FaPhone size={24} color="white" />
+                    <FaPhone size={24} color="black" />
                   </div>
                   <div>
                     <h3>Phone</h3>
@@ -79,7 +79,7 @@ const Contact = () => {
 
                 <div className="contact-item">
                   <div className="contact-icon">
-                    <FaEnvelope size={24} color="white" />
+                    <FaEnvelope size={24} color="black" />
                   </div>
                   <div>
                     <h3>Email</h3>
@@ -90,7 +90,7 @@ const Contact = () => {
 
                 <div className="contact-item">
                   <div className="contact-icon">
-                    <FaClock size={24} color="white" />
+                    <FaClock size={24} color="black" />
                   </div>
                   <div>
                     <h3>Working Hours</h3>
